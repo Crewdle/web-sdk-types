@@ -1,0 +1,1 @@
+export { StorageEventType } from './StorageEventType';

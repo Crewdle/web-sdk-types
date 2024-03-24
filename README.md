@@ -1,1 +1,1 @@
-# web-sdk-commons
+# web-sdk-types
