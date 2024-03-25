@@ -16,7 +16,7 @@ export interface ISDK {
 
   /**
    * Authenticate an agent.
-   * @param agentGroupId The ID of the agent group to authenticate the agent with.
+   * @param credentials The credentials to authenticate the agent with.
    * @returns A promise that resolves with the authenticated agent.
    */
   authenticateAgent(credentials: IAgentCredentials): Promise<IAuthAgent>;
