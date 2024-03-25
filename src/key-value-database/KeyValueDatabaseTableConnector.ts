@@ -2,7 +2,7 @@ import { IDatabaseTableQuery, IValueType, ValueTypeOmitId } from '.';
 
 /**
  * The key-value database table connector interface.
- * @category Key-Value Database
+ * @category Connector
  */
 export interface IKeyValueDatabaseTableConnector<T extends IValueType> {
   /**

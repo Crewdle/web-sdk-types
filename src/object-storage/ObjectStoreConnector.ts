@@ -2,7 +2,7 @@ import { ObjectDescriptor, ObjectKind } from '.';
 
 /**
  * The object store connector interface.
- * @category Object Storage
+ * @category Connector
  */
 export interface IObjectStoreConnector {
   /**

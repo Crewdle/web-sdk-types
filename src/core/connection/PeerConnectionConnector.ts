@@ -14,7 +14,7 @@ import {
 
 /**
  * The peer connection connector interface - used to establish a connection between two peers.
- * @category Core
+ * @category Connector
  */
 export interface IPeerConnectionConnector {
   /**

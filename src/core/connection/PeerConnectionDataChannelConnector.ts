@@ -1,6 +1,6 @@
 /**
  * The peer connection data channel connector interface.
- * @category Core
+ * @category Connector
  */
 export interface IPeerConnectionDataChannelConnector {
   /**
