@@ -1,4 +1,4 @@
-import { IValueType, IKeyValueDatabaseMigrationHandle, IKeyValueDatabaseTableConnector } from '.';
+import { IValueType, IKeyValueDatabaseTableConnector } from '.';
 /**
  * The key-value database connector interface.
  * @category Key-Value Database
@@ -6,9 +6,8 @@ import { IValueType, IKeyValueDatabaseMigrationHandle, IKeyValueDatabaseTableCon
 export interface IKeyValueDatabaseConnector {
     /**
      * Open the database and run a migration on it if necessary.
-     * @param migration The migration to run on the database.
      */
-    open(migration: (db: IKeyValueDatabaseMigrationHandle) => void): Promise<void>;
+    open(): Promise<void>;
     /**
      * Close the database.
      */

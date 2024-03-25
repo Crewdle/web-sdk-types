@@ -12,7 +12,6 @@ export { IDatabaseTableQueryWhereValues } from './DatabaseTableQueryWhereValues'
 export { IKeyValueDatabase } from './KeyValueDatabase';
 export { IKeyValueDatabaseConnector } from './KeyValueDatabaseConnector';
 export { KeyValueDatabaseConnectorConstructor } from './KeyValueDatabaseConnectorConstructor';
-export { IKeyValueDatabaseMigrationHandle } from './KeyValueDatabaseMigrationHandle';
 export { IKeyValueDatabaseTableConnector } from './KeyValueDatabaseTableConnector';
 export { ILayoutBuilder } from './LayoutBuilder';
 export { IQueryBuilder } from './QueryBuilder';
