@@ -1,6 +1,6 @@
-import { KeyValueDatabaseConnectorConstructor } from 'key-value-database';
+import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
-import { ObjectStoreConnectorConstructor } from 'object-storage';
+import { ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
 
 /**
