@@ -1,7 +1,7 @@
 {
   "name": "@crewdle/web-sdk-types",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Crewdle Mist Web SDK public types and interfaces",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Crewdle/web-sdk-types.git"
   },
-  "author": "",
+  "author": "Crewdle Technologies",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Crewdle/web-sdk-types/issues"
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Crewdle/web-sdk-types#readme",
   "devDependencies": {
     "typescript": "^5.4.3"
-  }
+  },
+  "files": [
+    "dist/"
+  ]
 }
