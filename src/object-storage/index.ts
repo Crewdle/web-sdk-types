@@ -1,3 +1,5 @@
+export * from './event';
+
 export { IFileDescriptor } from './FileDescriptor';
 export { IFilePayload } from './FilePayload';
 export { IFolderDescriptor } from './FolderDescriptor';
