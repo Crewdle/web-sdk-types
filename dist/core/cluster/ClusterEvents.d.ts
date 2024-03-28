@@ -50,6 +50,10 @@ export interface IClusterEvents {
      */
     'cluster-disconnect': (payload: INodeEventPayload) => void;
     /**
+     * @event cluster-leave - Event fired when the current node leaves the cluster.
+     */
+    'cluster-leave': () => void;
+    /**
      * @event local-media-stream-track-fail - Event fired when a local media stream track fails.
      * @param payload The local media stream track fail event payload.
      *

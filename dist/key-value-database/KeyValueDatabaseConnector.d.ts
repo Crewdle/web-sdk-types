@@ -1,7 +1,7 @@
 import { IValueType, IKeyValueDatabaseTableConnector } from '.';
 /**
  * The key-value database connector interface.
- * @category Key-Value Database
+ * @category Connector
  */
 export interface IKeyValueDatabaseConnector {
     /**

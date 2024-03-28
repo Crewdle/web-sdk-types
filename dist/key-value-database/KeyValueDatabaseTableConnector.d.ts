@@ -1,7 +1,7 @@
 import { IDatabaseTableQuery, IValueType, ValueTypeOmitId } from '.';
 /**
  * The key-value database table connector interface.
- * @category Key-Value Database
+ * @category Connector
  */
 export interface IKeyValueDatabaseTableConnector<T extends IValueType> {
     /**
@@ -13,12 +13,12 @@ export interface IKeyValueDatabaseTableConnector<T extends IValueType> {
     /**
      * Set the value for a key.
      * @param key The key to set the value for.
-     * @param value The value to set for the key. It must be a {@link SupportedIndexTypes}.
+     * @param value The value to set for the key. It must be a {@link SupportedIndexType}.
      */
     set(key: string, value: ValueTypeOmitId<T>): Promise<T>;
     /**
      * Add a value to the database.
-     * @param value  The value to add. It must be a {@link SupportedIndexTypes}.
+     * @param value  The value to add. It must be a {@link SupportedIndexType}.
      * @returns A promise that resolves with the value added.
      */
     add(value: ValueTypeOmitId<T>): Promise<T>;

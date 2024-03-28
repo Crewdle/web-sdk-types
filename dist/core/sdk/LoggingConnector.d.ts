@@ -1,7 +1,7 @@
 import { LoggingConnectorEvent } from '.';
 /**
  * The logging connector interface.
- * @category Core
+ * @category Connector
  */
 export interface ILoggingConnector {
     /**

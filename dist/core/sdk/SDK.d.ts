@@ -7,6 +7,10 @@ import { IAuthUser, IUserCredentials } from '../node/user';
  */
 export interface ISDK {
     /**
+     * Close the SDK.
+     */
+    close(): Promise<void>;
+    /**
      * Authenticate a user.
      * @param credentials The credentials to authenticate the user with.
      * @returns A promise that resolves with the authenticated user.
@@ -14,7 +18,7 @@ export interface ISDK {
     authenticateUser(credentials: IUserCredentials): Promise<IAuthUser>;
     /**
      * Authenticate an agent.
-     * @param agentGroupId The ID of the agent group to authenticate the agent with.
+     * @param credentials The credentials to authenticate the agent with.
      * @returns A promise that resolves with the authenticated agent.
      */
     authenticateAgent(credentials: IAgentCredentials): Promise<IAuthAgent>;
