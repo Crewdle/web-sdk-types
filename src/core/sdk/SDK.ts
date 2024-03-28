@@ -8,6 +8,11 @@ import { IAuthUser, IUserCredentials } from '../node/user';
  */
 export interface ISDK {
   /**
+   * Close the SDK.
+   */
+  close(): Promise<void>;
+
+  /**
    * Authenticate a user.
    * @param credentials The credentials to authenticate the user with.
    * @returns A promise that resolves with the authenticated user.
