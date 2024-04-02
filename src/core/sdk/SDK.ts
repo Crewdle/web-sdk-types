@@ -1,5 +1,5 @@
 import { ICluster } from '../cluster';
-import { IAgentCredentials, IAuthAgent } from '../node/agent';
+import { IAgentCredentials, IAuthAgent, IAgentCapacity } from '../node/agent';
 import { IAuthUser, IUserCredentials } from '../node/user';
 
 /**
@@ -24,7 +24,7 @@ export interface ISDK {
    * @param credentials The credentials to authenticate the agent with.
    * @returns A promise that resolves with the authenticated agent.
    */
-  authenticateAgent(credentials: IAgentCredentials): Promise<IAuthAgent>;
+  authenticateAgent(credentials: IAgentCredentials, reportCapacity: () => IAgentCapacity): Promise<IAuthAgent>;
 
   /**
    * Join a cluster.
