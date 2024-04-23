@@ -1,4 +1,5 @@
 export interface IAgentCapacity {
+  macAddress: string;
   cpu: {
     cores: number;
     load: number;
