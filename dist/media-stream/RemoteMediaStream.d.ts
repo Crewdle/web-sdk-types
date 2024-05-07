@@ -1,9 +1,5 @@
+import { Unsubscribe } from '../core';
 import { IMediaStream, MediaTrackKind, MediaSubscriptionParams } from '.';
-/**
- * The unsubscribe callback.
- * @category Media Stream
- */
-export type Unsubscribe = () => void;
 /**
  * The remote media stream interface.
  * @category Media Stream
@@ -36,5 +32,5 @@ export interface IRemoteMediaStream extends IMediaStream {
      * Subscribe to when the provider of the stream changes.
      * @param callback The callback to invoke when the provider changes.
      */
-    onProviderChanged(callback: (providerId: string | undefined) => void): Unsubscribe;
+    onProviderChange(callback: (providerId: string | undefined) => void): Unsubscribe;
 }
