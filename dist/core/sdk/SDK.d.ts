@@ -19,7 +19,6 @@ export interface ISDK {
     /**
      * Authenticate an agent.
      * @param credentials The credentials to authenticate the agent with.
-     * @param reportCapacity A callback to report the agent capacity.
      * @returns A promise that resolves with the authenticated agent.
      */
     authenticateAgent(credentials: IAgentCredentials): Promise<IAuthAgent>;
