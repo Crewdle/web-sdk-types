@@ -1,5 +1,5 @@
 import { ICluster } from '../cluster';
-import { IAgentCredentials, IAuthAgent, IAgentCapacity } from '../node/agent';
+import { IAgentCredentials, IAuthAgent } from '../node/agent';
 import { IAuthUser, IUserCredentials } from '../node/user';
 /**
  * The SDK interface.
@@ -22,7 +22,7 @@ export interface ISDK {
      * @param reportCapacity A callback to report the agent capacity.
      * @returns A promise that resolves with the authenticated agent.
      */
-    authenticateAgent(credentials: IAgentCredentials, reportCapacity?: () => Promise<IAgentCapacity>): Promise<IAuthAgent>;
+    authenticateAgent(credentials: IAgentCredentials): Promise<IAuthAgent>;
     /**
      * Join a cluster.
      * @param clusterId The ID of the cluster to join.

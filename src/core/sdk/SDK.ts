@@ -25,7 +25,7 @@ export interface ISDK {
    * @param reportCapacity A callback to report the agent capacity.
    * @returns A promise that resolves with the authenticated agent.
    */
-  authenticateAgent(credentials: IAgentCredentials, reportCapacity?: () => Promise<IAgentCapacity>): Promise<IAuthAgent>;
+  authenticateAgent(credentials: IAgentCredentials): Promise<IAuthAgent>;
 
   /**
    * Join a cluster.
