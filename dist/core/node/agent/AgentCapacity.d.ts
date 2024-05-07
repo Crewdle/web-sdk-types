@@ -1,5 +1,6 @@
 /**
  * The agent capacity interface used for reporting the agent's capacity.
+ * @category Core
  */
 export interface IAgentCapacity {
     /**
