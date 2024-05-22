@@ -1,4 +1,5 @@
 import { IClusterEventEmitter } from '.';
+import { IJobService } from '../../job/JobService';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
 import { IObjectStoreBucket } from '../../object-storage';
@@ -39,6 +40,11 @@ export interface ICluster extends IClusterEventEmitter {
      * @returns A promise that resolves with the key-value database.
      */
     openKeyValueDatabase(name: string, layout: IDatabaseLayout | ILayoutBuilder): Promise<IKeyValueDatabase>;
+    /**
+     * Open a Job Service.
+     * @param label The label of the Job Service.
+     */
+    openJobService(label: string): Promise<IJobService>;
     /**
      * Publish a local media stream.
      * @param label The label of the media stream.
