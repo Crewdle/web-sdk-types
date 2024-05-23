@@ -1,2 +1,3 @@
 export * from './Job';
-export * from './JobService';
+export * from './JobDispatcher';
+export * from './JobWorkerConnector';

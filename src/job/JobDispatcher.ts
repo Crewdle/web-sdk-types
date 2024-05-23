@@ -1,13 +1,14 @@
+import { Observable } from 'rx';
 import { IDataStream } from '../core/stream';
-import { IJob, JobParameters } from './Job';
+import { IJob, IJobResult } from './Job';
 
-export interface IJobService extends IDataStream {
+export interface IJobDispatcher extends IDataStream {
   /**
    * Create a new job.
    * @param jobId The ID of the job.
    * @param parameters The parameters of the job.
    */
-  createJob(jobId: string, parameters: JobParameters): Promise<void>;
+  createJob(job: IJob): Promise<Observable<IJobResult>>;
 
   /**
    * Get a job by ID.

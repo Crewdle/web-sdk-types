@@ -12,4 +12,8 @@ export var NodeType;
      * The agent node type.
      */
     NodeType["Agent"] = "agent";
+    /**
+     * The cloudlet node type.
+     */
+    NodeType["Cloudlet"] = "cloudlet";
 })(NodeType || (NodeType = {}));

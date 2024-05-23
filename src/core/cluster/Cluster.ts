@@ -1,5 +1,5 @@
 import { IClusterEventEmitter } from '.';
-import { IJobService } from '../../job/JobService';
+import { IJobDispatcher } from '../../job/JobDispatcher';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
 import { IObjectStoreBucket } from '../../object-storage';
@@ -49,7 +49,7 @@ export interface ICluster extends IClusterEventEmitter {
    * Open a Job Service.
    * @param label The label of the Job Service.
    */
-  openJobService(label: string): Promise<IJobService>;
+  openJobService(label: string): Promise<IJobDispatcher>;
 
   /**
    * Publish a local media stream.

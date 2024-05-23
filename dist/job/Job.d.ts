@@ -66,3 +66,23 @@ export interface IJobParametersAI extends IJobParameters {
  * Union of all job parameters interfaces.
  */
 export type JobParameters = IJobParametersAI;
+export interface IJobResult {
+    /**
+     * The ID of the job.
+     */
+    id: string;
+    /**
+     * The status of the job result.
+     */
+    status: JobStatus;
+    /**
+     * The result of the job.
+     */
+    result: JobResult;
+}
+export interface IJobResultAI {
+    jobType: JobType.AI;
+    output: string;
+}
+type JobResult = IJobResultAI;
+export {};

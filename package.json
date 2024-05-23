@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Crewdle/web-sdk-types#readme",
   "devDependencies": {
+    "@types/rx": "^4.1.4",
     "typescript": "^5.4.3"
   },
   "files": [
