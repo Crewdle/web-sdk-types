@@ -1,5 +1,7 @@
+import { IAIService } from '../../ai-service';
 import { IClusterEventEmitter } from '.';
 import { IJobDispatcher } from '../../job/JobDispatcher';
+import { IJobWorker } from '../../job/JobWorker';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
 import { IObjectStoreBucket } from '../../object-storage';
@@ -46,10 +48,24 @@ export interface ICluster extends IClusterEventEmitter {
   openKeyValueDatabase(name: string, layout: IDatabaseLayout | ILayoutBuilder): Promise<IKeyValueDatabase>;
 
   /**
-   * Open a Job Service.
+   * Open a Job Dispatcher.
    * @param label The label of the Job Service.
+   * @returns The Job Dispatcher.
    */
-  openJobService(label: string): Promise<IJobDispatcher>;
+  openJobDispatcher(label: string): Promise<IJobDispatcher>;
+
+  /**
+   * Open a Job Worker.
+   * @param label The label of the Job Worker.
+   * @returns The Job Worker.
+   */
+  openJobWorker(label: string): Promise<IJobWorker>;
+
+  /**
+   * Open an AI Service.
+   * @param label The label of the AI Service.
+   */
+  openAIService(label: string): Promise<IAIService>;
 
   /**
    * Publish a local media stream.
