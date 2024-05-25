@@ -1,4 +1,4 @@
 export interface IVectorDatabaseConnector {
-    search(vector: number[]): number[];
+    search(vector: number[], k: number): number[];
     insert(vectors: number[][]): void;
 }
