@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* Language and Environment */
     "target": "esnext",
-    "lib": ["es6", "dom", "esnext.asynciterable"],
+    "lib": ["es6", "dom", "esnext.asynciterable", "ES2018.AsyncGenerator"],
 
     /* Modules */
     "module": "esnext",
