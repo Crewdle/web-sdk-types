@@ -99,5 +99,5 @@ export interface IJobResultAI {
   output: string;
 }
 
-type JobResult = IJobResultAI;
+export type JobResult = IJobResultAI;
 
