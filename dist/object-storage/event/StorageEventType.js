@@ -5,6 +5,10 @@
 export var StorageEventType;
 (function (StorageEventType) {
     /**
+       * The sync complete event.
+       */
+    StorageEventType["SyncComplete"] = "sync-complete";
+    /**
      * The file write event.
      */
     StorageEventType["FileWrite"] = "file-write";

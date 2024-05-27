@@ -4,6 +4,10 @@
  */
 export declare enum StorageEventType {
     /**
+       * The sync complete event.
+       */
+    SyncComplete = "sync-complete",
+    /**
      * The file write event.
      */
     FileWrite = "file-write",

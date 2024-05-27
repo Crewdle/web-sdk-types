@@ -29,4 +29,8 @@ export var ContentType;
      * @ignore
      */
     ContentType["KeyValueDatabase"] = "keyvaluedatabase";
+    /**
+     * @ignore
+     */
+    ContentType["AI"] = "ai";
 })(ContentType || (ContentType = {}));

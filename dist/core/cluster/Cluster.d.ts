@@ -60,6 +60,10 @@ export interface ICluster extends IClusterEventEmitter {
      * @param label The label of the AI Service.
      */
     openAIService(label: string): Promise<IAIService>;
+    /**
+     * Open an AI Worker.
+     * @param label The label of the AI Worker.
+     */
     openAIWorker(label: string): Promise<IAIWorker>;
     /**
      * Publish a local media stream.

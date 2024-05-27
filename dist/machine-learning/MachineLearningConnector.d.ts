@@ -1,8 +1,9 @@
+import { IJob, IJobWorkerConnector, IJobResult } from '../job';
 /**
  * The machine learning connector interface.
  * @category Connector
  */
-export interface IMachineLearningConnector {
+export interface IMachineLearningConnector extends IJobWorkerConnector {
     /**
      * Initialize the machine learning model.
      * @param llmModel The path to the LLM model.
@@ -16,9 +17,9 @@ export interface IMachineLearningConnector {
      */
     addContent(content: string): Promise<void>;
     /**
-     * Prompt the machine learning model.
-     * @param prompt The prompt to use.
-     * @returns An async generator that yields the responses.
+     * Process a job.
+     * @param job The job to process.
+     * @returns An async generator that yields the job result.
      */
-    prompt(prompt: string): AsyncGenerator<string>;
+    processJob(job: IJob): AsyncGenerator<IJobResult>;
 }
