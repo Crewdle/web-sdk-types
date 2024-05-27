@@ -12,6 +12,7 @@ export interface IMachineLearningConnector {
     /**
      * Add content to the machine learning model.
      * @param content The content to add.
+     * @returns A promise that resolves when the content has been added.
      */
     addContent(content: string): Promise<void>;
     /**
