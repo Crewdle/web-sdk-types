@@ -62,16 +62,16 @@ export interface ICluster extends IClusterEventEmitter {
   openJobWorker(label: string): Promise<IJobWorker>;
 
   /**
-   * Open an AI Service.
-   * @param label The label of the AI Service.
+   * Open a generative AI context.
+   * @param label The label of the generative AI context.
    */
   openGenerativeAIContext(label: string): Promise<IGenerativeAIContext>;
 
   /**
-   * Open an AI Worker.
-   * @param label The label of the AI Worker.
+   * Open a generative AI worker.
+   * @param label The label of the generative AI Worker.
    */
-  openAIWorker(label: string): Promise<IAIWorker>;
+  openGenerativeAIWorker(label: string): Promise<IAIWorker>;
 
   /**
    * Publish a local media stream.
