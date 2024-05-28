@@ -84,5 +84,4 @@ export interface IJobResultAI {
     jobType: JobType.AI;
     output: string;
 }
-type JobResult = IJobResultAI;
-export {};
+export type JobResult = IJobResultAI;

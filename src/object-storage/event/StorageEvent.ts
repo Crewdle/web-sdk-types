@@ -1,4 +1,4 @@
-import { IFileDeleteEvent, IFileMoveEvent, IFileWriteEvent, IFolderCreateEvent, IFolderDeleteEvent, IFolderMoveEvent } from '.';
+import { IFileDeleteEvent, IFileMoveEvent, IFileWriteEvent, IFolderCreateEvent, IFolderDeleteEvent, IFolderMoveEvent, ISyncCompleteEvent } from '.';
 
 /**
  * The object store event.
@@ -9,4 +9,5 @@ export type StorageEvent = IFileWriteEvent |
   IFileMoveEvent |
   IFolderCreateEvent |
   IFolderDeleteEvent |
-  IFolderMoveEvent;
+  IFolderMoveEvent |
+  ISyncCompleteEvent;

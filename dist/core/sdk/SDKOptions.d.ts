@@ -2,6 +2,8 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
+import { MachineLearningConnectorConstructor } from '../../machine-learning';
+import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 /**
  * Options to configure the SDK.
  * @category Core
@@ -34,6 +36,14 @@ export interface ISDKOptions {
      * If not provided, the default peer connection connector is WebRTC in browser.
      */
     peerConnectionConnector?: PeerConnectionConnectorConstructor;
+    /**
+     * The custom machine learning connector to use for machine learning tasks.
+     */
+    machineLearningConnector?: MachineLearningConnectorConstructor;
+    /**
+     * The custom vector database connector to use for vector database tasks.
+     */
+    vectorDatabaseConnector?: VectorDatabaseConnectorConstructor;
     /**
      * The maximum number of outgoing subscriptions.
      */
