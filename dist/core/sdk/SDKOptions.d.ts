@@ -2,8 +2,7 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
-import { MachineLearningConnectorConstructor } from '../../machine-learning';
-import { VectorDatabaseConnectorConstructor } from '../../vector-database';
+import { GenerativeAIWorkerConnectorConstructor, VectorDatabaseConnectorConstructor } from '../../ai';
 /**
  * Options to configure the SDK.
  * @category Core
@@ -37,9 +36,9 @@ export interface ISDKOptions {
      */
     peerConnectionConnector?: PeerConnectionConnectorConstructor;
     /**
-     * The custom machine learning connector to use for machine learning tasks.
+     * The custom generative AI worker connector to use for generative AI tasks.
      */
-    machineLearningConnector?: MachineLearningConnectorConstructor;
+    generativeAIWorkerConnector?: GenerativeAIWorkerConnectorConstructor;
     /**
      * The custom vector database connector to use for vector database tasks.
      */

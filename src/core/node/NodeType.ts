@@ -18,3 +18,5 @@ export enum NodeType {
    */
   Cloudlet = 'cloudlet',
 }
+
+// TODO - Review naming for agent and cloudlet

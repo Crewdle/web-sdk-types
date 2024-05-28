@@ -1,10 +1,10 @@
 import { IJob, IJobWorkerConnector, IJobResult } from '../job';
 
 /**
- * The machine learning connector interface.
+ * The generative AI worker connector interface.
  * @category Connector
  */
-export interface IMachineLearningConnector extends IJobWorkerConnector {
+export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector {
   /**
    * Initialize the machine learning model.
    * @param llmModel The path to the LLM model.

@@ -1,5 +1,5 @@
-import { IAIService } from '../../ai-service';
 import { IClusterEventEmitter } from '.';
+import { IGenerativeAIContext, IAIWorker } from '../../ai';
 import { IJobDispatcher } from '../../job/JobDispatcher';
 import { IJobWorker } from '../../job/JobWorker';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
@@ -7,7 +7,6 @@ import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaS
 import { IObjectStoreBucket } from '../../object-storage';
 import { IPubSubTopic } from '../../pubsub';
 import { LocalNode, Node } from '../node';
-import { IAIWorker } from 'ai-service/AIWorker';
 
 /**
  * The cluster interface.
@@ -66,7 +65,7 @@ export interface ICluster extends IClusterEventEmitter {
    * Open an AI Service.
    * @param label The label of the AI Service.
    */
-  openAIService(label: string): Promise<IAIService>;
+  openGenerativeAIContext(label: string): Promise<IGenerativeAIContext>;
 
   /**
    * Open an AI Worker.

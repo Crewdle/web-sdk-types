@@ -1,7 +1,6 @@
 import { IVectorDatabaseConnector } from '.';
-
 /**
  * The vector database connector constructor type.
- * @category Machine Learning
+ * @category AI
  */
 export type VectorDatabaseConnectorConstructor = new () => IVectorDatabaseConnector;

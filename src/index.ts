@@ -4,6 +4,4 @@ export * from './media-stream';
 export * from './object-storage';
 export * from './pubsub';
 export * from './job';
-export * from './ai-service';
-export * from './machine-learning';
-export * from './vector-database';
+export * from './ai';

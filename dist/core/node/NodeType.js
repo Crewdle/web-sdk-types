@@ -17,3 +17,4 @@ export var NodeType;
      */
     NodeType["Cloudlet"] = "cloudlet";
 })(NodeType || (NodeType = {}));
+// TODO - Review naming for agent and cloudlet

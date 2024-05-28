@@ -28,4 +28,8 @@ export interface IJobDispatcher extends IDataStream {
      * @returns All jobs.
      */
     getJobs(): IJob[];
+    /**
+     * Close the Job Dispatcher.
+     */
+    close(): void;
 }
