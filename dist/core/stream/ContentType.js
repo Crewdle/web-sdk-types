@@ -32,5 +32,9 @@ export var ContentType;
     /**
      * @ignore
      */
-    ContentType["AI"] = "ai";
+    ContentType["JobWorker"] = "jobworker";
+    /**
+     * @ignore
+     */
+    ContentType["JobDispatcher"] = "jobdispatcher";
 })(ContentType || (ContentType = {}));
