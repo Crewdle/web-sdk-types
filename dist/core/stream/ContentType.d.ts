@@ -30,9 +30,5 @@ export declare enum ContentType {
     /**
      * @ignore
      */
-    JobWorker = "jobworker",
-    /**
-     * @ignore
-     */
-    JobDispatcher = "jobdispatcher"
+    Job = "job"
 }

@@ -32,9 +32,5 @@ export var ContentType;
     /**
      * @ignore
      */
-    ContentType["JobWorker"] = "jobworker";
-    /**
-     * @ignore
-     */
-    ContentType["JobDispatcher"] = "jobdispatcher";
+    ContentType["Job"] = "job";
 })(ContentType || (ContentType = {}));
