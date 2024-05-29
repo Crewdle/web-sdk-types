@@ -96,6 +96,16 @@ export interface ICluster extends IClusterEventEmitter {
      */
     getKeyValueDatabases(strategy?: (item: IKeyValueDatabase) => boolean): IKeyValueDatabase[];
     /**
+     * Get an array of opened generative AI contexts.
+     * @param strategy The strategy to use to filter the job dispatchers.
+     */
+    getGenerativeAIContexts(strategy?: (item: IGenerativeAIContext) => boolean): IGenerativeAIContext[];
+    /**
+     * Get an array of opened generative AI workers.
+     * @param strategy The strategy to use to filter the job workers.
+     */
+    getGenerativeAIWorkers(strategy?: (item: IAIWorker) => boolean): IAIWorker[];
+    /**
      * Get an array of published local media streams.
      * @param strategy The strategy to use to filter the media streams.
      */
