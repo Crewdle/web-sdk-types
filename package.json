@@ -17,8 +17,10 @@
     "url": "https://github.com/Crewdle/web-sdk-types/issues"
   },
   "homepage": "https://github.com/Crewdle/web-sdk-types#readme",
+  "peerDependencies": {
+    "rxjs": "^7.8.1"
+  },
   "dependencies": {
-    "@types/rx": "^4.1.4"
   },
   "devDependencies": {
     "typescript": "^5.4.3"

@@ -1,4 +1,4 @@
-import { Observable } from 'rx';
+import type { Observable } from 'rxjs';
 import { IDataStream } from '../core/stream';
 import { IJob, IJobResult } from './Job';
 

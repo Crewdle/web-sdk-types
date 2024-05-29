@@ -1,8 +1,9 @@
+import { IJobDispatcher } from 'job';
 /**
  * Represents a context for a Generative AI service.
  * @category AI
  */
-export interface IGenerativeAIContext {
+export interface IGenerativeAIContext extends IJobDispatcher {
     /**
      * Prompt the Generative AI Context to start processing a prompt.
      * @param prompt The prompt to start processing.
