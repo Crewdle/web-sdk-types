@@ -28,11 +28,12 @@ export interface ICluster extends IClusterEventEmitter {
   /**
    * Open a object store bucket.
    * @param name The name of the Object Store bucket.
+   * @param syncContent Whether to sync the content of the object store.
    * @throws {@link SDKClientErrorCodes.ObjectStoreAlreadyExists} if the data stream is already open.
    * @throws {@link SDKClientErrorCodes.ObjectStoreNameNotString} if the name is not a string.
    * @returns A promise that resolves with the data stream.
    */
-  openObjectStoreBucket(name: string): Promise<IObjectStoreBucket>;
+  openObjectStoreBucket(name: string, syncContent?: boolean): Promise<IObjectStoreBucket>;
 
   /**
    * Open a key-value database.
