@@ -2,6 +2,10 @@ import type { Observable } from 'rxjs';
 import { IDataStream } from '../core/stream';
 import { IJob, IJobResult } from './Job';
 
+/**
+ * The Job Dispatcher interface.
+ * @ignore
+ */
 export interface IJobDispatcher extends IDataStream {
   /**
    * Create a new job.

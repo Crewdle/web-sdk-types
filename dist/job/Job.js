@@ -1,6 +1,7 @@
 /**
  * JobType Enum
  * Provide this to create a job with a specific type.
+ * @ignore
  */
 export var JobType;
 (function (JobType) {
@@ -10,6 +11,7 @@ export var JobType;
 /**
  * JobStatus Enum
  * Represents the status of a job.
+ * @ignore
  */
 export var JobStatus;
 (function (JobStatus) {

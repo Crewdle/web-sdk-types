@@ -1,4 +1,4 @@
-export * from './AIWorker';
+export * from './GenerativeAIWorker';
 export * from './GenerativeAIContext';
 export * from './GenerativeAIWorkerConnector';
 export * from './GenerativeAIWorkerConnectorConstructor';

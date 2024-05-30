@@ -1,6 +1,7 @@
 /**
  * IJob Interface
  * Represents a job to be executed by the JobService.
+ * @ignore
  */
 export interface IJob {
     /**
@@ -19,6 +20,7 @@ export interface IJob {
 /**
  * JobType Enum
  * Provide this to create a job with a specific type.
+ * @ignore
  */
 export declare enum JobType {
     AI = 0,
@@ -27,6 +29,7 @@ export declare enum JobType {
 /**
  * JobStatus Enum
  * Represents the status of a job.
+ * @ignore
  */
 export declare enum JobStatus {
     /**
@@ -49,6 +52,7 @@ export declare enum JobStatus {
 /**
  * Base IJobParameters Interface
  * Allows providing parameters specific to the job type.
+ * @ignore
  */
 export interface IJobParameters {
     jobType: JobType;
@@ -56,6 +60,7 @@ export interface IJobParameters {
 /**
  * IJobParametersAI Interface
  * Parameters for AI job type.
+ * @ignore
  */
 export interface IJobParametersAI extends IJobParameters {
     jobType: JobType.AI;
@@ -64,8 +69,14 @@ export interface IJobParametersAI extends IJobParameters {
 /**
  * JobParameters Type
  * Union of all job parameters interfaces.
+ * @ignore
  */
 export type JobParameters = IJobParametersAI;
+/**
+ * IJobResult Interface
+ * Represents the result of a job.
+ * @ignore
+ */
 export interface IJobResult {
     /**
      * The ID of the job.
@@ -80,8 +91,18 @@ export interface IJobResult {
      */
     result: JobResult;
 }
+/**
+ * IJobResultAI Interface
+ * Represents the result of an AI job.
+ * @ignore
+ */
 export interface IJobResultAI {
     jobType: JobType.AI;
     output: string;
 }
+/**
+ * JobResult Type
+ * Union of all job result interfaces.
+ * @ignore
+ */
 export type JobResult = IJobResultAI;
