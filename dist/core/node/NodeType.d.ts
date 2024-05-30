@@ -10,9 +10,5 @@ export declare enum NodeType {
     /**
      * The agent node type.
      */
-    Agent = "agent",
-    /**
-     * The cloudlet node type.
-     */
-    Cloudlet = "cloudlet"
+    Agent = "agent"
 }

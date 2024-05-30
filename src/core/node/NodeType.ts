@@ -12,11 +12,4 @@ export enum NodeType {
    * The agent node type.
    */
   Agent = 'agent',
-
-  /**
-   * The cloudlet node type.
-   */
-  Cloudlet = 'cloudlet',
 }
-
-// TODO - Review naming for agent and cloudlet
