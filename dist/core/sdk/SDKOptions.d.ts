@@ -2,6 +2,7 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
+import { GenerativeAIWorkerConnectorConstructor, VectorDatabaseConnectorConstructor } from '../../ai';
 /**
  * Options to configure the SDK.
  * @category Core
@@ -34,6 +35,14 @@ export interface ISDKOptions {
      * If not provided, the default peer connection connector is WebRTC in browser.
      */
     peerConnectionConnector?: PeerConnectionConnectorConstructor;
+    /**
+     * The custom generative AI worker connector to use for generative AI tasks.
+     */
+    generativeAIWorkerConnector?: GenerativeAIWorkerConnectorConstructor;
+    /**
+     * The custom vector database connector to use for vector database tasks.
+     */
+    vectorDatabaseConnector?: VectorDatabaseConnectorConstructor;
     /**
      * The maximum number of outgoing subscriptions.
      */

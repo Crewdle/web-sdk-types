@@ -11,5 +11,5 @@ export enum NodeType {
   /**
    * The agent node type.
    */
-  Agent = 'agent'
+  Agent = 'agent',
 }

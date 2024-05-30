@@ -1,4 +1,5 @@
 import { IClusterEventEmitter } from '.';
+import { IGenerativeAIContext, IGenerativeAIWorker } from '../../ai';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
 import { IObjectStoreBucket } from '../../object-storage';
@@ -40,6 +41,16 @@ export interface ICluster extends IClusterEventEmitter {
      */
     openKeyValueDatabase(name: string, layout: IDatabaseLayout | ILayoutBuilder): Promise<IKeyValueDatabase>;
     /**
+     * Open a generative AI context.
+     * @param label The label of the generative AI context.
+     */
+    openGenerativeAIContext(label: string): Promise<IGenerativeAIContext>;
+    /**
+     * Open a generative AI worker.
+     * @param label The label of the generative AI Worker.
+     */
+    openGenerativeAIWorker(label: string): Promise<IGenerativeAIWorker>;
+    /**
      * Publish a local media stream.
      * @param label The label of the media stream.
      * @param mediaSource The media source to publish.
@@ -70,6 +81,16 @@ export interface ICluster extends IClusterEventEmitter {
      * @param strategy The strategy to use to filter the key-value databases.
      */
     getKeyValueDatabases(strategy?: (item: IKeyValueDatabase) => boolean): IKeyValueDatabase[];
+    /**
+     * Get an array of opened generative AI contexts.
+     * @param strategy The strategy to use to filter the job dispatchers.
+     */
+    getGenerativeAIContexts(strategy?: (item: IGenerativeAIContext) => boolean): IGenerativeAIContext[];
+    /**
+     * Get an array of opened generative AI workers.
+     * @param strategy The strategy to use to filter the job workers.
+     */
+    getGenerativeAIWorkers(strategy?: (item: IGenerativeAIWorker) => boolean): IGenerativeAIWorker[];
     /**
      * Get an array of published local media streams.
      * @param strategy The strategy to use to filter the media streams.

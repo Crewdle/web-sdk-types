@@ -8,5 +8,6 @@ export { IFolderDeleteEvent } from './FolderDeleteEvent';
 export { IFolderMoveEvent } from './FolderMoveEvent';
 export { IObjectDeleteEventPayload } from './ObjectDeleteEventPayload';
 export { IObjectMoveEventPayload } from './ObjectMoveEventPayload';
+export { ISyncCompleteEvent } from './SyncCompleteEvent';
 export { StorageEvent } from './StorageEvent';
 export { StorageEventType } from './StorageEventType';

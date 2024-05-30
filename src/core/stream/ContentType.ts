@@ -27,5 +27,9 @@ export enum ContentType {
   /**
    * @ignore
    */
-  KeyValueDatabase = 'keyvaluedatabase'
+  KeyValueDatabase = 'keyvaluedatabase',
+  /**
+   * @ignore
+   */
+  Job = 'job',
 }
