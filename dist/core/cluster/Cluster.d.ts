@@ -1,7 +1,5 @@
 import { IClusterEventEmitter } from '.';
 import { IGenerativeAIContext, IAIWorker } from '../../ai';
-import { IJobDispatcher } from '../../job/JobDispatcher';
-import { IJobWorker } from '../../job/JobWorker';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
 import { IObjectStoreBucket } from '../../object-storage';
@@ -42,18 +40,6 @@ export interface ICluster extends IClusterEventEmitter {
      * @returns A promise that resolves with the key-value database.
      */
     openKeyValueDatabase(name: string, layout: IDatabaseLayout | ILayoutBuilder): Promise<IKeyValueDatabase>;
-    /**
-     * Open a Job Dispatcher.
-     * @param label The label of the Job Service.
-     * @returns The Job Dispatcher.
-     */
-    openJobDispatcher(label: string): Promise<IJobDispatcher>;
-    /**
-     * Open a Job Worker.
-     * @param label The label of the Job Worker.
-     * @returns The Job Worker.
-     */
-    openJobWorker(label: string): Promise<IJobWorker>;
     /**
      * Open a generative AI context.
      * @param label The label of the generative AI context.
