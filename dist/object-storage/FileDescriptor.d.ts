@@ -28,4 +28,8 @@ export interface IFileDescriptor {
      * The path name of the file (a combination of the path and the name).
      */
     pathName: string;
+    /**
+     * The absolute path name of the file (a combination of the path and the name).
+     */
+    absolutePathName?: string;
 }

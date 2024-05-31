@@ -26,6 +26,11 @@ export interface IFolderDescriptor {
   pathName: string;
 
   /**
+   * The absolute path name of the folder (a combination of the path and the name).
+   */
+  absolutePathName?: string;
+
+  /**
    * The folder entries.
    */
   entries?: ObjectDescriptor[];
