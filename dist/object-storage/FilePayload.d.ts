@@ -16,4 +16,8 @@ export interface IFilePayload {
      * The path of the file.
      */
     path?: string;
+    /**
+     * The flag to skip encryption.
+     */
+    skipEncryption?: boolean;
 }

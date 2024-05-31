@@ -27,8 +27,9 @@ export interface IObjectStoreConnector {
      * Writes a file.
      * @param file The file to write.
      * @param path The path to write the file to.
+     * @param skipEncryption Whether to skip encryption.
      */
-    writeFile(file: File, path?: string): Promise<void>;
+    writeFile(file: File, path?: string, skipEncryption?: boolean): Promise<void>;
     /**
      * Moves an object.
      * @param path The path to the object.
