@@ -1,6 +1,7 @@
 import { IDataStream } from '../core/stream';
 import { ObjectDescriptor, Payload } from '.';
 import { StorageEvent } from './event';
+import { IObjectStoreListOptions } from './ObjectStoreListOptions';
 /**
  * The object store bucket interface.
  * @category Object Storage
@@ -51,5 +52,5 @@ export interface IObjectStoreBucket extends IDataStream {
      * @param recursive Whether to list the objects and folders recursively.
      * @returns The list of objects and folders.
      */
-    list(path: string, recursive?: boolean): Promise<ObjectDescriptor[]>;
+    list(path: string, options?: IObjectStoreListOptions): Promise<ObjectDescriptor[]>;
 }

@@ -1,4 +1,5 @@
 export * from './event';
+export { FileStatus } from './FileStatus';
 export { IFileDescriptor } from './FileDescriptor';
 export { IFilePayload } from './FilePayload';
 export { IFolderDescriptor } from './FolderDescriptor';
@@ -9,6 +10,7 @@ export { ObjectKind } from './ObjectKind';
 export { IObjectStoreBucket } from './ObjectStoreBucket';
 export { IObjectStoreBucketOptions } from './ObjectStoreBucketOptions';
 export { IObjectStoreConnector } from './ObjectStoreConnector';
+export { IObjectStoreListOptions } from './ObjectStoreListOptions';
 export { ObjectStoreConnectorConstructor } from './ObjectStoreConnectorConstructor';
 export { Payload } from './Payload';
 export { PayloadAction } from './PayloadAction';

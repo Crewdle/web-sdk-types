@@ -1,4 +1,5 @@
-import { ObjectKind } from '.';
+import { ObjectKind } from './';
+import { FileStatus } from './FileStatus';
 
 /**
  * The file descriptor interface.
@@ -41,7 +42,8 @@ export interface IFileDescriptor {
   absolutePathName?: string;
 
   /**
-   * Is the content of the file synced with the object store?
+   * The status of the file.
+   *
    */
-  isSynced?: boolean;
+  status: FileStatus;
 }
