@@ -8,6 +8,7 @@ export { IMovePayload } from './MovePayload';
 export { ObjectDescriptor } from './ObjectDescriptor';
 export { ObjectKind } from './ObjectKind';
 export { IObjectStoreBucket } from './ObjectStoreBucket';
+export { IObjectStoreBucketOptions } from './ObjectStoreBucketOptions';
 export { IObjectStoreConnector } from './ObjectStoreConnector';
 export { ObjectStoreConnectorConstructor } from './ObjectStoreConnectorConstructor';
 export { Payload } from './Payload';
