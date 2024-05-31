@@ -1,4 +1,4 @@
-import { ObjectDescriptor, ObjectKind } from '.';
+import { IFileDescriptor, IFolderDescriptor, ObjectDescriptor, ObjectKind } from '.';
 
 /**
  * The object store connector interface.
@@ -25,7 +25,7 @@ export interface IObjectStoreConnector {
    * @param path The path to the folder.
    * @returns A promise that resolves when the folder is created.
    */
-  createFolder(path: string): Promise<void>;
+  createFolder(path: string): Promise<IFolderDescriptor>;
 
   /**
    * Writes a file.
@@ -33,7 +33,7 @@ export interface IObjectStoreConnector {
    * @param path The path to write the file to.
    * @param skipEncryption Whether to skip encryption.
    */
-  writeFile(file: File, path?: string, skipEncryption?: boolean): Promise<void>;
+  writeFile(file: File, path?: string, skipEncryption?: boolean): Promise<IFileDescriptor>;
 
   /**
    * Moves an object.
