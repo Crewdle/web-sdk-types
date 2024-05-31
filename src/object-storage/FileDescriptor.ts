@@ -39,4 +39,9 @@ export interface IFileDescriptor {
    * The absolute path name of the file (a combination of the path and the name).
    */
   absolutePathName?: string;
+
+  /**
+   * Is the content of the file synced with the object store?
+   */
+  isSynced?: boolean;
 }
