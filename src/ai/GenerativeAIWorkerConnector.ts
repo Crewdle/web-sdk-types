@@ -9,6 +9,7 @@ export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector {
    * Initialize the machine learning model.
    * @param llmModel The path to the LLM model.
    * @param similarityModel The path to the similarity model.
+   * @returns A promise that resolves when the model has been initialized.
    */
   initialize(llmModel?: string, similarityModel?: string): Promise<void>;
 
