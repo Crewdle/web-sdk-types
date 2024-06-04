@@ -2,7 +2,7 @@ import { IClusterEventEmitter } from '.';
 import { IGenerativeAIContext, IGenerativeAIWorker } from '../../ai';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
-import { IObjectStoreBucket } from '../../object-storage';
+import { IObjectStoreBucket, IObjectStoreBucketOptions } from '../../object-storage';
 import { IPubSubTopic } from '../../pubsub';
 import { LocalNode, Node } from '../node';
 
@@ -28,11 +28,12 @@ export interface ICluster extends IClusterEventEmitter {
   /**
    * Open a object store bucket.
    * @param name The name of the Object Store bucket.
+   * @param syncContent Whether to sync the content of the object store.
    * @throws {@link SDKClientErrorCodes.ObjectStoreAlreadyExists} if the data stream is already open.
    * @throws {@link SDKClientErrorCodes.ObjectStoreNameNotString} if the name is not a string.
    * @returns A promise that resolves with the data stream.
    */
-  openObjectStoreBucket(name: string): Promise<IObjectStoreBucket>;
+  openObjectStoreBucket(name: string, options?: IObjectStoreBucketOptions): Promise<IObjectStoreBucket>;
 
   /**
    * Open a key-value database.

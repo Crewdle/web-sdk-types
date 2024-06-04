@@ -1,4 +1,5 @@
-import { ObjectKind } from '.';
+import { ObjectKind } from './';
+import { FileStatus } from './FileStatus';
 
 /**
  * The file descriptor interface.
@@ -34,4 +35,15 @@ export interface IFileDescriptor {
    * The path name of the file (a combination of the path and the name).
    */
   pathName: string;
+
+  /**
+   * The absolute path name of the file (a combination of the path and the name).
+   */
+  absolutePathName?: string;
+
+  /**
+   * The status of the file.
+   *
+   */
+  status: FileStatus;
 }
