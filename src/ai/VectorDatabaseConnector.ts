@@ -15,4 +15,10 @@ export interface IVectorDatabaseConnector {
    * @param vectors The vectors to insert.
    */
   insert(vectors: number[][]): void;
+
+  /**
+   * Remove vectors from the database.
+   * @param ids The IDs of the vectors to remove.
+   */
+  remove(ids: number[]): void;
 }

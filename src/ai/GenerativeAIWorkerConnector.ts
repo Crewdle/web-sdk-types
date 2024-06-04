@@ -14,10 +14,17 @@ export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector {
 
   /**
    * Add content to the machine learning model.
+   * @param name The name of the content.
    * @param content The content to add.
    * @returns A promise that resolves when the content has been added.
    */
-  addContent(content: string): Promise<void>;
+  addContent(name: string, content: string): Promise<void>;
+
+  /**
+   * Remove content from the machine learning model.
+   * @param name The name of the content.
+   */
+  removeContent(name: string): void
 
   /**
    * Process a job.
