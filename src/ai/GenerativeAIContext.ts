@@ -8,7 +8,7 @@ export interface IGenerativeAIContext {
    * @param prompt The prompt to start processing.
    * @returns The response from the AI service.
    */
-  prompt(prompt: string): Promise<string>;
+  prompt(prompt: string): AsyncGenerator<string>;
 
   /**
    * Close the Generative AI Context.
