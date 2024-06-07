@@ -18,17 +18,21 @@ export var JobStatus;
     /**
      * The job is pending.
      */
-    JobStatus["Pending"] = "Pending";
+    JobStatus["Pending"] = "pending";
     /**
      * The job is processing.
      */
-    JobStatus["Processing"] = "Processing";
+    JobStatus["Processing"] = "processing";
+    /**
+     * The job has partial results.
+     */
+    JobStatus["Partial"] = "partial";
     /**
      * The job is completed.
      */
-    JobStatus["Completed"] = "Completed";
+    JobStatus["Completed"] = "completed";
     /**
      * The job has failed.
      */
-    JobStatus["Failed"] = "Failed";
+    JobStatus["Failed"] = "failed";
 })(JobStatus || (JobStatus = {}));

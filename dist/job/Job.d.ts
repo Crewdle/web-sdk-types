@@ -35,19 +35,23 @@ export declare enum JobStatus {
     /**
      * The job is pending.
      */
-    Pending = "Pending",
+    Pending = "pending",
     /**
      * The job is processing.
      */
-    Processing = "Processing",
+    Processing = "processing",
+    /**
+     * The job has partial results.
+     */
+    Partial = "partial",
     /**
      * The job is completed.
      */
-    Completed = "Completed",
+    Completed = "completed",
     /**
      * The job has failed.
      */
-    Failed = "Failed"
+    Failed = "failed"
 }
 /**
  * Base IJobParameters Interface
@@ -99,6 +103,7 @@ export interface IJobResult {
 export interface IJobResultAI {
     jobType: JobType.AI;
     output: string;
+    index?: number;
 }
 /**
  * JobResult Type
