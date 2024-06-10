@@ -1,12 +1,18 @@
 /**
  * JobType Enum
- * Provide this to create a job with a specific type.
+ * Represents the type of a job.
  * @ignore
  */
 export var JobType;
 (function (JobType) {
-    JobType[JobType["AI"] = 0] = "AI";
-    JobType[JobType["Other"] = 1] = "Other";
+    /**
+     * The job is expected to return a Promise with a result.
+     */
+    JobType["Job"] = "job";
+    /**
+     * The job is expected to return a stream iterator with results.
+     */
+    JobType["JobStream"] = "job-stream";
 })(JobType || (JobType = {}));
 /**
  * JobStatus Enum

@@ -4,11 +4,17 @@
  */
 export interface IGenerativeAIContext {
     /**
-     * Prompt the Generative AI Context to start processing a prompt.
+     * Stream the response from the AI service.
      * @param prompt The prompt to start processing.
-     * @returns The response from the AI service.
+     * @returns An async generator that yields the response.
      */
-    prompt(prompt: string): AsyncGenerator<string>;
+    stream(prompt: string): AsyncGenerator<string>;
+    /**
+     * Process the response from the AI service.
+     * @param prompt The prompt to start processing.
+     * @returns A promise that resolves with the response.
+     */
+    prompt(prompt: string): Promise<string>;
     /**
      * Close the Generative AI Context.
      */
