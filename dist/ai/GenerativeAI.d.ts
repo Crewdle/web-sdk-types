@@ -27,6 +27,20 @@ export interface IPromptHistory {
      */
     message: string;
 }
+export interface IPromptOptions {
+    /**
+     * The instructions for the AI job.
+     */
+    instructions?: string;
+    /**
+     * Whether to use RAG for the AI job.
+     */
+    useRAG?: boolean;
+    /**
+     * The context for the AI job.
+     */
+    context?: IPromptHistory[];
+}
 /**
  * The AI job parameters Interface
  * Parameters for AI job type.
