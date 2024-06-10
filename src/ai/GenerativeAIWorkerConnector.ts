@@ -1,10 +1,11 @@
-import { IJob, IJobWorkerConnector, IJobResult } from '../job';
+import { IJobRequest, IJobWorkerConnector, JobResponse } from '../job';
+import { IJobParametersAI, IJobResultAI } from './GenerativeAI';
 
 /**
  * The generative AI worker connector interface.
  * @category Connector
  */
-export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector {
+export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<IJobParametersAI, IJobResultAI> {
   /**
    * Initialize the machine learning model.
    * @param llmModel The path to the LLM model.
@@ -30,7 +31,14 @@ export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector {
   /**
    * Process a job.
    * @param job The job to process.
+   * @returns A promise that resolves with the job result.
+   */
+  processJob(job: IJobRequest<IJobParametersAI>): Promise<JobResponse<IJobResultAI>>;
+
+  /**
+   * Stream a job.
+   * @param job The job to stream.
    * @returns An async generator that yields the job result.
    */
-  processJob(job: IJob): AsyncGenerator<IJobResult>;
+  processJobStream(job: IJobRequest<IJobParametersAI>): AsyncGenerator<JobResponse<IJobResultAI>>;
 }

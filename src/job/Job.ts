@@ -1,9 +1,16 @@
 /**
- * IJob Interface
+ * Base IJobParameters Interface
+ * Allows providing parameters specific to the job type.
+ * @ignore
+ */
+export interface IJobParameters {}
+
+/**
+ * Job request Interface
  * Represents a job to be executed by the JobService.
  * @ignore
  */
-export interface IJob {
+export interface IJobRequest<T extends IJobParameters> {
   /**
    * The ID of the job.
    */
@@ -12,22 +19,34 @@ export interface IJob {
   /**
    * The parameters of the job.
    */
-  parameters: JobParameters;
+  parameters: T;
 
   /**
   * The status of the job.
   */
   status?: JobStatus;
+
+  /**
+   * The type of the job.
+   */
+  jobType: JobType;
 }
 
 /**
  * JobType Enum
- * Provide this to create a job with a specific type.
+ * Represents the type of a job.
  * @ignore
  */
 export enum JobType {
-  AI,
-  Other,
+  /**
+   * The job is expected to return a Promise with a result.
+   */
+  Job = 'job',
+
+  /**
+   * The job is expected to return a stream iterator with results.
+   */
+  JobStream = 'job-stream',
 }
 
 /**
@@ -63,68 +82,59 @@ export enum JobStatus {
 }
 
 /**
- * Base IJobParameters Interface
- * Allows providing parameters specific to the job type.
- * @ignore
- */
-export interface IJobParameters {
-  jobType: JobType;
-}
-
-/**
- * IJobParametersAI Interface
- * Parameters for AI job type.
- * @ignore
- */
-export interface IJobParametersAI extends IJobParameters {
-  jobType: JobType.AI;
-  prompt: string;
-}
-
-/**
- * JobParameters Type
- * Union of all job parameters interfaces.
- * @ignore
- */
-export type JobParameters = IJobParametersAI;
-
-/**
- * IJobResult Interface
+ * Base job result Interface
  * Represents the result of a job.
  * @ignore
  */
-export interface IJobResult {
+export interface IJobResult {}
+
+/**
+ * Job response Interface
+ * Represents the response from a job.
+ * @ignore
+ */
+export interface IJobResultResponse<T extends IJobResult> {
   /**
    * The ID of the job.
    */
   id: string;
 
   /**
-   * The status of the job result.
+   * The status of the job.
    */
-  status: JobStatus;
+  status: JobStatus.Partial | JobStatus.Completed;
 
   /**
    * The result of the job.
    */
-  result: JobResult;
+  result: T;
 }
 
 /**
- * IJobResultAI Interface
- * Represents the result of an AI job.
+ * Job failed response Interface
+ * Represents a failed job response.
  * @ignore
  */
-export interface IJobResultAI {
-  jobType: JobType.AI;
-  output: string;
-  index?: number;
+export interface IJobFailedResponse {
+  /**
+   * The ID of the job.
+   */
+  id: string;
+
+  /**
+   * The status of the job.
+   */
+  status: JobStatus.Failed;
+
+  /**
+   * The error message.
+   */
+  message: string;
 }
 
 /**
- * JobResult Type
- * Union of all job result interfaces.
+ * Job response type
+ * Represents the response type from a job.
  * @ignore
  */
-export type JobResult = IJobResultAI;
-
+export type JobResponse<T extends IJobResult> = IJobResultResponse<T> | IJobFailedResponse;
