@@ -62,4 +62,11 @@ export interface IObjectStoreBucket extends IDataStream {
    * @returns The list of objects and folders.
    */
   list(path: string, options?: IObjectStoreListOptions): Promise<ObjectDescriptor[]>;
+
+  /**
+   * Get the storage size of the bucket.
+   * @param path Optionnally takes a path to get the size of a specific object or folder.
+   * @returns The storage size.
+   */
+  getSize(path?: string): Promise<number>;
 }
