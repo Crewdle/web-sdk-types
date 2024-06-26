@@ -1,4 +1,4 @@
-import { IPromptOptions } from '.';
+import { IPromptOptions, IPromptResult } from '.';
 
 /**
  * Represents a context for a Generative AI service.
@@ -10,14 +10,14 @@ export interface IGenerativeAIContext {
    * @param prompt The prompt to start processing.
    * @returns An async generator that yields the response.
    */
-  stream(prompt: string, options?: IPromptOptions): AsyncGenerator<string>;
+  stream(prompt: string, options?: IPromptOptions): AsyncGenerator<IPromptResult>;
 
   /**
    * Process the response from the AI service.
    * @param prompt The prompt to start processing.
    * @returns A promise that resolves with the response.
    */
-  prompt(prompt: string, options?: IPromptOptions): Promise<string>;
+  prompt(prompt: string, options?: IPromptOptions): Promise<IPromptResult>;
 
   /**
    * Close the Generative AI Context.
