@@ -44,29 +44,29 @@ export interface IPromptOptions {
     /**
      * The context for the AI job.
      */
-    context?: IPromptHistory[];
+    history?: IPromptHistory[];
     /**
      * The maximum number of tokens to generate.
      */
     maxTokens?: number;
     /**
-     * The temperature.
+     * The temperature for the LLM.
      */
     temperature?: number;
     /**
-     * The number of contents to include in the context.
+     * The maximum number of contents to include in the context.
      */
     maxContents?: number;
     /**
-     * The number of sentences to include in one content.
+     * The number of chunks to include in one content.
      */
-    maxSentences?: number;
+    maxChunks?: number;
     /**
-     * The maximum number of contents to include in the context.
+     * The starting index of the RAG for search.
      */
     ragStartingIndex?: number;
     /**
-     * The minimum relevance of the RAG.
+     * The minimum relevance of the RAG contents.
      */
     minRelevance?: number;
 }
