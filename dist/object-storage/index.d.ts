@@ -14,3 +14,4 @@ export { IObjectStoreListOptions } from './ObjectStoreListOptions';
 export { ObjectStoreConnectorConstructor } from './ObjectStoreConnectorConstructor';
 export { Payload } from './Payload';
 export { PayloadAction } from './PayloadAction';
+export { IWritableStream } from './WritableStream';
