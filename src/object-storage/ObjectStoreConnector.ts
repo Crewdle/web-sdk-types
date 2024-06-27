@@ -41,7 +41,7 @@ export interface IObjectStoreConnector {
    * @param path The path to the file.
    * @returns A promise that resolves with an {@link IWritableStream | IWritableStream }.
    */
-  createWritableStream(path: string): Promise<IWritableStream>;
+  createWritableStream(pathName: string): Promise<IWritableStream>;
 
   /**
    * Moves an object.
