@@ -2,6 +2,7 @@ export * from './event';
 export { FileStatus } from './FileStatus';
 export { IFileDescriptor } from './FileDescriptor';
 export { IFilePayload } from './FilePayload';
+export { IFileWriteOptions } from './FileWriteOptions';
 export { IFolderDescriptor } from './FolderDescriptor';
 export { IFolderPayload } from './FolderPayload';
 export { IMovePayload } from './MovePayload';
