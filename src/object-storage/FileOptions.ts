@@ -1,7 +1,7 @@
 /**
  * Represents the options for writing a file.
  */
-export interface IFileWriteOptions {
+export interface IFileOptions {
   /**
    * Specifies whether encryption should be skipped for the file.
    */

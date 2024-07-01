@@ -1,9 +1,10 @@
 export * from './event';
 
+export { IFile } from './File';
 export { FileStatus } from './FileStatus';
 export { IFileDescriptor } from './FileDescriptor';
 export { IFilePayload } from './FilePayload';
-export { IFileWriteOptions } from './FileWriteOptions';
+export { IFileOptions } from './FileOptions';
 export { IFolderDescriptor } from './FolderDescriptor';
 export { IFolderPayload } from './FolderPayload';
 export { IMovePayload } from './MovePayload';
@@ -16,4 +17,5 @@ export { IObjectStoreListOptions } from './ObjectStoreListOptions';
 export { ObjectStoreConnectorConstructor } from './ObjectStoreConnectorConstructor';
 export { Payload } from './Payload';
 export { PayloadAction } from './PayloadAction';
+export { IReadableStream } from './ReadableStream';
 export { IWritableStream } from './WritableStream';
