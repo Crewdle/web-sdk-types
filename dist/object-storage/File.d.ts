@@ -1,6 +1,7 @@
-import { IReadableStream } from "./ReadableStream";
+import { IReadableStream } from './ReadableStream';
 /**
  * Represents a file in the object storage.
+ * @category Object Storage
  */
 export interface IFile {
     /**

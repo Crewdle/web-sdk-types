@@ -5,7 +5,6 @@ import { GenerativeAIModelType } from './GenerativeAIModelType';
  * Represents a context for a Generative AI service.
  * @category AI
  */
-
 export interface IGenerativeAIContext {
   /**
    * Stream the response from the AI service.

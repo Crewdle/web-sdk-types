@@ -1,5 +1,6 @@
 /**
  * Represents a readable stream that provides a way to read data asynchronously.
+ * @category Object Storage
  */
 export interface IReadableStream {
     /**

@@ -1,5 +1,6 @@
 /**
  * Represents the types of generative AI models.
+ * @category AI
  */
 export var GenerativeAIModelType;
 (function (GenerativeAIModelType) {

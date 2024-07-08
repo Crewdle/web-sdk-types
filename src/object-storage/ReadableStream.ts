@@ -1,7 +1,6 @@
-// Define an interface for a generic readable stream that can be implemented for both Node.js and browser environments
-
 /**
  * Represents a readable stream that provides a way to read data asynchronously.
+ * @category Object Storage
  */
 export interface IReadableStream {
   /**

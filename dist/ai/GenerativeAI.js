@@ -1,5 +1,6 @@
 /**
  * The AI prompt source Enum
+ * @category AI
  */
 export var PromptSource;
 (function (PromptSource) {

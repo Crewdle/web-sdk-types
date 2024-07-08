@@ -1,5 +1,6 @@
 /**
  * File status enum
+ * @category Object Storage
  */
 export var FileStatus;
 (function (FileStatus) {

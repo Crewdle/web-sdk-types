@@ -1,5 +1,6 @@
 /**
- * Represents the options for writing a file.
+ * Represents the options for reading or writing a file.
+ * @category Object Storage
  */
 export interface IFileOptions {
   /**

@@ -1,5 +1,6 @@
 /**
  * Represents a writable stream.
+ * @category Object Storage
  */
 export interface IWritableStream {
   /**
