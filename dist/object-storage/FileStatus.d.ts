@@ -1,5 +1,6 @@
 /**
  * File status enum
+ * @category Object Storage
  */
 export declare enum FileStatus {
     /**

@@ -1,6 +1,7 @@
 import { IJobParameters, IJobResult } from '../job';
 /**
  * The AI prompt source Enum
+ * @category AI
  */
 export declare enum PromptSource {
     /**
@@ -15,7 +16,7 @@ export declare enum PromptSource {
 /**
  * The AI prompt history Interface
  * Represents the history of a prompt.
- * @ignore
+ * @category AI
  */
 export interface IPromptHistory {
     /**
@@ -30,7 +31,7 @@ export interface IPromptHistory {
 /**
  * The AI prompt options Interface
  * Represents the options for an AI prompt.
- * @ignore
+ * @category AI
  */
 export interface IPromptOptions {
     /**
@@ -73,7 +74,7 @@ export interface IPromptOptions {
 /**
  * The AI prompt result Interface
  * Represents the result of an AI prompt.
- * @ignore
+ * @category AI
  */
 export interface IPromptResult {
     /**
@@ -96,7 +97,7 @@ export interface IPromptResult {
 /**
  * The AI job parameters Interface
  * Parameters for AI job type.
- * @ignore
+ * @category AI
  */
 export interface IJobParametersAI extends IJobParameters, IPromptOptions {
     /**
@@ -107,7 +108,7 @@ export interface IJobParametersAI extends IJobParameters, IPromptOptions {
 /**
  * The AI job result Interface
  * Represents the result of an AI job.
- * @ignore
+ * @category AI
  */
 export interface IJobResultAI extends IJobResult, IPromptResult {
     /**

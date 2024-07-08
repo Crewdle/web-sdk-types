@@ -1,5 +1,5 @@
 import { IDataStream } from '../core/stream';
-import { ObjectDescriptor, Payload } from '.';
+import { IFile, IFileOptions, ObjectDescriptor, Payload } from '.';
 import { StorageEvent } from './event';
 import { IObjectStoreListOptions } from './ObjectStoreListOptions';
 /**
@@ -43,9 +43,10 @@ export interface IObjectStoreBucket extends IDataStream {
     /**
      * Get an object from the bucket.
      * @param path The path of the object.
+     * @param options The optional options for getting the object.
      * @returns The object.
      */
-    get(path: string): Promise<File>;
+    get(path: string, options?: IFileOptions): Promise<IFile>;
     /**
      * List the objects and folders of the bucket.
      * @param path The path of the folder.

@@ -1,5 +1,9 @@
 import { StorageEventType } from '.';
 
+/**
+ * The sync complete event.
+ * @category Object Storage
+ */
 export interface ISyncCompleteEvent {
   /**
    * The event type.

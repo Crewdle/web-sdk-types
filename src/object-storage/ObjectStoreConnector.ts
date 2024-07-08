@@ -1,16 +1,17 @@
-import { IFileDescriptor, IFolderDescriptor, ObjectDescriptor, ObjectKind } from '.';
+import { IFileDescriptor, IFolderDescriptor, IWritableStream, ObjectDescriptor, ObjectKind, IFileOptions, IFile } from '.';
 
 /**
- * The object store connector interface.
+ * Represents a connector for interacting with an object store.
  * @category Connector
  */
 export interface IObjectStoreConnector {
   /**
    * Gets a file.
    * @param path The path to the file.
+   * @param options The options for writing the file.
    * @returns A promise that resolves with the file.
    */
-  get(path: string): Promise<File>;
+  get(path: string, options?: IFileOptions): Promise<IFile>;
 
   /**
    * Lists the objects in a folder.
@@ -31,10 +32,18 @@ export interface IObjectStoreConnector {
    * Writes a file.
    * @param file The file to write.
    * @param path The path to write the file to.
-   * @param skipEncryption Whether to skip encryption.
+   * @param options The options for writing the file.
    * @returns A promise that resolves with the file descriptor.
    */
-  writeFile(file: File, path?: string, skipEncryption?: boolean): Promise<IFileDescriptor>;
+  writeFile(file: File, path?: string, options?: IFileOptions): Promise<IFileDescriptor>;
+
+  /**
+   * Creates a writable stream for a file.
+   * @param path The path to the file.
+   * @param options The options for creating the writable stream.
+   * @returns A promise that resolves with an {@link IWritableStream}.
+   */
+  createWritableStream(path: string, options?: IFileOptions): Promise<IWritableStream>;
 
   /**
    * Moves an object.
