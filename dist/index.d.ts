@@ -5,3 +5,4 @@ export * from './object-storage';
 export * from './pubsub';
 export * from './job';
 export * from './ai';
+export * from './vector-database';

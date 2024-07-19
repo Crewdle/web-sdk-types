@@ -9,17 +9,24 @@ export interface IVectorDatabaseConnector {
      * @param k The number of nearest vectors to return.
      * @param minRelevance The minimum relevance of the vectors.
      * @param startingIndex The starting index of the vectors.
-     * @returns The labels of the k nearest vectors.
+     * @returns The content of the k nearest vectors.
      */
-    search(vector: number[], k: number, minRelevance?: number, startingIndex?: number): number[];
+    search(vector: number[], k: number, minRelevance?: number, startingIndex?: number): string[];
     /**
      * Insert vectors into the database.
+     * @param name The name of the content.
+     * @param content The content of the vectors.
      * @param vectors The vectors to insert.
      */
-    insert(vectors: number[][]): void;
+    insert(name: string, content: string[], vectors: number[][]): void;
     /**
      * Remove vectors from the database.
-     * @param ids The IDs of the vectors to remove.
+     * @param name The name of the content.
      */
-    remove(ids: number[]): void;
+    remove(name: string): void;
+    /**
+     * Get the content of the database.
+     * @returns The content of the database.
+     */
+    getBuffer(): ArrayBuffer;
 }

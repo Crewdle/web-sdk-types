@@ -86,6 +86,16 @@ export interface IPromptOptions {
 }
 
 /**
+ * The AI prompt type text
+ */
+export type PromptTypeText = string | string[];
+
+/**
+ * The AI prompt type vector
+ */
+export type PromptTypeVector = number[];
+
+/**
  * The AI prompt result Interface
  * Represents the result of an AI prompt.
  * @category AI
@@ -94,7 +104,7 @@ export interface IPromptResult {
   /**
    * The output of the AI job.
    */
-  output: string;
+  output: PromptTypeText | PromptTypeVector;
 
   /**
    * The tokens used by the AI job.

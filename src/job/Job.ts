@@ -1,14 +1,14 @@
 /**
  * Base IJobParameters Interface
  * Allows providing parameters specific to the job type.
- * @ignore
+ * @category Job
  */
 export interface IJobParameters {}
 
 /**
  * Job request Interface
  * Represents a job to be executed by the JobService.
- * @ignore
+ * @category Job
  */
 export interface IJobRequest<T extends IJobParameters> {
   /**
@@ -35,7 +35,7 @@ export interface IJobRequest<T extends IJobParameters> {
 /**
  * JobType Enum
  * Represents the type of a job.
- * @ignore
+ * @category Job
  */
 export enum JobType {
   /**
@@ -52,7 +52,7 @@ export enum JobType {
 /**
  * JobStatus Enum
  * Represents the status of a job.
- * @ignore
+ * @category Job
  */
 export enum JobStatus {
   /**
@@ -84,14 +84,14 @@ export enum JobStatus {
 /**
  * Base job result Interface
  * Represents the result of a job.
- * @ignore
+ * @category Job
  */
 export interface IJobResult {}
 
 /**
  * Job response Interface
  * Represents the response from a job.
- * @ignore
+ * @category Job
  */
 export interface IJobResultResponse<T extends IJobResult> {
   /**
@@ -113,7 +113,7 @@ export interface IJobResultResponse<T extends IJobResult> {
 /**
  * Job failed response Interface
  * Represents a failed job response.
- * @ignore
+ * @category Job
  */
 export interface IJobFailedResponse {
   /**
@@ -135,6 +135,6 @@ export interface IJobFailedResponse {
 /**
  * Job response type
  * Represents the response type from a job.
- * @ignore
+ * @category Job
  */
 export type JobResponse<T extends IJobResult> = IJobResultResponse<T> | IJobFailedResponse;

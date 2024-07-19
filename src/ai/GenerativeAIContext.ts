@@ -1,5 +1,4 @@
 import { IPromptOptions, IPromptResult } from '.';
-import { GenerativeAIModelType } from './GenerativeAIModelType';
 
 /**
  * Represents a context for a Generative AI service.
@@ -21,20 +20,6 @@ export interface IGenerativeAIContext {
    * @returns A promise that resolves with the response.
    */
   prompt(prompt: string, options?: IPromptOptions): Promise<IPromptResult>;
-
-  /**
-   * Upload a model to the AI service.
-   * @param model The model file to upload.
-   * @returns A promise that resolves when the model is uploaded.
-   */
-  uploadModel(model: File, type?: GenerativeAIModelType): Promise<void>;
-
-  /**
-   * Delete a model from the AI service.
-   * @param modelId The optional ID of the model to delete.
-   * @returns A promise that resolves when the model is deleted.
-   */
-  deleteModel(modelId?: string): Promise<void>;
 
   /**
    * Close the Generative AI Context.

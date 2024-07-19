@@ -4,6 +4,7 @@ import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-va
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
 import { IObjectStoreBucket, IObjectStoreBucketOptions } from '../../object-storage';
 import { IPubSubTopic } from '../../pubsub';
+import { IVectorDatabase } from '../../vector-database';
 import { LocalNode, Node } from '../node';
 /**
  * The cluster interface.
@@ -51,6 +52,11 @@ export interface ICluster extends IClusterEventEmitter {
      * @param label The label of the generative AI Worker.
      */
     openGenerativeAIWorker(label: string): Promise<IGenerativeAIWorker>;
+    /**
+     * Open a vector database.
+     * @param label The label of the vector database.
+     */
+    openVectorDatabase(label: string): IVectorDatabase;
     /**
      * Publish a local media stream.
      * @param label The label of the media stream.
@@ -102,6 +108,11 @@ export interface ICluster extends IClusterEventEmitter {
      * @param strategy The strategy to use to filter the media streams.
      */
     getRemoteMediaStreams(strategy?: (item: IRemoteMediaStream) => boolean): IRemoteMediaStream[];
+    /**
+     * Get an array of opened vector databases.
+     * @param strategy The strategy to use to filter the vector databases.
+     */
+    getVectorDatabases(strategy?: (item: IVectorDatabase) => boolean): IVectorDatabase[];
     /**
      * Get the local node for this cluster.
      */

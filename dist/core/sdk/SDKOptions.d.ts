@@ -2,7 +2,8 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
-import { GenerativeAIWorkerConnectorConstructor, VectorDatabaseConnectorConstructor } from '../../ai';
+import { GenerativeAIWorkerConnectorConstructor } from '../../ai';
+import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 /**
  * Options to configure the SDK.
  * @category Core
