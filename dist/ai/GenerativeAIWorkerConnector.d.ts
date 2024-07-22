@@ -23,6 +23,7 @@ export interface IGenerativeAIModel {
     id: string;
     inputType: GenerativeAIModelInputType;
     outputType: GenerativeAIModelOutputType;
+    sourceUrl: string;
 }
 /**
  * The generative AI worker options.
