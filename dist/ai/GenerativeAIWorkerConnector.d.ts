@@ -44,6 +44,11 @@ export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<IJobPa
      */
     initialize(models: Map<string, string>): Promise<void>;
     /**
+     * Close the machine learning model.
+     * @returns A promise that resolves when the model has been closed.
+     */
+    close(): Promise<void>;
+    /**
      * Process a job.
      * @param parameters The job parameters.
      * @param options The job options.
