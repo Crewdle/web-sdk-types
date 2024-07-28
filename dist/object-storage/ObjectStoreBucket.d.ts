@@ -21,13 +21,15 @@ export interface IObjectStoreBucket extends IDataStream {
     close(): void;
     /**
      * Subscribe to the bucket events.
+     * @param label The label of the subscriber.
      * @param callback The callback function.
      */
-    subscribe(callback: (data: StorageEvent) => void): void;
+    subscribe(label: string, callback: (data: StorageEvent) => void): void;
     /**
      * Unsubscribe from the bucket.
+     * @param label The label of the subscriber.
      */
-    unsubscribe(): void;
+    unsubscribe(label: string): void;
     /**
      * Publish an action to the bucket.
      * @param payload The object store payload.
