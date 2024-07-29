@@ -39,10 +39,11 @@ export interface IGenerativeAIWorkerOptions extends IJobWorkerOptions {
 export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<IJobParametersAI, IJobResultAI> {
     /**
      * Initialize the machine learning model.
+     * @param workflowId The workflow ID.
      * @param models A map of model IDs and pathnames.
      * @returns A promise that resolves when the model has been initialized.
      */
-    initialize(models: Map<string, string>): Promise<void>;
+    initialize(workflowId: string, models: Map<string, string>): Promise<void>;
     /**
      * Close the machine learning model.
      * @returns A promise that resolves when the model has been closed.
