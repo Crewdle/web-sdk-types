@@ -1,8 +1,8 @@
 import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
-import { ObjectStoreConnectorConstructor } from '../../object-storage';
+import { DocumentParserConnectorConstructor, ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
-import { GenerativeAIWorkerConnectorConstructor } from '../../ai';
+import { GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor } from '../../ai';
 import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 
 /**
@@ -52,6 +52,16 @@ export interface ISDKOptions {
    * The custom vector database connector to use for vector database tasks.
    */
   vectorDatabaseConnector?: VectorDatabaseConnectorConstructor;
+
+  /**
+   * The custom document parser connector to use for parsing documents.
+   */
+  documentParserConnector?: DocumentParserConnectorConstructor;
+
+  /**
+   * The custom natural language processing connector to use for natural language processing tasks.
+   */
+  nlpLibraryConnector?: NLPLibraryConnectorConstructor;
 
   /**
    * The maximum number of outgoing subscriptions.

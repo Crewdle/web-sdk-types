@@ -1,4 +1,6 @@
 export * from './event';
+export { IDocumentParserConnector } from './DocumentParserConnector';
+export { DocumentParserConnectorConstructor } from './DocumentParserConnectorConstructor';
 export { IFile } from './File';
 export { FileStatus } from './FileStatus';
 export { IFileDescriptor } from './FileDescriptor';
