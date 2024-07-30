@@ -37,4 +37,8 @@ export var ContentType;
      * @ignore
      */
     ContentType["VectorDatabase"] = "vectordatabase";
+    /**
+     * @ignore
+     */
+    ContentType["GraphDatabase"] = "graphdatabase";
 })(ContentType || (ContentType = {}));

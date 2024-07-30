@@ -36,4 +36,8 @@ export enum ContentType {
    * @ignore
    */
   VectorDatabase = 'vectordatabase',
+  /**
+   * @ignore
+   */
+  GraphDatabase = 'graphdatabase',
 }

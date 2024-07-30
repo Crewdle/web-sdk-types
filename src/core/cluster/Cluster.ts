@@ -1,3 +1,4 @@
+import { IGraphDatabase } from '../../graph-database';
 import { IClusterEventEmitter } from '.';
 import { IGenerativeAIContext, IGenerativeAIWorker } from '../../ai';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
@@ -66,6 +67,12 @@ export interface ICluster extends IClusterEventEmitter {
   openVectorDatabase(label: string): IVectorDatabase;
 
   /**
+   * Open a graph database.
+   * @param label The label of the graph database.
+   */
+  openGraphDatabase(label: string): IGraphDatabase;
+
+  /**
    * Publish a local media stream.
    * @param label The label of the media stream.
    * @param mediaSource The media source to publish.
@@ -130,6 +137,12 @@ export interface ICluster extends IClusterEventEmitter {
    * @param strategy The strategy to use to filter the vector databases.
    */
   getVectorDatabases(strategy?: (item: IVectorDatabase) => boolean): IVectorDatabase[];
+
+  /**
+   * Get an array of opened graph databases.
+   * @param strategy The strategy to use to filter the graph databases.
+   */
+  getGraphDatabases(strategy?: (item: IGraphDatabase) => boolean): IGraphDatabase[];
 
   /**
    * Get the local node for this cluster.

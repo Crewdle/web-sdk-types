@@ -1,6 +1,7 @@
 import { IDataStream } from '../core';
 /**
  * The interface for the vector database.
+ * @category Vector Database
  */
 export interface IVectorDatabase extends IDataStream {
     /**
