@@ -1,3 +1,4 @@
+import { IVectorDatabaseSearchResult } from '../vector-database';
 import { IJobParameters, IJobResult } from '../job';
 
 /**
@@ -79,7 +80,12 @@ export interface IPromptResult {
   /**
    * The output of the AI job.
    */
-  output: PromptTypeText | PromptTypeVector;
+  output?: PromptTypeText | PromptTypeVector;
+
+  /**
+   * The relevant context used by the AI job.
+   */
+  context?: IVectorDatabaseSearchResult[];
 
   /**
    * The tokens used by the AI job.

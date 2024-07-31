@@ -22,6 +22,12 @@ export interface IGenerativeAIContext {
   prompt(prompt: string, options?: IPromptOptions): Promise<IPromptResult>;
 
   /**
+   * Get the data bucket IDs.
+   * @returns An array of data bucket IDs.
+   */
+  getDataBucketIds(): Promise<string[]>;
+
+  /**
    * Close the Generative AI Context.
    */
   close(): void;

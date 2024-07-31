@@ -1,4 +1,5 @@
 import { IDataStream } from '../core';
+import { IVectorDatabaseSearchResult } from './VectorDatabaseSearchResult';
 
 /**
  * The interface for the vector database.
@@ -26,9 +27,9 @@ export interface IVectorDatabase extends IDataStream {
    * @param k The number of nearest vectors to return.
    * @param minRelevance The minimum relevance of the vectors.
    * @param contentSize The size of the content to return (vector +/- contentSize, default 0).
-   * @returns The content of the k nearest vectors.
+   * @returns An array of search results.
    */
-  search(vector: number[], k: number, minRelevance?: number, contentSize?: number): string[];
+  search(vector: number[], k: number, minRelevance?: number, contentSize?: number): IVectorDatabaseSearchResult[];
 
   /**
    * Insert vectors into the database.
