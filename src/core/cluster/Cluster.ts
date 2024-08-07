@@ -1,9 +1,11 @@
+import { IGraphDatabase } from '../../graph-database';
 import { IClusterEventEmitter } from '.';
 import { IGenerativeAIContext, IGenerativeAIWorker } from '../../ai';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
 import { IObjectStoreBucket, IObjectStoreBucketOptions } from '../../object-storage';
 import { IPubSubTopic } from '../../pubsub';
+import { IVectorDatabase } from '../../vector-database';
 import { LocalNode, Node } from '../node';
 
 /**
@@ -57,6 +59,18 @@ export interface ICluster extends IClusterEventEmitter {
    * @param label The label of the generative AI Worker.
    */
   openGenerativeAIWorker(label: string): Promise<IGenerativeAIWorker>;
+
+  /**
+   * Open a vector database.
+   * @param label The label of the vector database.
+   */
+  openVectorDatabase(label: string): IVectorDatabase;
+
+  /**
+   * Open a graph database.
+   * @param label The label of the graph database.
+   */
+  openGraphDatabase(label: string): IGraphDatabase;
 
   /**
    * Publish a local media stream.
@@ -117,6 +131,18 @@ export interface ICluster extends IClusterEventEmitter {
    * @param strategy The strategy to use to filter the media streams.
    */
   getRemoteMediaStreams(strategy?: (item: IRemoteMediaStream) => boolean): IRemoteMediaStream[];
+
+  /**
+   * Get an array of opened vector databases.
+   * @param strategy The strategy to use to filter the vector databases.
+   */
+  getVectorDatabases(strategy?: (item: IVectorDatabase) => boolean): IVectorDatabase[];
+
+  /**
+   * Get an array of opened graph databases.
+   * @param strategy The strategy to use to filter the graph databases.
+   */
+  getGraphDatabases(strategy?: (item: IGraphDatabase) => boolean): IGraphDatabase[];
 
   /**
    * Get the local node for this cluster.

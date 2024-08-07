@@ -1,6 +1,6 @@
 {
   "name": "@crewdle/web-sdk-types",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "The Crewdle Mist Web SDK public types and interfaces",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

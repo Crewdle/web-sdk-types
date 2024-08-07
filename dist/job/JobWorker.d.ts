@@ -1,6 +1,6 @@
 /**
  * The Job Worker interface.
- * @ignore
+ * @category Job
  */
 export interface IJobWorker {
     /**

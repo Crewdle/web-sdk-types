@@ -32,4 +32,12 @@ export enum ContentType {
    * @ignore
    */
   Job = 'job',
+  /**
+   * @ignore
+   */
+  VectorDatabase = 'vectordatabase',
+  /**
+   * @ignore
+   */
+  GraphDatabase = 'graphdatabase',
 }

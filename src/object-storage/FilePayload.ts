@@ -1,4 +1,4 @@
-import { PayloadAction } from '.';
+import { IFileOptions, PayloadAction } from '.';
 
 /**
  * The file payload interface.
@@ -23,5 +23,5 @@ export interface IFilePayload {
   /**
    * The flag to skip encryption.
    */
-  skipEncryption?: boolean;
+  options?: IFileOptions;
 }

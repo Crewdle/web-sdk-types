@@ -3,7 +3,7 @@ import { IDataStream } from '../core/stream';
 import { IJobParameters, IJobRequest, IJobResult, JobResponse } from './Job';
 /**
  * The Job Dispatcher interface.
- * @ignore
+ * @category Job
  */
 export interface IJobDispatcher<T extends IJobParameters, U extends IJobResult> extends IDataStream {
     /**

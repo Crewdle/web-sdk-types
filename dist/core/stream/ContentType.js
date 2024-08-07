@@ -33,4 +33,12 @@ export var ContentType;
      * @ignore
      */
     ContentType["Job"] = "job";
+    /**
+     * @ignore
+     */
+    ContentType["VectorDatabase"] = "vectordatabase";
+    /**
+     * @ignore
+     */
+    ContentType["GraphDatabase"] = "graphdatabase";
 })(ContentType || (ContentType = {}));
