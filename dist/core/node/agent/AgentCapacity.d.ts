@@ -51,6 +51,19 @@ export interface IAgentCapacity {
         available: number;
     };
     /**
+     * The agent's VRAM capacity.
+     */
+    vram: {
+        /**
+         * The total VRAM available.
+         */
+        total: number;
+        /**
+         * The available VRAM.
+         */
+        available: number;
+    };
+    /**
      * The agent's storage capacity.
      */
     storage: {
