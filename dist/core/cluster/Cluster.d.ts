@@ -7,6 +7,7 @@ import { IObjectStoreBucket, IObjectStoreBucketOptions } from '../../object-stor
 import { IPubSubTopic } from '../../pubsub';
 import { IVectorDatabase } from '../../vector-database';
 import { LocalNode, Node } from '../node';
+import { ISDKCloseOptions } from '../sdk';
 /**
  * The cluster interface.
  * @category Core
@@ -14,8 +15,9 @@ import { LocalNode, Node } from '../node';
 export interface ICluster extends IClusterEventEmitter {
     /**
      * Leave the cluster.
+     * @param options The options to close the SDK with.
      */
-    leave(): void;
+    leave(options?: ISDKCloseOptions): void;
     /**
      * Open a pub/sub topic.
      * @param name The name of the PubSub Topic.

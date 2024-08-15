@@ -1,6 +1,7 @@
 import { ICluster } from '../cluster';
 import { IAgentCredentials, IAuthAgent } from '../node/agent';
 import { IAuthUser, IUserCredentials } from '../node/user';
+import { ISDKCloseOptions } from './SDKCloseOptions';
 /**
  * The SDK interface.
  * @category Core
@@ -8,8 +9,9 @@ import { IAuthUser, IUserCredentials } from '../node/user';
 export interface ISDK {
     /**
      * Close the SDK.
+     * @param options The options to close the SDK with.
      */
-    close(): Promise<void>;
+    close(options?: ISDKCloseOptions): Promise<void>;
     /**
      * Authenticate a user.
      * @param credentials The credentials to authenticate the user with.
