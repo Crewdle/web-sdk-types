@@ -12,4 +12,12 @@ export interface INLPLibraryConnector {
    * @returns A promise that resolves with the entities.
    */
   getEntities(text: string): Promise<string[]>;
+
+  /**
+   * Extracts the similarity between two texts.
+   * @param text1 The first text.
+   * @param text2 The second text.
+   * @returns A promise that resolves with the similarity between the texts. The value is between 0 and 1.
+   */
+  getSimilarity(text1: string, text2: string): Promise<number>;
 }
