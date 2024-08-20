@@ -5,9 +5,11 @@
 export interface IGraphDatabaseConnector {
   /**
    * Add a node to the database.
+   * @param name The name of the content.
+   * @param content The content of the node.
    * @param node The node to add.
    */
-  addNode(node: string): void;
+  addNode(name: string, content: string[], node: string): void;
 
   /**
    * Add an edge to the database.

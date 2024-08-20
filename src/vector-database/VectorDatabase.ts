@@ -1,5 +1,5 @@
+import { ISearchResult } from '../ai';
 import { IDataStream } from '../core';
-import { IVectorDatabaseSearchResult } from './VectorDatabaseSearchResult';
 
 /**
  * The interface for the vector database.
@@ -29,7 +29,7 @@ export interface IVectorDatabase extends IDataStream {
    * @param contentSize The size of the content to return (vector +/- contentSize, default 0).
    * @returns An array of search results.
    */
-  search(vector: number[], k: number, minRelevance?: number, contentSize?: number): IVectorDatabaseSearchResult[];
+  search(vector: number[], k: number, minRelevance?: number, contentSize?: number): ISearchResult[];
 
   /**
    * Insert vectors into the database.

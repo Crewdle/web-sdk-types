@@ -1,4 +1,4 @@
-import { IVectorDatabaseSearchResult } from './VectorDatabaseSearchResult';
+import { ISearchResult } from '../ai';
 /**
  * The vector database connector interface.
  * @category Connector
@@ -12,7 +12,7 @@ export interface IVectorDatabaseConnector {
      * @param contentSize The size of the content to return (vector +/- contentSize, default 0).
      * @returns An array of search results.
      */
-    search(vector: number[], k: number, minRelevance?: number, contentSize?: number): IVectorDatabaseSearchResult[];
+    search(vector: number[], k: number, minRelevance?: number, contentSize?: number): ISearchResult[];
     /**
      * Insert vectors into the database.
      * @param name The name of the content.

@@ -1,3 +1,10 @@
+export interface INLPEntityTypes {
+  ner: boolean;
+  noun: boolean;
+  propn: boolean;
+  verb: boolean;
+}
+
 export interface INLPLibraryConnector {
   /**
    * Splits the text into sentences.
@@ -9,9 +16,10 @@ export interface INLPLibraryConnector {
   /**
    * Extracts the entities from the text.
    * @param text The text to extract from.
+   * @param types The types of entities to extract.
    * @returns A promise that resolves with the entities.
    */
-  getEntities(text: string): Promise<string[]>;
+  getEntities(text: string, types: INLPEntityTypes): Promise<string[]>;
 
   /**
    * Extracts the similarity between two texts.
