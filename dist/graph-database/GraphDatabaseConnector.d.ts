@@ -17,10 +17,14 @@ export interface IGraphDatabaseConnector {
      */
     addEdge(from: string, to: string): void;
     /**
-     * Get the neighbors of a node.
-     * @param node The node to get the neighbors of.
+     * Get the content of the nodes and their neighbors.
+     * @param nodes The nodes to get the content of.
+     * @param maxDepth The maximum depth to search.
+     * @returns The content of the nodes and their neighbors.
      */
-    getNeighbors(node: string): string[];
+    getContent(nodes: string[], maxDepth: number): {
+        [key: string]: string[];
+    };
     /**
      * Get the size of the database
      * @returns The size of the database.
