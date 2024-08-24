@@ -45,9 +45,9 @@ export interface ISDKOptions {
   peerConnectionConnector?: PeerConnectionConnectorConstructor;
 
   /**
-   * The custom generative AI worker connector to use for generative AI tasks.
+   * The custom generative AI worker connectors to use for generative AI tasks.
    */
-  generativeAIWorkerConnector?: GenerativeAIWorkerConnectorConstructor;
+  generativeAIWorkerConnectors?: GenerativeAIWorkerConnectorConstructor[];
 
   /**
    * The custom vector database connector to use for vector database tasks.
