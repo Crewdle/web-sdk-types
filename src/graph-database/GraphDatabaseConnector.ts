@@ -1,3 +1,5 @@
+import { IIndex } from '../ai';
+
 /**
  * The graph database connector interface.
  * @category Connector
@@ -6,10 +8,11 @@ export interface IGraphDatabaseConnector {
   /**
    * Add a node to the database.
    * @param name The name of the content.
-   * @param content The content of the node.
+   * @param content The content.
+   * @param index The index of the node.
    * @param node The node to add.
    */
-  addNode(name: string, content: string[], node: string): void;
+  addNode(name: string, content: string, index: IIndex[], node: string): void;
 
   /**
    * Add an edge to the database.
@@ -21,10 +24,11 @@ export interface IGraphDatabaseConnector {
   /**
    * Get the content of the nodes and their neighbors.
    * @param nodes The nodes to get the content of.
-   * @param maxDepth The maximum depth to search.
+   * @param maxDepth The maximum depth to search (default 1).
+   * @param contentSize The size of the content to return (content +/- contentSize, default 0).
    * @returns The content of the nodes and their neighbors.
    */
-  getContent(nodes: string[], maxDepth: number): { [key: string]: string[] };
+  getContent(nodes: string[], maxDepth?: number, contentSize?: number): { [key: string]: string[] };
 
   /**
    * Get the size of the database
