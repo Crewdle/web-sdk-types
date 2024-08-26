@@ -34,6 +34,39 @@ export interface IPromptHistory {
 };
 
 /**
+ * The AI prompt function parameters Interface
+ * Represents the parameters for a prompt function.
+ * @category AI
+ */
+export interface IPromptFunctionParams {
+  [key: string]: {
+    type: 'string' | 'number' | 'boolean';
+  };
+}
+
+/**
+ * The AI prompt function Interface
+ * Represents a function that can be called by the LLM.
+ * @category AI
+ */
+export interface IPromptFunction {
+  /**
+   * The function description.
+   */
+  description: string;
+
+  /**
+   * The function parameters.
+   */
+  params?: IPromptFunctionParams;
+
+  /**
+   * The function callback.
+   */
+  callback: (params?: { [key: string]: string | number | boolean }) => string | Promise<string>;
+}
+
+/**
  * The AI prompt options Interface
  * Represents the options for an AI prompt.
  * @category AI
@@ -58,6 +91,11 @@ export interface IPromptOptions {
    * The temperature for the LLM.
    */
   temperature?: number;
+
+  /**
+   * The functions that can be called by the LLM.
+   */
+  functions?: Map<string, IPromptFunction>;
 }
 
 /**
