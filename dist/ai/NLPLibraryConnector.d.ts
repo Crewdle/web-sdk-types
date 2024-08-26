@@ -1,9 +1,17 @@
+/**
+ * Represents the types of entities that can be extracted.
+ * @category AI
+ */
 export interface INLPEntityTypes {
     ner: boolean;
     noun: boolean;
     propn: boolean;
     verb: boolean;
 }
+/**
+ * Represents a natural language processing library connector.
+ * @category Connector
+ */
 export interface INLPLibraryConnector {
     /**
      * Splits the text into sentences.

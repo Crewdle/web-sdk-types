@@ -2,7 +2,7 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { DocumentParserConnectorConstructor, ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
-import { GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor } from '../../ai';
+import { GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, SearchConnectorConstructor } from '../../ai';
 import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 import { GraphDatabaseConnectorConstructor } from '../../graph-database';
 /**
@@ -57,6 +57,10 @@ export interface ISDKOptions {
      * The custom natural language processing connector to use for natural language processing tasks.
      */
     nlpLibraryConnector?: NLPLibraryConnectorConstructor;
+    /**
+     * The custom search connector to use for searching the web.
+     */
+    searchConnector?: SearchConnectorConstructor;
     /**
      * The maximum number of outgoing subscriptions.
      */
