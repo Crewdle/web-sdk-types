@@ -5,3 +5,5 @@ export * from './GenerativeAIWorkerConnector';
 export * from './GenerativeAIWorkerConnectorConstructor';
 export * from './NLPLibraryConnector';
 export * from './NLPLibraryConnectorConstructor';
+export * from './SearchConnector';
+export * from './SearchConnectorConstructor';

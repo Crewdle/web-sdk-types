@@ -1,3 +1,4 @@
+import { IIndex } from '../ai';
 import { IDataStream } from '../core';
 /**
  * The interface for the graph database.
@@ -18,9 +19,12 @@ export interface IGraphDatabase extends IDataStream {
     close(): void;
     /**
      * Add a node to the database.
+     * @param name The name of the content.
+     * @param content The content.
+     * @param index The index of the node.
      * @param node The node to add.
      */
-    addNode(node: string): void;
+    addNode(name: string, content: string, index: IIndex[], node: string): void;
     /**
      * Add an edge to the database.
      * @param from The node to add the edge from.
@@ -28,8 +32,13 @@ export interface IGraphDatabase extends IDataStream {
      */
     addEdge(from: string, to: string): void;
     /**
-     * Get the neighbors of a node.
-     * @param node The node to get the neighbors of.
+     * Get the content of the nodes and their neighbors.
+     * @param nodes The nodes to get the content of.
+     * @param maxDepth The maximum depth to search (default 1).
+     * @param contentSize The size of the content to return (content +/- contentSize, default 0).
+     * @returns The content of the nodes and their neighbors.
      */
-    getNeighbors(node: string): string[];
+    getContent(nodes: string[], maxDepth?: number, contentSize?: number): {
+        [key: string]: string[];
+    };
 }

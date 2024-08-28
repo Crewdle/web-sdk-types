@@ -1,4 +1,3 @@
-import { IVectorDatabaseSearchResult } from '../vector-database';
 import { IJobParameters, IJobResult } from '../job';
 /**
  * The AI prompt source Enum
@@ -30,6 +29,37 @@ export interface IPromptHistory {
     message: string;
 }
 /**
+ * The AI prompt function parameters Interface
+ * Represents the parameters for a prompt function.
+ * @category AI
+ */
+export interface IPromptFunctionParams {
+    [key: string]: {
+        type: 'string' | 'number' | 'boolean';
+    };
+}
+/**
+ * The AI prompt function Interface
+ * Represents a function that can be called by the LLM.
+ * @category AI
+ */
+export interface IPromptFunction {
+    /**
+     * The function description.
+     */
+    description: string;
+    /**
+     * The function parameters.
+     */
+    params?: IPromptFunctionParams;
+    /**
+     * The function callback.
+     */
+    callback: (params?: {
+        [key: string]: string | number | boolean;
+    }) => string | Promise<string>;
+}
+/**
  * The AI prompt options Interface
  * Represents the options for an AI prompt.
  * @category AI
@@ -51,6 +81,10 @@ export interface IPromptOptions {
      * The temperature for the LLM.
      */
     temperature?: number;
+    /**
+     * The functions that can be called by the LLM.
+     */
+    functions?: Map<string, IPromptFunction>;
 }
 /**
  * The AI prompt type text
@@ -73,7 +107,7 @@ export interface IPromptResult {
     /**
      * The relevant context used by the AI job.
      */
-    context?: IVectorDatabaseSearchResult[];
+    context?: ISearchResult[];
     /**
      * The tokens used by the AI job.
      */
@@ -104,4 +138,41 @@ export interface IJobResultAI extends IJobResult, IPromptResult {
      * The index of the output, in case of partial results.
      */
     index?: number;
+}
+/**
+ * Represents a search result.
+ * @category AI
+ */
+export interface ISearchResult {
+    /**
+     * The content of the search result.
+     */
+    content: string;
+    /**
+     * The relevance of the search result.
+     * The relevance is a number between 0 and 1, where 1 is the most relevant.
+     */
+    relevance: number;
+    /**
+     * The path name of the document containing the search result.
+     */
+    pathName: string;
+}
+/**
+ * Represents a content index.
+ * @category AI
+ */
+export interface IIndex {
+    /**
+     * The content of the index.
+     */
+    content: string;
+    /**
+     * The start index of the content.
+     */
+    start: number;
+    /**
+     * The length of the content.
+     */
+    length: number;
 }
