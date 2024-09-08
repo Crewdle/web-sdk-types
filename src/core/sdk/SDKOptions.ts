@@ -39,6 +39,11 @@ export interface ISDKOptions {
   keyValueDatabaseConnector?: KeyValueDatabaseConnectorConstructor;
 
   /**
+   * The custom logging database connector to use for storing Job logs.
+   */
+  loggingDatabaseConnector?: KeyValueDatabaseConnectorConstructor;
+
+  /**
    * The custom peer connection connector to use for creating peer connections.
    * If not provided, the default peer connection connector is WebRTC in browser.
    */
