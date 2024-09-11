@@ -1,25 +1,49 @@
 import { IPromptOptions, IPromptResult } from '.';
 
 /**
+ * Represents bounded prompt job ready to be run or streamed.
+ */
+export interface IGenerativeAIPromptJob {
+  /**
+   * The job ID.
+   */
+  id: string;
+
+  /**
+   * The prompt to be processed
+   */
+  prompt: string;
+
+  /**
+   * The options for the prompt.
+   */
+  options: IPromptOptions;
+
+  /**
+   * Run the prompt job.
+   * @returns A promise that resolves with the result
+   */
+  run: () => Promise<IPromptResult>;
+
+  /**
+   * Stream the prompt job.
+   * @returns An async generator that yields the result
+   */
+  stream: () => AsyncGenerator<IPromptResult>;
+}
+
+/**
  * Represents a context for a Generative AI service.
  * @category AI
  */
 export interface IGenerativeAIContext {
   /**
-   * Stream the response from the AI service.
-   * @param prompt The prompt to start processing.
-   * @param options Optional parameters for the prompt.
-   * @returns An async generator that yields the response.
+   * Create a prompt job. The prompt job is bounded to the context.
+   * @param prompt The prompt to be processed.
+   * @param options The options for the prompt job.
+   * @returns The prompt job ready to be run or streamed.
    */
-  stream(prompt: string, options?: IPromptOptions): AsyncGenerator<IPromptResult>;
-
-  /**
-   * Process the response from the AI service.
-   * @param prompt The prompt to start processing.
-   * @param options Optional parameters for the prompt.
-   * @returns A promise that resolves with the response.
-   */
-  prompt(prompt: string, options?: IPromptOptions): Promise<IPromptResult>;
+  createAIJob(prompt: string, options?: IPromptOptions): IGenerativeAIPromptJob;
 
   /**
    * Get the data bucket IDs.
