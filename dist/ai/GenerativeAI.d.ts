@@ -85,6 +85,10 @@ export interface IPromptOptions {
      * The functions that can be called by the LLM.
      */
     functions?: Map<string, IPromptFunction>;
+    /**
+     * The thread id
+     */
+    threadId?: string;
 }
 /**
  * The AI prompt type text
@@ -127,6 +131,10 @@ export interface IJobParametersAI extends IJobParameters, IPromptOptions {
      * The prompt for the AI job.
      */
     prompt: string;
+    /**
+     * The thread id, if within a conversation.
+     */
+    threadId: string;
 }
 /**
  * The AI job result Interface

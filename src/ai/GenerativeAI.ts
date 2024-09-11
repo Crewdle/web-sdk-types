@@ -96,6 +96,11 @@ export interface IPromptOptions {
    * The functions that can be called by the LLM.
    */
   functions?: Map<string, IPromptFunction>;
+
+  /**
+   * The thread id
+   */
+  threadId?: string;
 }
 
 /**
@@ -145,6 +150,11 @@ export interface IJobParametersAI extends IJobParameters, IPromptOptions {
    * The prompt for the AI job.
    */
   prompt: string;
+
+  /**
+   * The thread id, if within a conversation.
+   */
+  threadId: string;
 }
 
 /**
