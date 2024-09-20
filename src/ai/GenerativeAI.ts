@@ -1,6 +1,15 @@
 import { IJobParameters, IJobResult } from '../job';
 
 /**
+ * The AI prompt rating Enum
+ * @category AI
+ */
+export enum PromptRating {
+  Up = 'up',
+  Down = 'down',
+}
+
+/**
  * The AI prompt source Enum
  * @category AI
  */
@@ -66,12 +75,26 @@ export interface IPromptFunction {
   callback: (params?: { [key: string]: string | number | boolean }) => string | Promise<string>;
 }
 
+export type AIJobOptions = IPromptOptions | IRatingOptions;
+
+/**
+ * The AI options Interface
+ * Represents the options for an AI job.
+ * @category AI
+ */
+export interface IAIOptions {
+  /**
+   * The thread id
+   */
+  threadId?: string;
+}
+
 /**
  * The AI prompt options Interface
  * Represents the options for an AI prompt.
  * @category AI
  */
-export interface IPromptOptions {
+export interface IPromptOptions extends IAIOptions {
   /**
    * The instructions for the AI job.
    */
@@ -96,12 +119,14 @@ export interface IPromptOptions {
    * The functions that can be called by the LLM.
    */
   functions?: Map<string, IPromptFunction>;
-
-  /**
-   * The thread id
-   */
-  threadId?: string;
 }
+
+/**
+ * The AI rating options Interface
+ * Represents the options for an AI rating.
+ * @category AI
+ */
+export interface IRatingOptions extends IAIOptions {}
 
 /**
  * The AI prompt type text
@@ -118,7 +143,12 @@ export type PromptTypeVector = number[];
  * Represents the result of an AI prompt.
  * @category AI
  */
-export interface IPromptResult {
+export interface IPromptResult extends IJobResultAI {
+  /**
+   * The prompt AI job type.
+   */
+  type: AIJobType.Prompt;
+
   /**
    * The output of the AI job.
    */
@@ -141,32 +171,110 @@ export interface IPromptResult {
 }
 
 /**
- * The AI job parameters Interface
- * Parameters for AI job type.
+ * The AI rating status Enum
  * @category AI
  */
-export interface IJobParametersAI extends IJobParameters, IPromptOptions {
-  /**
-   * The prompt for the AI job.
-   */
-  prompt: string;
-
-  /**
-   * The thread id, if within a conversation.
-   */
-  threadId: string;
+export enum AIRatingStatus {
+  Success = 'success',
+  Error = 'error',
 }
+
+/**
+ * The AI rating result Interface
+ * Represents the result of an AI rating.
+ * @category AI
+ */
+export interface IRatingResult extends IJobResultAI {
+  /**
+   * The rating AI job type.
+   */
+  type: AIJobType.Rating;
+  /**
+   * The status of the rating.
+   */
+  status: AIRatingStatus;
+}
+
+export type GenAIResult = IPromptResult | IRatingResult;
 
 /**
  * The AI job result Interface
  * Represents the result of an AI job.
  * @category AI
  */
-export interface IJobResultAI extends IJobResult, IPromptResult {
+export interface IJobResultAI extends IJobResult {
+  /**
+   * The AI job type.
+   */
+  type: AIJobType;
   /**
    * The index of the output, in case of partial results.
    */
   index?: number;
+}
+
+/**
+ * The AI job type Enum
+ * @category AI
+ */
+export enum AIJobType {
+  /**
+   * The AI job generates a prompt.
+   */
+  Prompt = 'prompt',
+  /**
+   * The AI job rates a prompt.
+   */
+  Rating = 'rate',
+}
+
+/**
+ * The AI job parameters Interface
+ * Parameters for AI job type.
+ * @category AI
+ */
+export interface IJobParametersAI extends IJobParameters, IPromptOptions, IRatingOptions {
+  /**
+   * The AI job type.
+   */
+  type: AIJobType;
+  /**
+   * The thread id, if within a conversation.
+   */
+  threadId: string;
+}
+
+export type GenAIJobParameters = IJobPromptAIParameters | IJobRatingAIParameters;
+
+export interface IJobPromptAIParameters extends IJobParametersAI {
+  /**
+   * The AI job type.
+   */
+  type: AIJobType.Prompt;
+  /**
+   * The prompt for the AI job.
+   */
+  prompt: string;
+}
+
+export interface IJobRatingAIParameters extends IJobParametersAI {
+  /**
+   * The AI job type.
+   */
+  type: AIJobType.Rating;
+  /**
+   * The job id.
+   */
+  jobId: string;
+
+  /**
+   * The rating for the AI job.
+   */
+  rating: PromptRating;
+  /**
+   * The feedback for the AI job.
+   */
+  feedback?: string;
 }
 
 /**
