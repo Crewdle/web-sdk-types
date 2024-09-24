@@ -1,5 +1,5 @@
 import { IJobWorkerConnector, IJobWorkerOptions } from '../job';
-import { GenAIJobParameters, GenAIResult, IJobPromptAIParameters, IPromptResult } from './GenerativeAI';
+import { IJobPromptAIParameters, IPromptResult } from './GenerativeAI';
 /**
  * The generative AI model input types.
  * @category AI
@@ -85,7 +85,7 @@ export interface IGenerativeAIWorkerOptions extends IJobWorkerOptions {
  * The generative AI worker connector interface.
  * @category Connector
  */
-export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<GenAIJobParameters, GenAIResult> {
+export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<IJobPromptAIParameters, IPromptResult> {
     /**
      * Initialize the machine learning model.
      * @param workflowId The workflow ID.

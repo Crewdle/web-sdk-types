@@ -92,7 +92,7 @@ export interface IGenerativeAIWorkerOptions extends IJobWorkerOptions {
  * The generative AI worker connector interface.
  * @category Connector
  */
-export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<GenAIJobParameters, GenAIResult> {
+export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<IJobPromptAIParameters, IPromptResult> {
   /**
    * Initialize the machine learning model.
    * @param workflowId The workflow ID.
