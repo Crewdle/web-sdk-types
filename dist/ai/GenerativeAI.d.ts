@@ -37,13 +37,30 @@ export interface IPromptHistory {
     message: string;
 }
 /**
+ * The type of parameters supported for agentic functions
+ */
+export declare enum PromptFunctionParamsType {
+    /**
+     * The parameter is a string.
+     */
+    String = "string",
+    /**
+     * The parameter is a number.
+     */
+    Number = "number",
+    /**
+     * The parameter is a boolean.
+     */
+    Boolean = "boolean"
+}
+/**
  * The AI prompt function parameters Interface
  * Represents the parameters for a prompt function.
  * @category AI
  */
 export interface IPromptFunctionParams {
     [key: string]: {
-        type: 'string' | 'number' | 'boolean';
+        type: PromptFunctionParamsType;
     };
 }
 /**
