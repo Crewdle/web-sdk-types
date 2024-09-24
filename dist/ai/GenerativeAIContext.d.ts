@@ -114,6 +114,7 @@ export interface IGenerativeAIContext {
      */
     createAIJob(parameters: IJobPromptParameters): IGenerativeAIPromptJob;
     createAIJob(parameters: IJobRatingParameters): IGenerativeAIRatingJob;
+    ratePrompt(parameters: IJobRatingParameters): Promise<IRatingResult>;
     /**
      * Get the data bucket IDs.
      * @returns An array of data bucket IDs.
