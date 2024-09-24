@@ -126,7 +126,7 @@ export type PromptTypeVector = number[];
  * Represents the result of an AI prompt.
  * @category AI
  */
-export interface IPromptResult extends IJobResultAI {
+export interface IGenAIPromptResult extends IJobResultAI {
     /**
      * The prompt AI job type.
      */
@@ -161,7 +161,7 @@ export declare enum AIRatingStatus {
  * Represents the result of an AI rating.
  * @category AI
  */
-export interface IRatingResult extends IJobResultAI {
+export interface IGenAIRatingResult extends IJobResultAI {
     /**
      * The rating AI job type.
      */
@@ -171,7 +171,7 @@ export interface IRatingResult extends IJobResultAI {
      */
     status: AIRatingStatus;
 }
-export type GenAIResult = IPromptResult | IRatingResult;
+export type GenAIJobResult = IGenAIPromptResult | IGenAIRatingResult;
 /**
  * The AI job result Interface
  * Represents the result of an AI job.
@@ -216,8 +216,8 @@ export interface IJobParametersAI extends IJobParameters, IPromptOptions, IRatin
      */
     threadId: string;
 }
-export type GenAIJobParameters = IJobPromptAIParameters | IJobRatingAIParameters;
-export interface IJobPromptAIParameters extends IJobParametersAI {
+export type GenAIJobParameters = IGenAIPromptParameters | IGenAIRatingParameters;
+export interface IGenAIPromptParameters extends IJobParametersAI {
     /**
      * The AI job type.
      */
@@ -227,7 +227,7 @@ export interface IJobPromptAIParameters extends IJobParametersAI {
      */
     prompt: string;
 }
-export interface IJobRatingAIParameters extends IJobParametersAI {
+export interface IGenAIRatingParameters extends IJobParametersAI {
     /**
      * The AI job type.
      */

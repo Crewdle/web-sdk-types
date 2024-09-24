@@ -1,4 +1,4 @@
-import { AIJobType, IPromptOptions, IPromptResult, IRatingOptions, IRatingResult, PromptRating } from '.';
+import { AIJobType, IPromptOptions, IGenAIPromptResult, IRatingOptions, IGenAIRatingResult, PromptRating } from '.';
 
 /**
  * Represents bounded prompt job ready to be run or streamed.
@@ -23,13 +23,13 @@ export interface IGenerativeAIPromptJob {
    * Run the prompt job.
    * @returns A promise that resolves with the result
    */
-  run: () => Promise<IPromptResult>;
+  run: () => Promise<IGenAIPromptResult>;
 
   /**
    * Stream the prompt job.
    * @returns An async generator that yields the result
    */
-  stream: () => AsyncGenerator<IPromptResult>;
+  stream: () => AsyncGenerator<IGenAIPromptResult>;
 }
 
 /**
@@ -65,7 +65,7 @@ export interface IGenerativeAIRatingJob {
    * Run the rating job.
    * @returns A promise that resolves with the result
    */
-  rate: () => Promise<IRatingResult>;
+  rate: () => Promise<IGenAIRatingResult>;
 }
 
 /**
@@ -135,7 +135,7 @@ export interface IGenerativeAIContext {
    * @param parameters The parameters of the rating job.
    * @returns A promise that resolves with the result.
    */
-  ratePrompt(parameters: IJobRatingParameters): Promise<IRatingResult>;
+  ratePrompt(parameters: IJobRatingParameters): Promise<IGenAIRatingResult>;
 
   /**
    * Get the data bucket IDs.

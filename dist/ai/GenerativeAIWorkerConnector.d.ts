@@ -1,5 +1,5 @@
 import { IJobWorkerConnector, IJobWorkerOptions } from '../job';
-import { IJobPromptAIParameters, IPromptResult } from './GenerativeAI';
+import { GenAIJobParameters, GenAIJobResult } from './GenerativeAI';
 /**
  * The generative AI model input types.
  * @category AI
@@ -85,7 +85,7 @@ export interface IGenerativeAIWorkerOptions extends IJobWorkerOptions {
  * The generative AI worker connector interface.
  * @category Connector
  */
-export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<IJobPromptAIParameters, IPromptResult> {
+export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<GenAIJobParameters, GenAIJobResult> {
     /**
      * Initialize the machine learning model.
      * @param workflowId The workflow ID.
@@ -109,12 +109,12 @@ export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<IJobPr
      * @param options The job options.
      * @returns A promise that resolves with the job result.
      */
-    processJob(parameters: IJobPromptAIParameters, options?: IGenerativeAIWorkerOptions): Promise<IPromptResult>;
+    processJob(parameters: GenAIJobParameters, options?: IGenerativeAIWorkerOptions): Promise<GenAIJobResult>;
     /**
      * Stream a job.
      * @param parameters The job parameters.
      * @param options The job options.
      * @returns An async generator that yields the job result.
      */
-    processJobStream(parameters: IJobPromptAIParameters, options?: IGenerativeAIWorkerOptions): AsyncGenerator<IPromptResult>;
+    processJobStream(parameters: GenAIJobParameters, options?: IGenerativeAIWorkerOptions): AsyncGenerator<GenAIJobResult>;
 }
