@@ -130,6 +130,11 @@ export interface IGenerativeAIContext {
   createAIJob(parameters: IJobPromptParameters): IGenerativeAIPromptJob;
   createAIJob(parameters: IJobRatingParameters): IGenerativeAIRatingJob;
 
+  /**
+   * Rate a prompt.
+   * @param parameters The parameters of the rating job.
+   * @returns A promise that resolves with the result.
+   */
   ratePrompt(parameters: IJobRatingParameters): Promise<IRatingResult>;
 
   /**
