@@ -216,7 +216,7 @@ export interface IJobParametersGenerativeAI extends IJobParameters, IPromptOptio
      */
     threadId: string;
 }
-export type GenerativeAIJobParameters = IGenerativeAIPromptWorkerParameters | IGenerativeAIRatingWorkerParameters;
+export type GenerativeAIWorkerParameters = IGenerativeAIPromptWorkerParameters | IGenerativeAIRatingWorkerParameters;
 export interface IGenerativeAIWorkerParameters extends IJobParametersGenerativeAI {
     /**
      * The AI job type.
