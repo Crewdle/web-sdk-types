@@ -143,7 +143,7 @@ export type PromptTypeVector = number[];
  * Represents the result of an AI prompt.
  * @category AI
  */
-export interface IPromptResult extends IJobResultAI {
+export interface IGenerativeAIPromptResult extends IJobResultAI {
     /**
      * The prompt AI job type.
      */
@@ -178,7 +178,7 @@ export declare enum AIRatingStatus {
  * Represents the result of an AI rating.
  * @category AI
  */
-export interface IRatingResult extends IJobResultAI {
+export interface IGenerativeAIRatingResult extends IJobResultAI {
     /**
      * The rating AI job type.
      */
@@ -188,7 +188,7 @@ export interface IRatingResult extends IJobResultAI {
      */
     status: AIRatingStatus;
 }
-export type GenAIResult = IPromptResult | IRatingResult;
+export type GenerativeAIJobResult = IGenerativeAIPromptResult | IGenerativeAIRatingResult;
 /**
  * The AI job result Interface
  * Represents the result of an AI job.
@@ -208,7 +208,7 @@ export interface IJobResultAI extends IJobResult {
  * The AI job type Enum
  * @category AI
  */
-export declare enum AIJobType {
+export declare const enum AIJobType {
     /**
      * The AI job generates a prompt.
      */
@@ -219,11 +219,11 @@ export declare enum AIJobType {
     Rating = "rate"
 }
 /**
- * The AI job parameters Interface
- * Parameters for AI job type.
- * @category AI
- */
-export interface IJobParametersAI extends IJobParameters, IPromptOptions, IRatingOptions {
+* The AI job parameters Interface
+* Parameters for AI job type.
+* @category AI
+*/
+export interface IJobParametersGenerativeAI extends IJobParameters, IPromptOptions, IRatingOptions {
     /**
      * The AI job type.
      */
@@ -233,8 +233,14 @@ export interface IJobParametersAI extends IJobParameters, IPromptOptions, IRatin
      */
     threadId: string;
 }
-export type GenAIJobParameters = IJobPromptAIParameters | IJobRatingAIParameters;
-export interface IJobPromptAIParameters extends IJobParametersAI {
+export type GenerativeAIWorkerParameters = IGenerativeAIPromptWorkerParameters | IGenerativeAIRatingWorkerParameters;
+export interface IGenerativeAIWorkerParameters extends IJobParametersGenerativeAI {
+    /**
+     * The AI job type.
+     */
+    type: AIJobType;
+}
+export interface IGenerativeAIPromptWorkerParameters extends IGenerativeAIWorkerParameters {
     /**
      * The AI job type.
      */
@@ -244,23 +250,44 @@ export interface IJobPromptAIParameters extends IJobParametersAI {
      */
     prompt: string;
 }
-export interface IJobRatingAIParameters extends IJobParametersAI {
+export interface IGenerativeAIRatingWorkerParameters extends IGenerativeAIWorkerParameters {
     /**
      * The AI job type.
      */
     type: AIJobType.Rating;
     /**
-     * The job id.
+     * The job ID.
      */
     jobId: string;
     /**
-     * The rating for the AI job.
+     * The rating for the AI prompt.
      */
     rating: PromptRating;
     /**
-     * The feedback for the AI job.
+     * The feedback for the AI prompt
      */
     feedback?: string;
+}
+export type GenerativeAIWorkerConnectorParameters = IGenerativeAIPromptWorkerConnectorParameters;
+export type GenerativeAIWorkerConnectorResult = IGenerativeAIWorkerConnectorPromptResult;
+export type GenerativeAIWorkerConnectorTypes = GenerativeAIWorkerConnectorResult['type'];
+export interface IGenerativeAIWorkerConnectorPromptResult extends IGenerativeAIPromptResult {
+}
+export interface IGenerativeAIWorkerConnectorParameters {
+    /**
+     * The AI job type.
+     */
+    type: AIJobType;
+}
+export interface IGenerativeAIPromptWorkerConnectorParameters extends IGenerativeAIWorkerConnectorParameters, IPromptOptions {
+    /**
+     * The AI job type.
+     */
+    type: AIJobType.Prompt;
+    /**
+     * The prompt for the AI job.
+     */
+    prompt: string;
 }
 /**
  * Represents a search result.

@@ -51,18 +51,3 @@ export var AIRatingStatus;
     AIRatingStatus["Success"] = "success";
     AIRatingStatus["Error"] = "error";
 })(AIRatingStatus || (AIRatingStatus = {}));
-/**
- * The AI job type Enum
- * @category AI
- */
-export var AIJobType;
-(function (AIJobType) {
-    /**
-     * The AI job generates a prompt.
-     */
-    AIJobType["Prompt"] = "prompt";
-    /**
-     * The AI job rates a prompt.
-     */
-    AIJobType["Rating"] = "rate";
-})(AIJobType || (AIJobType = {}));
