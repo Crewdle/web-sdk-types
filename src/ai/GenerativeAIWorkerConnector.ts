@@ -1,5 +1,5 @@
 import { IJobWorkerConnector, IJobWorkerOptions } from '../job';
-import { GenAIJobParameters, GenAIJobResult } from './GenerativeAI';
+import { GenerativeAIWorkerConnectorParameters, IGenerativeAIPromptWorkerConnectorParameters, IGenerativeAIWorkerConnectorPromptResult, GenerativeAIWorkerConnectorResult } from './GenerativeAI';
 
 /**
  * The generative AI model input types.
@@ -92,7 +92,7 @@ export interface IGenerativeAIWorkerOptions extends IJobWorkerOptions {
  * The generative AI worker connector interface.
  * @category Connector
  */
-export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<GenAIJobParameters, GenAIJobResult> {
+export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<GenerativeAIWorkerConnectorParameters, GenerativeAIWorkerConnectorResult> {
   /**
    * Initialize the machine learning model.
    * @param workflowId The workflow ID.
@@ -119,7 +119,8 @@ export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<GenAIJ
    * @param options The job options.
    * @returns A promise that resolves with the job result.
    */
-  processJob(parameters: GenAIJobParameters, options?: IGenerativeAIWorkerOptions): Promise<GenAIJobResult>;
+  processJob(parameters: IGenerativeAIPromptWorkerConnectorParameters, options?: IGenerativeAIWorkerOptions): Promise<IGenerativeAIWorkerConnectorPromptResult>;
+  processJob(parameters: GenerativeAIWorkerConnectorParameters, options?: IGenerativeAIWorkerOptions): Promise<GenerativeAIWorkerConnectorResult>;
 
   /**
    * Stream a job.
@@ -127,5 +128,6 @@ export interface IGenerativeAIWorkerConnector extends IJobWorkerConnector<GenAIJ
    * @param options The job options.
    * @returns An async generator that yields the job result.
    */
-  processJobStream(parameters: GenAIJobParameters, options?: IGenerativeAIWorkerOptions): AsyncGenerator<GenAIJobResult>;
+  processJobStream(parameters: IGenerativeAIPromptWorkerConnectorParameters, options?: IGenerativeAIWorkerOptions): AsyncGenerator<IGenerativeAIWorkerConnectorPromptResult>;
+  processJobStream(parameters: GenerativeAIWorkerConnectorParameters, options?: IGenerativeAIWorkerOptions): AsyncGenerator<GenerativeAIWorkerConnectorResult>;
 }

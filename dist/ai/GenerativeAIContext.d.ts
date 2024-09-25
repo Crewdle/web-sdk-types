@@ -1,4 +1,4 @@
-import { AIJobType, IPromptOptions, IGenAIPromptResult, IRatingOptions, IGenAIRatingResult, PromptRating } from '.';
+import { AIJobType, IPromptOptions, IGenerativeAIPromptResult, IRatingOptions, IGenerativeAIRatingResult, PromptRating } from '.';
 /**
  * Represents bounded prompt job ready to be run or streamed.
  */
@@ -19,12 +19,12 @@ export interface IGenerativeAIPromptJob {
      * Run the prompt job.
      * @returns A promise that resolves with the result
      */
-    run: () => Promise<IGenAIPromptResult>;
+    run: () => Promise<IGenerativeAIPromptResult>;
     /**
      * Stream the prompt job.
      * @returns An async generator that yields the result
      */
-    stream: () => AsyncGenerator<IGenAIPromptResult>;
+    stream: () => AsyncGenerator<IGenerativeAIPromptResult>;
 }
 /**
  * Represents a Generative AI job.
@@ -54,16 +54,16 @@ export interface IGenerativeAIRatingJob {
      * Run the rating job.
      * @returns A promise that resolves with the result
      */
-    rate: () => Promise<IGenAIRatingResult>;
+    rate: () => Promise<IGenerativeAIRatingResult>;
 }
 /**
  * Represents the parameters of an AI job.
  */
-export type CreateAIJobParameters = IJobPromptParameters | IJobRatingParameters;
+export type CreateAIJobParameters = IGenerativeAIPromptParameters | IGenerativeAIRatingParameters;
 /**
  * Represents the parameters of a prompt job.
  */
-export interface IJobPromptParameters {
+export interface IGenerativeAIPromptParameters {
     /**
      * The prompt job type.
      */
@@ -80,7 +80,7 @@ export interface IJobPromptParameters {
 /**
  * Represents the parameters of a rating job.
  */
-export interface IJobRatingParameters {
+export interface IGenerativeAIRatingParameters {
     /**
      * The rating job type.
      */
@@ -112,14 +112,14 @@ export interface IGenerativeAIContext {
      * @param parameters The parameters of the AI job.
      * @returns The job ready to be run or streamed.
      */
-    createAIJob(parameters: IJobPromptParameters): IGenerativeAIPromptJob;
-    createAIJob(parameters: IJobRatingParameters): IGenerativeAIRatingJob;
+    createAIJob(parameters: IGenerativeAIPromptParameters): IGenerativeAIPromptJob;
+    createAIJob(parameters: IGenerativeAIRatingParameters): IGenerativeAIRatingJob;
     /**
      * Rate a prompt.
      * @param parameters The parameters of the rating job.
      * @returns A promise that resolves with the result.
      */
-    ratePrompt(parameters: IJobRatingParameters): Promise<IGenAIRatingResult>;
+    ratePrompt(parameters: IGenerativeAIRatingParameters): Promise<IGenerativeAIRatingResult>;
     /**
      * Get the data bucket IDs.
      * @returns An array of data bucket IDs.
