@@ -31,6 +31,12 @@ export interface IGraphDatabaseConnector {
   getContent(nodes: string[], maxDepth?: number, contentSize?: number): { [key: string]: string[] };
 
   /**
+   * Remove content from the database.
+   * @param name The name of the content to remove.
+   */
+  remove(name: string): void;
+
+  /**
    * Get the size of the database
    * @returns The size of the database.
    */

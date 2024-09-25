@@ -38,6 +38,12 @@ export interface IGraphDatabase extends IDataStream {
   addEdge(from: string, to: string): void;
 
   /**
+   * Remove content from the database.
+   * @param name The name of the content to remove.
+   */
+  remove(name: string): void;
+
+  /**
    * Get the content of the nodes and their neighbors.
    * @param nodes The nodes to get the content of.
    * @param maxDepth The maximum depth to search (default 1).
