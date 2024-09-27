@@ -1,6 +1,6 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 import { IGenerativeAICreateJobParameters } from '../generic';
-import { GenerativeAIPromptRating } from './GenerativeAIPromptRating';
+import { GenerativeAIRating } from './GenerativeAIRating';
 import { IGenerativeAIRatingOptions } from './GenerativeAIRatingOptions';
 
 /**
@@ -21,7 +21,7 @@ export interface IGenerativeAIRatingCreateJobParameters extends IGenerativeAICre
   /**
    * The rating of the prompt.
    */
-  rating: GenerativeAIPromptRating;
+  rating: GenerativeAIRating;
 
   /**
    * The options for the rating.

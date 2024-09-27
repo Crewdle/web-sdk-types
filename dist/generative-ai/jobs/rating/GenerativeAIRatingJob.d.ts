@@ -1,4 +1,4 @@
-import { IGenerativeAIRatingOptions, IGenerativeAIRatingResult, GenerativeAIPromptRating } from '.';
+import { IGenerativeAIRatingOptions, IGenerativeAIRatingResult, GenerativeAIRating } from '.';
 /**
  * Represents bounded rating job ready to be run or streamed.
  * @category AI
@@ -11,7 +11,7 @@ export interface IGenerativeAIRatingJob {
     /**
      * The rating for the job.
      */
-    rating: GenerativeAIPromptRating;
+    rating: GenerativeAIRating;
     /**
      * The options for the rating.
      */

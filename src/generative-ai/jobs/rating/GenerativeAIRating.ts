@@ -2,7 +2,7 @@
  * The AI prompt rating Enum
  * @category AI
  */
-export enum GenerativeAIPromptRating {
+export enum GenerativeAIRating {
   Up = 'up',
   Down = 'down'
 }

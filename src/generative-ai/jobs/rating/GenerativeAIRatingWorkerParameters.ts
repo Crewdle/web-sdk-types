@@ -1,5 +1,5 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
-import { GenerativeAIPromptRating } from './GenerativeAIPromptRating';
+import { GenerativeAIRating } from './GenerativeAIRating';
 import { IGenerativeAIWorkerParameters } from '../generic/GenerativeAIWorkerParameters';
 
 /**
@@ -21,7 +21,7 @@ export interface IGenerativeAIRatingWorkerParameters extends IGenerativeAIWorker
   /**
    * The rating for the AI prompt.
    */
-  rating: GenerativeAIPromptRating;
+  rating: GenerativeAIRating;
 
   /**
    * The thread ID
