@@ -1,10 +1,11 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
+import { IGenerativeAICreateJobParameters } from '../generic';
 
 /**
  * Represents the parameters to create a download document job
  * @category AI
  */
-export interface IGenerativeAIDownloadDocumentCreateJobParameters {
+export interface IGenerativeAIDownloadDocumentCreateJobParameters extends IGenerativeAICreateJobParameters {
   /**
    * The AI job type.
    */

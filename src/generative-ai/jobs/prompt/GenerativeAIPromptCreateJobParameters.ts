@@ -1,4 +1,5 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
+import { IGenerativeAICreateJobParameters } from '../generic';
 import { IGenerativeAIPromptOptions } from './GenerativeAIPromptOptions';
 
 /**
@@ -6,7 +7,7 @@ import { IGenerativeAIPromptOptions } from './GenerativeAIPromptOptions';
  * @category AI
  */
 
-export interface IGenerativeAIPromptCreateJobParameters {
+export interface IGenerativeAIPromptCreateJobParameters extends IGenerativeAICreateJobParameters {
   /**
    * The prompt job type.
    */

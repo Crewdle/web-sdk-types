@@ -1,11 +1,12 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
+import { IGenerativeAICreateJobParameters } from '../generic';
 import { GenerativeAIPromptRating } from './GenerativeAIPromptRating';
 import { IGenerativeAIRatingOptions } from './GenerativeAIRatingOptions';
 /**
  * Represents the parameters of a rating job.
  * @category AI
  */
-export interface IGenerativeAIRatingCreateJobParameters {
+export interface IGenerativeAIRatingCreateJobParameters extends IGenerativeAICreateJobParameters {
     /**
      * The rating job type.
      */
