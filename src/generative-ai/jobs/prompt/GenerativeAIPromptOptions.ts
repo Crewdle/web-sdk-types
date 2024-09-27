@@ -1,5 +1,5 @@
 import { IGenerativeAIOptions } from '../generic/GenerativeAIOptions';
-import { IPromptFunction, IPromptHistory } from '../../prompt-functions';
+import { IPromptFunction, IPromptHistory } from './options';
 
 /**
  * The AI prompt options Interface

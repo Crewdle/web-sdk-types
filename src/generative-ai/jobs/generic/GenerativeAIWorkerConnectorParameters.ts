@@ -1,4 +1,4 @@
-import { GenerativeAIJobType } from '../../union-types';
+import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 
 /**
  * AI worker connector parameters Interface

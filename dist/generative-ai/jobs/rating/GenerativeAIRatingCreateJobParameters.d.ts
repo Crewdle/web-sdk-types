@@ -1,4 +1,4 @@
-import { GenerativeAIJobType } from '../../union-types';
+import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 import { GenerativeAIPromptRating } from './GenerativeAIPromptRating';
 import { IGenerativeAIRatingOptions } from './GenerativeAIRatingOptions';
 /**

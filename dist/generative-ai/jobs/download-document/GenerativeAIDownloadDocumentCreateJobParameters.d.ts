@@ -1,4 +1,4 @@
-import { GenerativeAIJobType } from '../../union-types';
+import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 /**
  * Represents the parameters to create a download document job
  * @category AI

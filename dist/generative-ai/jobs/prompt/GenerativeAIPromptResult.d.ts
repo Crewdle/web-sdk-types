@@ -1,7 +1,7 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 import { IJobResultGenerativeAI } from '../../job/JobResultGenerativeAI';
 import { ISearchResult } from '../../search';
-import { PromptTypeText, PromptTypeVector } from '../../prompt-functions';
+import { PromptTypeText, PromptTypeVector } from './result';
 /**
  * The AI prompt result Interface
  * Represents the result of an AI prompt.

@@ -1,3 +1,5 @@
+export * from './options';
+export * from './result';
 export * from './GenerativeAIPromptCreateJobParameters';
 export * from './GenerativeAIPromptJob';
 export * from './GenerativeAIPromptOptions';

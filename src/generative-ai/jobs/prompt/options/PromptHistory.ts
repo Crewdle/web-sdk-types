@@ -5,7 +5,6 @@ import { PromptSource } from './PromptSource';
  * Represents the history of a prompt.
  * @category AI
  */
-
 export interface IPromptHistory {
   /**
    * The source of the prompt.
@@ -16,5 +15,4 @@ export interface IPromptHistory {
    * The prompt.
    */
   message: string;
-}
-;
+};
