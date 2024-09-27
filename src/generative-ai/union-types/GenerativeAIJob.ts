@@ -1,3 +1,4 @@
+import { IGenerativeAIDownloadDocumentJob } from '../jobs/download-document';
 import { IGenerativeAIPromptJob } from '../jobs/prompt';
 import { IGenerativeAIRatingJob } from '../jobs/rating';
 
@@ -8,4 +9,5 @@ import { IGenerativeAIRatingJob } from '../jobs/rating';
 export type GenerativeAIJob =
   | IGenerativeAIPromptJob
   | IGenerativeAIRatingJob
+  | IGenerativeAIDownloadDocumentJob
 ;

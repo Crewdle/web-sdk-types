@@ -1,4 +1,6 @@
-import { IGenerativeAIRatingResult } from '.';
+import { IGenerativeAIRatingResult, IGenerativeAIDownloadDocumentResult } from '.';
+import { IGenerativeAIDownloadDocumentCreateJobParameters } from './jobs/download-document/GenerativeAIDownloadDocumentCreateJobParameters';
+import { IGenerativeAIDownloadDocumentJob } from './jobs/download-document/GenerativeAIDownloadDocumentJob';
 import { IGenerativeAIPromptCreateJobParameters } from './jobs/prompt/GenerativeAIPromptCreateJobParameters';
 import { IGenerativeAIPromptJob } from './jobs/prompt/GenerativeAIPromptJob';
 import { IGenerativeAIRatingCreateJobParameters } from './jobs/rating/GenerativeAIRatingCreateJobParameters';
@@ -16,6 +18,7 @@ export interface IGenerativeAIContext {
    */
   createAIJob(parameters: IGenerativeAIPromptCreateJobParameters): IGenerativeAIPromptJob;
   createAIJob(parameters: IGenerativeAIRatingCreateJobParameters): IGenerativeAIRatingJob;
+  createAIJob(parameters: IGenerativeAIDownloadDocumentCreateJobParameters): IGenerativeAIDownloadDocumentJob;
 
   /**
    * Rate a prompt.
@@ -23,6 +26,13 @@ export interface IGenerativeAIContext {
    * @returns A promise that resolves with the result.
    */
   ratePrompt(parameters: IGenerativeAIRatingCreateJobParameters): Promise<IGenerativeAIRatingResult>;
+
+  /**
+   * Download a document.
+   * @param parameters The parameters of the download document job.
+   * @returns A promise that resolves with the result containing the document as an ArrayBuffer.
+   */
+  downloadDocument(documentPath: string): Promise<IGenerativeAIDownloadDocumentResult>;
 
   /**
    * Get the data bucket IDs.

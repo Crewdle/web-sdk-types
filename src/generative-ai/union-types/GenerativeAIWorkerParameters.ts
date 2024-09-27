@@ -1,3 +1,4 @@
+import { IGenerativeAIDownloadDocumentWorkerParameters } from '../jobs/download-document';
 import { IGenerativeAIPromptWorkerParameters } from '../jobs/prompt';
 import { IGenerativeAIRatingWorkerParameters } from '../jobs/rating';
 
@@ -9,4 +10,5 @@ import { IGenerativeAIRatingWorkerParameters } from '../jobs/rating';
 export type GenerativeAIWorkerParameters =
   | IGenerativeAIPromptWorkerParameters
   | IGenerativeAIRatingWorkerParameters
+  | IGenerativeAIDownloadDocumentWorkerParameters
 ;

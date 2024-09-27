@@ -12,4 +12,9 @@ export const enum GenerativeAIJobType {
    * The AI job rates a prompt.
    */
   Rating = 'rate',
+
+  /**
+   * The user requests to download a document related to the answer they got.
+   */
+  DownloadDocument = 'downloadDocument'
 }
