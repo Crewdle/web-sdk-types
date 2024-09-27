@@ -1,4 +1,4 @@
-import { IIndex, ISearchResult } from '../ai';
+import { IIndex, ISearchResult } from '../generative-ai';
 
 /**
  * The vector database connector interface.

@@ -1,6 +1,6 @@
 import { IGraphDatabase } from '../../graph-database';
 import { IClusterEventEmitter } from '.';
-import { IGenerativeAIContext, IGenerativeAIWorker } from '../../ai';
+import { IGenerativeAIContext, IGenerativeAIWorker } from '../../generative-ai';
 import { IKeyValueDatabase, IDatabaseLayout, ILayoutBuilder } from '../../key-value-database';
 import { ILocalMediaStream, ILocalDynamicMediaStream, IRemoteMediaStream, MediaStreamSource } from '../../media-stream';
 import { IObjectStoreBucket, IObjectStoreBucketOptions } from '../../object-storage';

@@ -1,4 +1,4 @@
-import { IIndex, ISearchResult } from '../ai';
+import { IIndex, ISearchResult } from '../generative-ai';
 import { IDataStream } from '../core';
 /**
  * The interface for the vector database.
