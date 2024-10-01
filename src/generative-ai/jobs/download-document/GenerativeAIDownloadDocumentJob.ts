@@ -1,3 +1,4 @@
+import { IGenerativeAIJob } from '../generic';
 import { IGenerativeAIDownloadDocumentResult } from './GenerativeAIDownloadDocumentResult';
 
 
@@ -6,7 +7,7 @@ import { IGenerativeAIDownloadDocumentResult } from './GenerativeAIDownloadDocum
  * @category AI
  */
 
-export interface IGenerativeAIDownloadDocumentJob {
+export interface IGenerativeAIDownloadDocumentJob extends IGenerativeAIJob {
   /**
    * The job ID.
    */

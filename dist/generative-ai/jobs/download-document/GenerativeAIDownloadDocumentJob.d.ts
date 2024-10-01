@@ -1,9 +1,10 @@
+import { IGenerativeAIJob } from '../generic';
 import { IGenerativeAIDownloadDocumentResult } from './GenerativeAIDownloadDocumentResult';
 /**
  * Represents bounded download document job ready to be executed.
  * @category AI
  */
-export interface IGenerativeAIDownloadDocumentJob {
+export interface IGenerativeAIDownloadDocumentJob extends IGenerativeAIJob {
     /**
      * The job ID.
      */

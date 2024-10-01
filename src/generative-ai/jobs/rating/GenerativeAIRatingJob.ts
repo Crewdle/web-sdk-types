@@ -1,10 +1,11 @@
 import { IGenerativeAIRatingOptions, IGenerativeAIRatingResult, GenerativeAIRating } from '.';
+import { IGenerativeAIJob } from '../generic';
 
 /**
  * Represents bounded rating job ready to be run or streamed.
  * @category AI
  */
-export interface IGenerativeAIRatingJob {
+export interface IGenerativeAIRatingJob extends IGenerativeAIJob {
   /**
    * The job ID.
    */

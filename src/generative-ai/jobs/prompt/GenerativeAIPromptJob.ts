@@ -1,10 +1,11 @@
 import { IGenerativeAIPromptOptions, IGenerativeAIPromptResult } from '.';
+import { IGenerativeAIJob } from '../generic';
 
 /**
  * Represents bounded prompt job ready to be run or streamed.
  * @category AI
  */
-export interface IGenerativeAIPromptJob {
+export interface IGenerativeAIPromptJob extends IGenerativeAIJob {
 
   /**
    * The prompt to be processed
