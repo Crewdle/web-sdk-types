@@ -2,7 +2,7 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { DocumentParserConnectorConstructor, ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
-import { GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, SearchConnectorConstructor } from '../../ai';
+import { GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, SearchConnectorConstructor } from '../../generative-ai';
 import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 import { GraphDatabaseConnectorConstructor } from '../../graph-database';
 

@@ -1,4 +1,4 @@
-import { IIndex } from '../ai';
+import { IIndex } from '../generative-ai';
 import { IDataStream } from '../core';
 
 /**

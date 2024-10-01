@@ -1,4 +1,4 @@
-import { IIndex } from '../ai';
+import { IIndex } from '../generative-ai';
 /**
  * The graph database connector interface.
  * @category Connector
