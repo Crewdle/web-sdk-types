@@ -7,3 +7,4 @@ export * from './job';
 export * from './generative-ai';
 export * from './vector-database';
 export * from './graph-database';
+export * from './external-storage';

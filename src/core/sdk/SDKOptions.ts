@@ -5,6 +5,7 @@ import { PeerConnectionConnectorConstructor } from '../connection';
 import { GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, SearchConnectorConstructor } from '../../generative-ai';
 import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 import { GraphDatabaseConnectorConstructor } from '../../graph-database';
+import { ExternalStorageConnectionConnectorConstructor, ExternalStorageType } from '../../external-storage';
 
 /**
  * Options to configure the SDK.
@@ -31,6 +32,11 @@ export interface ISDKOptions {
    * If not provided, the default object store connector is OPFS.
    */
   objectStoreConnector?: ObjectStoreConnectorConstructor;
+
+  /**
+   * The custom external storage connectors.
+   */
+  externalStorageConnectors?: Map<ExternalStorageType, ExternalStorageConnectionConnectorConstructor>;
 
   /**
    * The custom key-value database connector to use for storing key-value pairs.
