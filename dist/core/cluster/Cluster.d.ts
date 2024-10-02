@@ -8,7 +8,7 @@ import { IPubSubTopic } from '../../pubsub';
 import { IVectorDatabase } from '../../vector-database';
 import { LocalNode, Node } from '../node';
 import { ISDKCloseOptions } from '../sdk';
-import { IExternalStorageConnection } from '../../external-storage';
+import { ExternalStorageType, IExternalStorageConnection } from '../../external-storage';
 /**
  * The cluster interface.
  * @category Core
@@ -39,11 +39,12 @@ export interface ICluster extends IClusterEventEmitter {
     /**
      * Open an external storage connection.
      * @param name The name of the external storage connection.
+     * @param type The type of the external storage connection.
      * @throws {@link SDKClientErrorCodes.ExternalStorageConnectionAlreadyExists} if the external storage connection is already open.
      * @throws {@link SDKClientErrorCodes.ExternalStorageConnectionNameNotString} if the name is not a string.
-     * @returns A promise that resolves with the external storage connection.
+     * @returns The external storage connection.
      */
-    openExternalStorageConnection(name: string): Promise<IExternalStorageConnection>;
+    openExternalStorageConnection(name: string, type: ExternalStorageType): IExternalStorageConnection;
     /**
      * Open a key-value database.
      * @param name The name of the key-value database.
