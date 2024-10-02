@@ -8,4 +8,3 @@ export var ExternalStorageType;
      */
     ExternalStorageType["SharePoint"] = "sharepoint";
 })(ExternalStorageType || (ExternalStorageType = {}));
-;
