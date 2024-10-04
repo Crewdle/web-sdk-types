@@ -1,4 +1,4 @@
-import { IFile, ObjectDescriptor } from '../object-storage';
+import { IFile, ObjectDescriptor, StorageEvent } from '../object-storage';
 
 /**
  * Interface for external storage connection connector.
@@ -19,4 +19,10 @@ export interface IExternalStorageConnectionConnector {
    * @returns A promise that resolves with an array of object descriptors.
    */
   list(path: string, recursive: boolean): Promise<ObjectDescriptor[]>;
+
+  /**
+   * Lists the changes in the storage.
+   * @returns A promise that resolves with an array of storage events.
+   */
+  listChanges(): Promise<StorageEvent[]>
 }

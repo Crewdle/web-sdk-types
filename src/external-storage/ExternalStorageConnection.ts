@@ -1,4 +1,4 @@
-import { IFile, ObjectDescriptor } from '../object-storage';
+import { IFile, ObjectDescriptor, StorageEvent } from '../object-storage';
 import { IDataStream } from '../core';
 import { IExternalStorageListOptions } from '.';
 
@@ -46,4 +46,17 @@ export interface IExternalStorageConnection extends IDataStream {
    * @returns The list of objects and folders.
    */
   list(path: string, options?: IExternalStorageListOptions): Promise<ObjectDescriptor[]>;
+
+  /**
+   * Subscribe to the bucket events.
+   * @param label The label of the subscriber.
+   * @param callback The callback function.
+   */
+  subscribe(label: string, callback: (data: StorageEvent) => void): void;
+
+  /**
+   * Unsubscribe from the bucket.
+   * @param label The label of the subscriber.
+   */
+  unsubscribe(label: string): void;
 }
