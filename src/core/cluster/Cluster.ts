@@ -48,7 +48,7 @@ export interface ICluster extends IClusterEventEmitter {
    * @throws {@link SDKClientErrorCodes.ExternalStorageConnectionNameNotString} if the name is not a string.
    * @returns The external storage connection.
    */
-  openExternalStorageConnection(name: string, type: ExternalStorageType): IExternalStorageConnection;
+  openExternalStorageConnection(name: string, type: ExternalStorageType): Promise<IExternalStorageConnection>;
 
   /**
    * Open a key-value database.
