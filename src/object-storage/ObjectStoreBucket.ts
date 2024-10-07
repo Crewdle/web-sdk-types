@@ -61,7 +61,7 @@ export interface IObjectStoreBucket extends IDataStream {
   /**
    * List the objects and folders of the bucket.
    * @param path The path of the folder.
-   * @param recursive Whether to list the objects and folders recursively.
+   * @param options The optional options for listing the objects and folders.
    * @returns The list of objects and folders.
    */
   list(path: string, options?: IObjectStoreListOptions): Promise<ObjectDescriptor[]>;

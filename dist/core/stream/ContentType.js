@@ -41,4 +41,8 @@ export var ContentType;
      * @ignore
      */
     ContentType["GraphDatabase"] = "graphdatabase";
+    /**
+     * @ignore
+     */
+    ContentType["ExternalStorage"] = "externalstorage";
 })(ContentType || (ContentType = {}));

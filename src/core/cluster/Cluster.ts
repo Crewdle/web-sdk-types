@@ -8,6 +8,7 @@ import { IPubSubTopic } from '../../pubsub';
 import { IVectorDatabase } from '../../vector-database';
 import { LocalNode, Node } from '../node';
 import { ISDKCloseOptions } from '../sdk';
+import { ExternalStorageType, IExternalStorageConnection } from '../../external-storage';
 
 /**
  * The cluster interface.
@@ -38,6 +39,16 @@ export interface ICluster extends IClusterEventEmitter {
    * @returns A promise that resolves with the data stream.
    */
   openObjectStoreBucket(name: string, options?: IObjectStoreBucketOptions): Promise<IObjectStoreBucket>;
+
+  /**
+   * Open an external storage connection.
+   * @param name The name of the external storage connection.
+   * @param type The type of the external storage connection.
+   * @throws {@link SDKClientErrorCodes.ExternalStorageConnectionAlreadyExists} if the external storage connection is already open.
+   * @throws {@link SDKClientErrorCodes.ExternalStorageConnectionNameNotString} if the name is not a string.
+   * @returns The external storage connection.
+   */
+  openExternalStorageConnection(name: string, type: ExternalStorageType): Promise<IExternalStorageConnection>;
 
   /**
    * Open a key-value database.
@@ -103,6 +114,12 @@ export interface ICluster extends IClusterEventEmitter {
    * @param strategy The strategy to use to filter the data streams.
    */
   getObjectStoreBuckets(strategy?: (item: IObjectStoreBucket) => boolean): IObjectStoreBucket[];
+
+  /**
+   * Get an array of opened external storage connections.
+   * @param strategy The strategy to use to filter the external storage connections.
+   */
+  getExternalStorageConnections(strategy?: (item: IExternalStorageConnection) => boolean): IExternalStorageConnection[];
 
   /**
    * Get an array of opened key-value databases.

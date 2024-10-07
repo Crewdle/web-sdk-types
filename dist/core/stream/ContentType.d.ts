@@ -38,5 +38,9 @@ export declare enum ContentType {
     /**
      * @ignore
      */
-    GraphDatabase = "graphdatabase"
+    GraphDatabase = "graphdatabase",
+    /**
+     * @ignore
+     */
+    ExternalStorage = "externalstorage"
 }
