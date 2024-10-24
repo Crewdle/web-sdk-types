@@ -19,13 +19,15 @@ export interface IVectorDatabaseConnector {
      * @param content The content.
      * @param index The index of the vectors.
      * @param vectors The vectors to insert.
+     * @param transactionId The transaction ID.
      */
-    insert(name: string, content: string, index: IIndex[], vectors: number[][]): void;
+    insert(name: string, content: string, index: IIndex[], vectors: number[][], transactionId: string): void;
     /**
      * Remove vectors from the database.
      * @param name The name of the content.
+     * @param transactionId The transaction ID.
      */
-    remove(name: string): void;
+    remove(name: string, transactionId: string): void;
     /**
      * Get the content of the database.
      * @returns The content of the database.
