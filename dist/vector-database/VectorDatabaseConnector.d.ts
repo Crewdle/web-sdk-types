@@ -19,18 +19,26 @@ export interface IVectorDatabaseConnector {
      * @param content The content.
      * @param index The index of the vectors.
      * @param vectors The vectors to insert.
-     * @param transactionId The transaction ID.
      */
-    insert(name: string, content: string, index: IIndex[], vectors: number[][], transactionId: string): void;
+    insert(name: string, content: string, index: IIndex[], vectors: number[][]): void;
     /**
      * Remove vectors from the database.
      * @param name The name of the content.
-     * @param transactionId The transaction ID.
      */
-    remove(name: string, transactionId: string): void;
+    remove(name: string): void;
     /**
      * Get the content of the database.
      * @returns The content of the database.
      */
     getBuffer(): ArrayBuffer;
+    /**
+     * Save the database to disk.
+     * @param version The version of the data collection.
+     */
+    saveToDisk(version: number): void;
+    /**
+     * Load the database from disk.
+     * @param version The version of the data collection.
+     */
+    loadFromDisk(version: number): void;
 }

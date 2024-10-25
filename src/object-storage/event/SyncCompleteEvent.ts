@@ -1,4 +1,4 @@
-import { StorageEventType } from '.';
+import { StorageEventType, ISyncCompleteEventPayload } from '.';
 
 /**
  * The sync complete event.
@@ -13,5 +13,5 @@ export interface ISyncCompleteEvent {
   /**
    * The sync complete event payload.
    */
-  payload: null;
+  payload: ISyncCompleteEventPayload;
 }
