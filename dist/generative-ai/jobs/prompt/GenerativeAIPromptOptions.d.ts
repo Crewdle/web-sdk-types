@@ -15,6 +15,10 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
      */
     instructions?: string;
     /**
+     * The grammar to use for the AI job.
+     */
+    grammar?: string;
+    /**
      * The context for the AI job.
      */
     history?: IPromptHistory[];
