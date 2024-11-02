@@ -23,6 +23,12 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
      */
     history?: IPromptHistory[];
     /**
+     * The internal context for the AI job.
+     */
+    internalContext?: {
+        [key: string]: string;
+    };
+    /**
      * The maximum number of tokens to generate.
      */
     maxTokens?: number;
