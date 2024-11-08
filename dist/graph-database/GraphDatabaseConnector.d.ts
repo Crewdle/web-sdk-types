@@ -38,4 +38,14 @@ export interface IGraphDatabaseConnector {
      * @returns The size of the database.
      */
     getSize(): number;
+    /**
+     * Save the database to disk.
+     * @param version The version of the data collection.
+     */
+    saveToDisk(version: string): void;
+    /**
+     * Load the database from disk.
+     * @param version The version of the data collection.
+     */
+    loadFromDisk(version: string): void;
 }

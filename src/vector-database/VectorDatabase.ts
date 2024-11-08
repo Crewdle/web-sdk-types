@@ -45,4 +45,16 @@ export interface IVectorDatabase extends IDataStream {
    * @param name The name of the content.
    */
   remove(name: string): void;
+
+  /**
+   * Save the database to disk.
+   * @param version The version of the data collection.
+   */
+  saveToDisk(version: string): void;
+
+  /**
+   * Load the database from disk.
+   * @param version The version of the data collection.
+   */
+  loadFromDisk(version: string): void;
 }

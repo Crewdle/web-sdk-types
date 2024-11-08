@@ -15,9 +15,19 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
      */
     instructions?: string;
     /**
+     * The grammar to use for the AI job.
+     */
+    grammar?: string;
+    /**
      * The context for the AI job.
      */
     history?: IPromptHistory[];
+    /**
+     * The internal context for the AI job.
+     */
+    internalContext?: {
+        [key: string]: string;
+    };
     /**
      * The maximum number of tokens to generate.
      */

@@ -46,4 +46,14 @@ export interface IGraphDatabase extends IDataStream {
     getContent(nodes: string[], maxDepth?: number, contentSize?: number): {
         [key: string]: string[];
     };
+    /**
+     * Save the database to disk.
+     * @param version The version of the data collection.
+     */
+    saveToDisk(version: string): void;
+    /**
+     * Load the database from disk.
+     * @param version The version of the data collection.
+     */
+    loadFromDisk(version: string): void;
 }

@@ -21,6 +21,12 @@ export interface IGenerativeAIPromptResult extends IJobResultGenerativeAI {
      */
     context?: ISearchResult[];
     /**
+     * The internal context used by the AI job.
+     */
+    internalContext?: {
+        [key: string]: string;
+    };
+    /**
      * The tokens used by the AI job.
      */
     inputTokens?: number;
