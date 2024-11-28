@@ -1,5 +1,9 @@
 import { IFile } from './File';
 
+/**
+ * The interface for the document parser connector.
+ * @category Object Storage
+ */
 export interface IDocumentParserConnector {
   /**
    * Parses a document.

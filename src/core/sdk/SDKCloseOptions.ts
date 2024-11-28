@@ -1,5 +1,6 @@
 /**
  * Represents the options for closing the SDK.
+ * @category Core
  */
 export interface ISDKCloseOptions {
 

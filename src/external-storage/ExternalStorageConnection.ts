@@ -4,6 +4,7 @@ import { IExternalStorageListOptions } from '.';
 
 /**
  * The type of external storage.
+ * @category External Storage
  */
 export enum ExternalStorageType {
   /**

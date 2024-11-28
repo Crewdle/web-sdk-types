@@ -45,7 +45,7 @@ export interface ICluster extends IClusterEventEmitter {
    * @param name The name of the external storage connection.
    * @param type The type of the external storage connection.
    * @throws {@link SDKClientErrorCodes.ExternalStorageConnectionAlreadyExists} if the external storage connection is already open.
-   * @throws {@link SDKClientErrorCodes.ExternalStorageConnectionNameNotString} if the name is not a string.
+   * @throws {@link SDKClientErrorCodes.ExternalStorageNameNotString} if the name is not a string.
    * @returns The external storage connection.
    */
   openExternalStorageConnection(name: string, type: ExternalStorageType): Promise<IExternalStorageConnection>;
