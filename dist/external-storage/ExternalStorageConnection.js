@@ -1,5 +1,6 @@
 /**
  * The type of external storage.
+ * @category External Storage
  */
 export var ExternalStorageType;
 (function (ExternalStorageType) {

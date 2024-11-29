@@ -1,4 +1,8 @@
 import { IJobParameters, IJobResult } from './Job';
+/**
+ * The Job Worker options.
+ * @category Job
+ */
 export interface IJobWorkerOptions {
 }
 /**
