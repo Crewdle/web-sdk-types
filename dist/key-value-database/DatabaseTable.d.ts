@@ -52,7 +52,7 @@ export interface IDatabaseTable<T extends IValueType> {
     count(query?: IDatabaseTableQuery | IQueryBuilder): Promise<number>;
     /**
      * Subscribe to changes in the database table.
-     * @params callback The callback to call when the database table changes.
+     * @param callback The callback to call when the database table changes.
      */
     subscribe(callback: (event: IDatabaseTableEvent<T>) => void): void;
     /**

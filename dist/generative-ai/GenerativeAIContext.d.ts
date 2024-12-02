@@ -26,7 +26,7 @@ export interface IGenerativeAIContext {
     ratePrompt(parameters: IGenerativeAIRatingCreateJobParameters): Promise<IGenerativeAIRatingResult>;
     /**
      * Download a document.
-     * @param parameters The parameters of the download document job.
+     * @param documentPath The path of the document to download.
      * @returns A promise that resolves with the result containing the document as an ArrayBuffer.
      */
     downloadDocument(documentPath: string): Promise<IGenerativeAIDownloadDocumentResult>;

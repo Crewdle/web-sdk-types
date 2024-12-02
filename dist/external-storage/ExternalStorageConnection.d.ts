@@ -3,6 +3,7 @@ import { IDataStream } from '../core';
 import { IExternalStorageListOptions } from '.';
 /**
  * The type of external storage.
+ * @category External Storage
  */
 export declare enum ExternalStorageType {
     /**

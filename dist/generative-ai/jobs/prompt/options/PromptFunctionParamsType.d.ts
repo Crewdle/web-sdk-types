@@ -1,5 +1,6 @@
 /**
  * The type of parameters supported for agentic functions
+ * @category AI
  */
 export declare enum PromptFunctionParamsType {
     /**
