@@ -88,6 +88,7 @@ export interface IGenerativeAIModel {
  */
 export interface IGenerativeAIWorkerOptions extends IJobWorkerOptions {
   model: IGenerativeAIModel;
+  sequences?: number;
 }
 
 /**

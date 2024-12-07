@@ -82,6 +82,7 @@ export interface IGenerativeAIModel {
  */
 export interface IGenerativeAIWorkerOptions extends IJobWorkerOptions {
     model: IGenerativeAIModel;
+    sequences?: number;
 }
 /**
  * The generative AI worker connector interface.
