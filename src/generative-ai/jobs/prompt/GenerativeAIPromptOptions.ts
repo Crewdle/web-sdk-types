@@ -2,6 +2,23 @@ import { IFile } from '../../../object-storage';
 import { IGenerativeAIOptions } from '../generic/GenerativeAIOptions';
 import { IPromptFunction, IPromptHistory } from './options';
 
+export interface IGenerativeAIPromptFile {
+  /**
+   * The name of the file.
+   */
+  name: string;
+
+  /**
+   * The type of the file.
+   */
+  type: string;
+
+  /**
+   * The content of the file.
+   */
+  content: string;
+}
+
 /**
  * The AI prompt options Interface
  * Represents the options for an AI prompt.
@@ -51,6 +68,6 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
   /**
    * The files that will be used by the LLM.
    */
-  files?: IFile[];
+  files?: IGenerativeAIPromptFile[];
 }
 
