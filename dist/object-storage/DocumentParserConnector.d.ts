@@ -9,7 +9,7 @@ export interface IDocumentParserConnector {
      * @param file The file to parse.
      * @returns A promise that resolves with the parsed document.
      */
-    parse(file: IFile): Promise<string>;
+    parse(file: IFile | File): Promise<string>;
     /**
      * Get the supported file types.
      * @returns The supported file types.
@@ -20,5 +20,5 @@ export interface IDocumentParserConnector {
      * @param file The file to check.
      * @returns Whether the connector supports the file.
      */
-    supports(file: IFile): boolean;
+    supports(file: IFile | File): boolean;
 }

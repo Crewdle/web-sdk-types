@@ -71,6 +71,7 @@ export interface IGenerativeAIModel {
     id: string;
     engineType: GenerativeAIEngineType;
     taskType: GenerativeAITaskType;
+    knowledgeCutoffDate?: string;
     inputType: GenerativeAIModelInputType;
     outputType: GenerativeAIModelOutputType;
     sourceUrl: string;
