@@ -1,5 +1,6 @@
 export * from './job';
 export * from './jobs';
+export * from './query';
 export * from './search';
 export * from './union-types';
 
