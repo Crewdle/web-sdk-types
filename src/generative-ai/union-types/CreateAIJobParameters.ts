@@ -1,3 +1,4 @@
+import { IGenerativeAISearchCreateJobParameters } from '../jobs/search/GenerativeAISearchCreateJobParameters';
 import { IGenerativeAIDownloadDocumentCreateJobParameters } from '../jobs/download-document';
 import { IGenerativeAIPromptCreateJobParameters } from '../jobs/prompt';
 import { IGenerativeAIRatingCreateJobParameters } from '../jobs/rating';
@@ -10,4 +11,5 @@ export type CreateAIJobParameters =
   | IGenerativeAIPromptCreateJobParameters
   | IGenerativeAIRatingCreateJobParameters
   | IGenerativeAIDownloadDocumentCreateJobParameters
+  | IGenerativeAISearchCreateJobParameters
 ;
