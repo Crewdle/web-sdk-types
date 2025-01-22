@@ -5,7 +5,6 @@ import { IGenerativeAIWorkerParameters } from '../generic/GenerativeAIWorkerPara
  * AI download document job parameters Interface
  * @category AI
  */
-
 export interface IGenerativeAIDownloadDocumentWorkerParameters extends IGenerativeAIWorkerParameters {
   /**
    * The AI job type.

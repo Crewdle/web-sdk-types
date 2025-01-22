@@ -16,5 +16,10 @@ export const enum GenerativeAIJobType {
   /**
    * The user requests to download a document related to the answer they got.
    */
-  DownloadDocument = 'downloadDocument'
+  DownloadDocument = 'downloadDocument',
+
+  /**
+   * The AI job retrieves documents.
+   */
+  Search = 'search',
 }
