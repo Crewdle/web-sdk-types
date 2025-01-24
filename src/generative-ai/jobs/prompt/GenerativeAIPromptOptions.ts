@@ -1,4 +1,3 @@
-import { IFile } from '../../../object-storage';
 import { IGenerativeAIOptions } from '../generic/GenerativeAIOptions';
 import { IPromptFunction, IPromptHistory } from './options';
 
