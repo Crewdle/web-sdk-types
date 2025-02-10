@@ -40,6 +40,11 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
   grammar?: string;
 
   /**
+   * Enable reasoning for the AI job.
+   */
+  reasoning?: boolean;
+
+  /**
    * The context for the AI job.
    */
   history?: IPromptHistory[];
