@@ -6,6 +6,8 @@ export * from './union-types';
 
 export * from './GenerativeAIContext';
 export * from './GenerativeAIJobType';
+export * from './GenerativeAIRagConnector';
+export * from './GenerativeAIRagConnectorConstructor';
 export * from './GenerativeAIWorker';
 export * from './GenerativeAIWorkerConnector';
 export * from './GenerativeAIWorkerConnectorConstructor';

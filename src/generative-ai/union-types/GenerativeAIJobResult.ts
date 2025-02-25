@@ -1,4 +1,4 @@
-import { IGenerativeAIDownloadDocumentResult } from '../jobs/download-document';
+import { IGenerativeAIFileDownloadResult } from '../jobs/file-download';
 import { IGenerativeAIPromptResult } from '../jobs/prompt';
 import { IGenerativeAIRatingResult } from '../jobs/rating';
 
@@ -10,5 +10,5 @@ import { IGenerativeAIRatingResult } from '../jobs/rating';
 export type GenerativeAIJobResult =
   | IGenerativeAIPromptResult
   | IGenerativeAIRatingResult
-  | IGenerativeAIDownloadDocumentResult
+  | IGenerativeAIFileDownloadResult
 ;

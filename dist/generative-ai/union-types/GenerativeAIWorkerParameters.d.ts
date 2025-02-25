@@ -1,9 +1,10 @@
-import { IGenerativeAISearchWorkerParameters } from '../jobs/search';
-import { IGenerativeAIDownloadDocumentWorkerParameters } from '../jobs/download-document';
+import { IGenerativeAICollectionCreateWorkerParameters, IGenerativeAICollectionDeleteWorkerParameters, IGenerativeAIEmbedWorkerParameters, IGenerativeAIFileDeleteWorkerParameters, IGenerativeAIFileIngestWorkerParameters, IGenerativeAIFileListWorkerParameters, IGenerativeAIInferenceWorkerParameters, IGenerativeAIWorkflowWorkerParameters } from '../jobs';
+import { IGenerativeAICollectionQueryWorkerParameters } from '../jobs/collection-query';
+import { IGenerativeAIFileDownloadWorkerParameters } from '../jobs/file-download';
 import { IGenerativeAIPromptWorkerParameters } from '../jobs/prompt';
 import { IGenerativeAIRatingWorkerParameters } from '../jobs/rating';
 /**
  * Union type for AI job worker parameters.
  * @category AI
  */
-export type GenerativeAIWorkerParameters = IGenerativeAIPromptWorkerParameters | IGenerativeAIRatingWorkerParameters | IGenerativeAIDownloadDocumentWorkerParameters | IGenerativeAISearchWorkerParameters;
+export type GenerativeAIWorkerParameters = IGenerativeAICollectionCreateWorkerParameters | IGenerativeAICollectionDeleteWorkerParameters | IGenerativeAICollectionQueryWorkerParameters | IGenerativeAIEmbedWorkerParameters | IGenerativeAIFileDeleteWorkerParameters | IGenerativeAIFileDownloadWorkerParameters | IGenerativeAIFileIngestWorkerParameters | IGenerativeAIFileListWorkerParameters | IGenerativeAIInferenceWorkerParameters | IGenerativeAIPromptWorkerParameters | IGenerativeAIRatingWorkerParameters | IGenerativeAIWorkflowWorkerParameters;

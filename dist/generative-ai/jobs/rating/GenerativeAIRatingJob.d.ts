@@ -6,10 +6,6 @@ import { IGenerativeAIJob } from '../generic';
  */
 export interface IGenerativeAIRatingJob extends IGenerativeAIJob {
     /**
-     * The job ID.
-     */
-    id: string;
-    /**
      * The rating for the job.
      */
     rating: GenerativeAIRating;
@@ -21,5 +17,5 @@ export interface IGenerativeAIRatingJob extends IGenerativeAIJob {
      * Run the rating job.
      * @returns A promise that resolves with the result
      */
-    rate: () => Promise<IGenerativeAIRatingResult>;
+    run: () => Promise<IGenerativeAIRatingResult>;
 }
