@@ -1,4 +1,4 @@
-import { IGenerativeAIDownloadDocumentResult } from '../jobs/download-document';
+import { IGenerativeAIFileDownloadResult } from '../jobs/file-download';
 import { IGenerativeAIPromptResult } from '../jobs/prompt';
 import { IGenerativeAIRatingResult } from '../jobs/rating';
 /**
@@ -6,4 +6,4 @@ import { IGenerativeAIRatingResult } from '../jobs/rating';
  * Represents the result of an AI job.
  * @category AI
  */
-export type GenerativeAIJobResult = IGenerativeAIPromptResult | IGenerativeAIRatingResult | IGenerativeAIDownloadDocumentResult;
+export type GenerativeAIJobResult = IGenerativeAIPromptResult | IGenerativeAIRatingResult | IGenerativeAIFileDownloadResult;

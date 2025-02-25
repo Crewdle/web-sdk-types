@@ -9,4 +9,8 @@ export interface IGenerativeAIWorkerParameters extends IJobParametersGenerativeA
      * The AI job type.
      */
     type: GenerativeAIJobType;
+    /**
+     * The vendor ID.
+     */
+    vendorId: string;
 }
