@@ -1,4 +1,4 @@
-import { IGenerativeAIRatingResult, IGenerativeAIFileDownloadResult, ISearchResult, IGenerativeAICollectionCreateCreateJobParameters, IGenerativeAICollectionCreateJob, IGenerativeAICollectionDeleteCreateJobParameters, IGenerativeAICollectionDeleteJob, IGenerativeAIEmbedCreateJobParameters, IGenerativeAIEmbedJob, IGenerativeAIFileDeleteCreateJobParameters, IGenerativeAIFileDeleteJob, IGenerativeAIFileIngestCreateJobParameters, IGenerativeAIFileIngestJob, IGenerativeAIFileListCreateJobParameters, IGenerativeAIFileListJob, IGenerativeAIInferenceCreateJobParameters, IGenerativeAIInferenceJob, IGenerativeAIWorkflowCreateJobParameters, IGenerativeAIWorkflowJob } from '.';
+import { IGenerativeAICollectionCreateCreateJobParameters, IGenerativeAICollectionCreateJob, IGenerativeAICollectionDeleteCreateJobParameters, IGenerativeAICollectionDeleteJob, IGenerativeAIEmbedCreateJobParameters, IGenerativeAIEmbedJob, IGenerativeAIFileDeleteCreateJobParameters, IGenerativeAIFileDeleteJob, IGenerativeAIFileIngestCreateJobParameters, IGenerativeAIFileIngestJob, IGenerativeAIFileListCreateJobParameters, IGenerativeAIFileListJob, IGenerativeAIInferenceCreateJobParameters, IGenerativeAIInferenceJob, IGenerativeAIWorkflowCreateJobParameters, IGenerativeAIWorkflowJob } from '.';
 import { IGenerativeAIFileDownloadCreateJobParameters, IGenerativeAIFileDownloadJob } from './jobs/file-download';
 import { IGenerativeAIPromptCreateJobParameters, IGenerativeAIPromptJob } from './jobs/prompt';
 import { IGenerativeAIRatingCreateJobParameters, IGenerativeAIRatingJob } from './jobs/rating';
@@ -25,24 +25,6 @@ export interface IGenerativeAIContext {
     createAIJob(parameters: IGenerativeAIPromptCreateJobParameters): IGenerativeAIPromptJob;
     createAIJob(parameters: IGenerativeAIRatingCreateJobParameters): IGenerativeAIRatingJob;
     createAIJob(parameters: IGenerativeAIWorkflowCreateJobParameters): IGenerativeAIWorkflowJob;
-    /**
-     * Rate a prompt.
-     * @param parameters The parameters of the rating job.
-     * @returns A promise that resolves with the result.
-     */
-    ratePrompt(parameters: IGenerativeAIRatingCreateJobParameters): Promise<IGenerativeAIRatingResult>;
-    /**
-     * Download a document.
-     * @param documentPath The path of the document to download.
-     * @returns A promise that resolves with the result containing the document as an ArrayBuffer.
-     */
-    downloadDocument(documentPath: string): Promise<IGenerativeAIFileDownloadResult>;
-    /**
-     * Search for documents.
-     * @param parameters The parameters of the search job.
-     * @returns A promise that resolves with the result containing the search results.
-     */
-    search(parameters: IGenerativeAICollectionQueryCreateJobParameters): Promise<ISearchResult[]>;
     /**
      * Get the data bucket IDs.
      * @returns An array of data bucket IDs.
