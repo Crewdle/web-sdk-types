@@ -1,4 +1,5 @@
 import { IGenerativeAIJob } from '../generic';
+import { IGenerativeAIFileListResult } from './GenerativeAIFileListResult';
 
 /**
  * Represents bounded file list job ready to be executed
@@ -14,5 +15,5 @@ export interface IGenerativeAIFileListJob extends IGenerativeAIJob {
    * Run the file list job.
    * @returns A promise that resolves with the result.
    */
-  run: () => Promise<void>;
+  run: () => Promise<IGenerativeAIFileListResult>;
 }
