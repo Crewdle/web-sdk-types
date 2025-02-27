@@ -1,5 +1,5 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
-import { IJobResultGenerativeAI } from '../../job/JobResultGenerativeAI';
+import { IGenerativeAIJobResult } from '../../job/GenerativeAIJobResult';
 import { GenerativeAIRatingStatus } from './GenerativeAIRatingStatus';
 
 /**
@@ -7,11 +7,12 @@ import { GenerativeAIRatingStatus } from './GenerativeAIRatingStatus';
  * Represents the result of an AI rating.
  * @category AI
  */
-export interface IGenerativeAIRatingResult extends IJobResultGenerativeAI {
+export interface IGenerativeAIRatingResult extends IGenerativeAIJobResult {
   /**
    * The rating AI job type.
    */
   type: GenerativeAIJobType.Rating;
+
   /**
    * The status of the rating.
    */

@@ -1,3 +1,4 @@
+import { IGenerativeAIFile } from './jobs';
 import { ISearchResult } from './search';
 /**
  * Generative AI Rag Connector Interface
@@ -43,5 +44,5 @@ export interface IGenerativeAIRagConnector {
      * @param collectionId The collection id to list files.
      * @returns The list of files.
      */
-    listFiles(collectionId: string): Promise<any[]>;
+    listFiles(collectionId: string): Promise<IGenerativeAIFile[]>;
 }

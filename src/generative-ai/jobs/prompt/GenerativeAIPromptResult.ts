@@ -1,5 +1,5 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
-import { IJobResultGenerativeAI } from '../../job/JobResultGenerativeAI';
+import { IGenerativeAIJobResult } from '../../job/GenerativeAIJobResult';
 import { ISearchResult } from '../../search';
 import { PromptTypeText, PromptTypeVector } from './result';
 
@@ -9,7 +9,7 @@ import { PromptTypeText, PromptTypeVector } from './result';
  * @category AI
  */
 
-export interface IGenerativeAIPromptResult extends IJobResultGenerativeAI {
+export interface IGenerativeAIPromptResult extends IGenerativeAIJobResult {
   /**
    * The prompt AI job type.
    */

@@ -11,9 +11,14 @@ export interface IGenerativeAIFileIngestJob extends IGenerativeAIJob {
   collectionId: string;
 
   /**
-   * The path of the file to ingest.
+   * The name of the file to ingest.
    */
-  path: string;
+  fileName: string;
+
+  /**
+   * The file content to ingest.
+   */
+  content: string;
 
   /**
    * Run the file ingest job.

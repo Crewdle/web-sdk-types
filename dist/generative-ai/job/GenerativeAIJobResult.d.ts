@@ -5,7 +5,7 @@ import { IJobResult } from '../../job/Job';
  * Represents the result of an AI job.
  * @category AI
  */
-export interface IJobResultGenerativeAI extends IJobResult {
+export interface IGenerativeAIJobResult extends IJobResult {
     /**
      * The AI job type.
      */

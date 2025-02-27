@@ -1,12 +1,12 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
-import { IJobResultGenerativeAI } from '../../job/JobResultGenerativeAI';
+import { IGenerativeAIJobResult } from '../../job/GenerativeAIJobResult';
 
 /**
  * The AI download document result Interface
  * @category AI
  */
 
-export interface IGenerativeAIFileDownloadResult extends IJobResultGenerativeAI {
+export interface IGenerativeAIFileDownloadResult extends IGenerativeAIJobResult {
   /**
    * The download document AI job type.
    */
