@@ -11,6 +11,10 @@ export interface IGenerativeAIPromptCreateJobParameters extends IGenerativeAICre
      */
     type: GenerativeAIJobType.Prompt;
     /**
+     * The workflow id to use for the prompt.
+     */
+    workflowId: string;
+    /**
      * The prompt to be processed.
      */
     prompt: string;

@@ -6,6 +6,10 @@ import { IGenerativeAIJob } from '../generic';
  */
 export interface IGenerativeAIPromptJob extends IGenerativeAIJob {
     /**
+     * The workflow id to use for the prompt.
+     */
+    workflowId: string;
+    /**
      * The prompt to be processed
      */
     prompt: string;
