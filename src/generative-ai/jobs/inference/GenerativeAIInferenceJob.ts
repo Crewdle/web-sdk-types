@@ -1,4 +1,6 @@
 import { IGenerativeAIJob } from '../generic';
+import { IPromptHistory } from '../prompt';
+import { IGenerativeAIInferenceTool } from './GenerativeAIInferenceWorkerParameters';
 
 /**
  * Represents bounded inference job ready to be executed
@@ -6,24 +8,59 @@ import { IGenerativeAIJob } from '../generic';
  */
 export interface IGenerativeAIInferenceJob extends IGenerativeAIJob {
   /**
-   * The model of the inference job.
+   * The thread id
+   */
+  threadId: string;
+
+  /**
+   * The prompt to be processed.
+   */
+  prompt: string;
+
+  /**
+   * The instructions for the AI job.
+   */
+  instructions?: string;
+  
+  /**
+   * The grammar to use for the AI job.
+   */
+  grammar?: any;
+
+  /**
+   * Enable reasoning for the AI job.
+   */
+  reasoning?: boolean;
+
+  /**
+   * The context for the AI job.
+   */
+  history?: IPromptHistory[];
+
+  /**
+   * The model to use for inference.
    */
   model: string;
 
   /**
-   * The input data for the inference.
-   */
-  messages: any[];
-
-  /**
    * The temperature for the inference.
    */
-  temperature: number;
+  temperature?: number;
 
   /**
    * The max tokens for the inference.
    */
-  maxTokens: number;
+  maxTokens?: number;
+
+  /**
+   * tools for the AI job.
+   */
+  tools?: IGenerativeAIInferenceTool[];
+
+  /**
+   * The internal context used by the AI job.
+   */
+  internalContext?: {[key: string]: string};
 
   /**
    * Run the inference job.
