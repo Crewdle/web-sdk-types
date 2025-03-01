@@ -1,4 +1,5 @@
 import { IGenerativeAIJob } from '../generic';
+import { IGenerativeAIPromptResult } from '../prompt';
 
 /**
  * Represents a job that embeds a given input into a latent space.
@@ -19,5 +20,5 @@ export interface IGenerativeAIEmbedJob extends IGenerativeAIJob {
    * Run the embed job.
    * @returns A promise that resolves with the result.
    */
-  run: () => Promise<number[]>;
+  run: () => Promise<IGenerativeAIPromptResult>;
 }

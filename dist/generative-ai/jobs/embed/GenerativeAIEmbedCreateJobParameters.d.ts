@@ -17,4 +17,8 @@ export interface IGenerativeAIEmbedCreateJobParameters extends IGenerativeAICrea
      * The input text to embed.
      */
     text: string;
+    /**
+     * The thread ID for the job.
+     */
+    threadId: string;
 }
