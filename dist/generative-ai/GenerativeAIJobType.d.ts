@@ -43,9 +43,5 @@ export declare const enum GenerativeAIJobType {
     /**
      * The AI job rates a prompt.
      */
-    Rating = "rate",
-    /**
-     * The AI job runs a workflow.
-     */
-    Workflow = "workflow"
+    Rating = "rate"
 }

@@ -1,4 +1,4 @@
-import { IGenerativeAIPromptOptions, IGenerativeAIPromptResult } from '.';
+import { IGenerativeAIPromptResult, IPromptHistory } from '.';
 import { IGenerativeAIJob } from '../generic';
 /**
  * Represents bounded prompt job ready to be run or streamed.
@@ -14,9 +14,19 @@ export interface IGenerativeAIPromptJob extends IGenerativeAIJob {
      */
     prompt: string;
     /**
-     * The options for the prompt.
+     * The thread id
      */
-    options: IGenerativeAIPromptOptions;
+    threadId: string;
+    /**
+     * The context for the AI job.
+     */
+    history?: IPromptHistory[];
+    /**
+     * The internal context for the AI job.
+     */
+    internalContext?: {
+        [key: string]: string;
+    };
     /**
      * Run the prompt job.
      * @returns A promise that resolves with the result

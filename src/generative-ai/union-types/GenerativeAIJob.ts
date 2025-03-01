@@ -1,4 +1,4 @@
-import { IGenerativeAICollectionCreateJob, IGenerativeAICollectionDeleteJob, IGenerativeAIEmbedJob, IGenerativeAIFileDeleteJob, IGenerativeAIFileIngestJob, IGenerativeAIFileListJob, IGenerativeAIInferenceJob, IGenerativeAIWorkflowJob } from '../jobs';
+import { IGenerativeAICollectionCreateJob, IGenerativeAICollectionDeleteJob, IGenerativeAIEmbedJob, IGenerativeAIFileDeleteJob, IGenerativeAIFileIngestJob, IGenerativeAIFileListJob, IGenerativeAIInferenceJob } from '../jobs';
 import { IGenerativeAICollectionQueryJob } from '../jobs/collection-query/GenerativeAICollectionQueryJob';
 import { IGenerativeAIFileDownloadJob } from '../jobs/file-download';
 import { IGenerativeAIPromptJob } from '../jobs/prompt';
@@ -20,5 +20,4 @@ export type GenerativeAIJob =
   | IGenerativeAIInferenceJob
   | IGenerativeAIPromptJob
   | IGenerativeAIRatingJob
-  | IGenerativeAIWorkflowJob
 ;

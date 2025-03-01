@@ -11,7 +11,7 @@ export interface IGenerativeAIPromptResult extends IGenerativeAIJobResult {
     /**
      * The prompt AI job type.
      */
-    type: GenerativeAIJobType.Prompt | GenerativeAIJobType.Inference | GenerativeAIJobType.Embed | GenerativeAIJobType.Workflow;
+    type: GenerativeAIJobType.Prompt | GenerativeAIJobType.Inference | GenerativeAIJobType.Embed;
     /**
      * The output of the AI job.
      */
