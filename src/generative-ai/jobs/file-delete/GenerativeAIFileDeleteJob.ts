@@ -1,4 +1,5 @@
 import { IGenerativeAIJob } from '../generic';
+import { IGenerativeAIFileDeleteResult } from './GenerativeAIFileDeleteResult';
 
 /**
  * Represents bounded delete file job ready to be executed
@@ -19,5 +20,5 @@ export interface IGenerativeAIFileDeleteJob extends IGenerativeAIJob {
    * Run the delete file job.
    * @returns A promise that resolves with the result.
    */
-  run: () => Promise<void>;
+  run: () => Promise<IGenerativeAIFileDeleteResult>;
 }

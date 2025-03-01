@@ -1,4 +1,5 @@
 import { IGenerativeAIJob } from '../generic';
+import { IGenerativeAIFileIngestResult } from './GenerativeAIFileIngestResult';
 /**
  * Represents bounded file ingest job ready to be executed
  * @category AI
@@ -20,5 +21,5 @@ export interface IGenerativeAIFileIngestJob extends IGenerativeAIJob {
      * Run the file ingest job.
      * @returns A promise that resolves with the result.
      */
-    run: () => Promise<void>;
+    run: () => Promise<IGenerativeAIFileIngestResult>;
 }

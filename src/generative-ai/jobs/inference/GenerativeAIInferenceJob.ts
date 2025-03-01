@@ -1,5 +1,5 @@
 import { IGenerativeAIJob } from '../generic';
-import { IPromptHistory } from '../prompt';
+import { IGenerativeAIPromptResult, IPromptHistory } from '../prompt';
 import { IGenerativeAIInferenceTool } from './GenerativeAIInferenceWorkerParameters';
 
 /**
@@ -66,11 +66,11 @@ export interface IGenerativeAIInferenceJob extends IGenerativeAIJob {
    * Run the inference job.
    * @returns A promise that resolves with the result.
    */
-  run: () => Promise<any>;
+  run: () => Promise<IGenerativeAIPromptResult>;
 
   /**
    * Stream the inference job.
    * @returns A promise that resolves with the result.
    */
-  stream: () => AsyncGenerator<any>;
+  stream: () => AsyncGenerator<IGenerativeAIPromptResult>;
 }

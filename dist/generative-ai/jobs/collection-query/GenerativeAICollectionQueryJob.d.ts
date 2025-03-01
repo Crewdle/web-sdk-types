@@ -1,5 +1,5 @@
-import { ISearchResult } from '../../search';
 import { IGenerativeAIJob } from '../generic';
+import { IGenerativeAICollectionQueryResult } from './GenerativeAICollectionQueryResult';
 /**
  * AI search job Interface
  * @category AI
@@ -17,5 +17,5 @@ export interface IGenerativeAICollectionQueryJob extends IGenerativeAIJob {
      * Run the search job.
      * @returns A promise that resolves with the result.
      */
-    run: () => Promise<ISearchResult[]>;
+    run: () => Promise<IGenerativeAICollectionQueryResult>;
 }
