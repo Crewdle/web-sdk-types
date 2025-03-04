@@ -62,4 +62,5 @@ export var GenerativeAIEngineType;
 (function (GenerativeAIEngineType) {
     GenerativeAIEngineType["Llamacpp"] = "llamacpp";
     GenerativeAIEngineType["Transformers"] = "transformers";
+    GenerativeAIEngineType["OpenAI"] = "openai";
 })(GenerativeAIEngineType || (GenerativeAIEngineType = {}));

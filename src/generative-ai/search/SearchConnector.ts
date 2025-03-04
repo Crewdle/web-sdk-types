@@ -31,5 +31,5 @@ export interface ISearchConnector {
    * @param engineId The engine ID to use for the search.
    * @returns A promise that resolves with the search results.
    */
-  search(query: string, apiKey: string, engineId: string): Promise<ISearchConnectorResult[]>;
+  search(query: string, engineId: string): Promise<ISearchConnectorResult[]>;
 }

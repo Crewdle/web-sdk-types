@@ -9,5 +9,5 @@ export interface IAISearchConnector {
      * @param apiKey The API key to use for the search.
      * @returns A promise that resolves with the search result.
      */
-    search(query: string, apiKey: string): Promise<string>;
+    search(query: string): Promise<string>;
 }
