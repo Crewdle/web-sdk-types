@@ -1,4 +1,4 @@
-import { IGenerativeAICollectionCreateWorkerParameters, IGenerativeAICollectionDeleteWorkerParameters, IGenerativeAIEmbedWorkerParameters, IGenerativeAIFileDeleteWorkerParameters, IGenerativeAIFileIngestWorkerParameters, IGenerativeAIFileListWorkerParameters, IGenerativeAIInferenceWorkerParameters } from '../jobs';
+import { IGenerativeAICollectionCreateWorkerParameters, IGenerativeAICollectionDeleteWorkerParameters, IGenerativeAIEmbedWorkerParameters, IGenerativeAIFileDeleteWorkerParameters, IGenerativeAIFileIngestWorkerParameters, IGenerativeAIFileListWorkerParameters, IGenerativeAIInferenceWorkerParameters, IGenerativeAIRealtimeSessionCreateWorkerParameters } from '../jobs';
 import { IGenerativeAICollectionQueryWorkerParameters } from '../jobs/collection-query';
 import { IGenerativeAIFileDownloadWorkerParameters } from '../jobs/file-download';
 import { IGenerativeAIPromptWorkerParameters } from '../jobs/prompt';
@@ -21,4 +21,5 @@ export type GenerativeAIWorkerParameters =
   | IGenerativeAIInferenceWorkerParameters
   | IGenerativeAIPromptWorkerParameters
   | IGenerativeAIRatingWorkerParameters
+  | IGenerativeAIRealtimeSessionCreateWorkerParameters
 ;

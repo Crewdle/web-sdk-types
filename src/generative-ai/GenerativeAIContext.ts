@@ -1,4 +1,4 @@
-import { IGenerativeAICollectionCreateCreateJobParameters, IGenerativeAICollectionCreateJob, IGenerativeAICollectionDeleteCreateJobParameters, IGenerativeAICollectionDeleteJob, IGenerativeAIEmbedCreateJobParameters, IGenerativeAIEmbedJob, IGenerativeAIFileDeleteCreateJobParameters, IGenerativeAIFileDeleteJob, IGenerativeAIFileIngestCreateJobParameters, IGenerativeAIFileIngestJob, IGenerativeAIFileListCreateJobParameters, IGenerativeAIFileListJob, IGenerativeAIInferenceCreateJobParameters, IGenerativeAIInferenceJob } from '.';
+import { IGenerativeAICollectionCreateCreateJobParameters, IGenerativeAICollectionCreateJob, IGenerativeAICollectionDeleteCreateJobParameters, IGenerativeAICollectionDeleteJob, IGenerativeAIEmbedCreateJobParameters, IGenerativeAIEmbedJob, IGenerativeAIFileDeleteCreateJobParameters, IGenerativeAIFileDeleteJob, IGenerativeAIFileIngestCreateJobParameters, IGenerativeAIFileIngestJob, IGenerativeAIFileListCreateJobParameters, IGenerativeAIFileListJob, IGenerativeAIInferenceCreateJobParameters, IGenerativeAIInferenceJob, IGenerativeAIRealtimeSessionCreateCreateJobParameters, IGenerativeAIRealtimeSessionCreateJob } from '.';
 import { IGenerativeAIFileDownloadCreateJobParameters, IGenerativeAIFileDownloadJob } from './jobs/file-download';
 import { IGenerativeAIPromptCreateJobParameters, IGenerativeAIPromptJob } from './jobs/prompt';
 import { IGenerativeAIRatingCreateJobParameters, IGenerativeAIRatingJob } from './jobs/rating';
@@ -25,6 +25,7 @@ export interface IGenerativeAIContext {
   createAIJob(parameters: IGenerativeAIInferenceCreateJobParameters): IGenerativeAIInferenceJob;
   createAIJob(parameters: IGenerativeAIPromptCreateJobParameters): IGenerativeAIPromptJob;
   createAIJob(parameters: IGenerativeAIRatingCreateJobParameters): IGenerativeAIRatingJob;
+  createAIJob(parameters: IGenerativeAIRealtimeSessionCreateCreateJobParameters): IGenerativeAIRealtimeSessionCreateJob;
 
   /**
    * Get the data bucket IDs.

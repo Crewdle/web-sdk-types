@@ -7,6 +7,7 @@ import { IGenerativeAICollectionDeleteResult } from '../jobs/collection-delete';
 import { IGenerativeAIFileDeleteResult } from '../jobs/file-delete';
 import { IGenerativeAIFileIngestResult } from '../jobs/file-ingest';
 import { IGenerativeAICollectionQueryResult } from '../jobs/collection-query';
+import { IGenerativeAIRealtimeSessionCreateResult } from 'generative-ai/jobs';
 
 /**
  * Union type for an AI job result.
@@ -23,4 +24,5 @@ export type GenerativeAIJobResult =
   | IGenerativeAIFileDownloadResult
   | IGenerativeAIFileIngestResult
   | IGenerativeAIFileListResult
+  | IGenerativeAIRealtimeSessionCreateResult
 ;

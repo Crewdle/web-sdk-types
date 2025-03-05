@@ -3,6 +3,9 @@
  * @category AI
  */
 export const enum GenerativeAIJobType {
+  /**
+   * The AI job creates a workflow.
+   */
   Prompt = 'prompt',
 
   /**
@@ -54,4 +57,9 @@ export const enum GenerativeAIJobType {
    * The AI job rates a prompt.
    */
   Rating = 'rate',
+
+  /**
+   * The AI job for real-time session create.
+   */
+  RealtimeSessionCreate = 'realtime-session-create',
 }
