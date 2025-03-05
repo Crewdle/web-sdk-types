@@ -12,6 +12,10 @@ export interface IGenerativeAIRatingCreateJobParameters extends IGenerativeAICre
      */
     type: GenerativeAIJobType.Rating;
     /**
+     * The workflow ID associated with the message.
+     */
+    workflowId: string;
+    /**
      * The job ID associated with the message.
      */
     jobId: string;

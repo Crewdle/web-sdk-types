@@ -119,9 +119,9 @@ export interface IGenerativeAIInferenceTool {
   bodyParameters?: { name: string, value: string }[];
 
   /**
-   * The model to use for the tool.
+   * The model ID to use for the tool.
    */
-  model?: string;
+  modelId?: string;
 
   /**
    * The instructions for the tool.
