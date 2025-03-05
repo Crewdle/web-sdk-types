@@ -123,6 +123,10 @@ export interface IGenerativeAIInferenceTool {
      * The temperature for the tool.
      */
     temperature?: number;
+    /**
+     * The collection ID for the tool.
+     */
+    collectionId?: string;
 }
 /**
  * The enum for the generative AI inference tool type.

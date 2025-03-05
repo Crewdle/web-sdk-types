@@ -137,6 +137,11 @@ export interface IGenerativeAIInferenceTool {
    * The temperature for the tool.
    */
   temperature?: number;
+
+  /**
+   * The collection ID for the tool.
+   */
+  collectionId?: string;
 }
 
 /**
