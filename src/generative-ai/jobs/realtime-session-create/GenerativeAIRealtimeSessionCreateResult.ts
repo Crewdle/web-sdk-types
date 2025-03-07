@@ -25,4 +25,19 @@ export interface IGenerativeAIRealtimeSessionCreateResult extends IGenerativeAIJ
    * The instructions.
    */
   instructions: string;
+
+  /**
+   * The temperature.
+   */
+  temperature: number;
+
+  /**
+   * The max tokens.
+   */
+  maxTokens: number;
+
+  /**
+   * The initial prompt.
+   */
+  initialPrompt?: string;
 }
