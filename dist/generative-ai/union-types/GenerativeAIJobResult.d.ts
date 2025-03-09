@@ -7,7 +7,7 @@ import { IGenerativeAICollectionDeleteResult } from '../jobs/collection-delete';
 import { IGenerativeAIFileDeleteResult } from '../jobs/file-delete';
 import { IGenerativeAIFileIngestResult } from '../jobs/file-ingest';
 import { IGenerativeAICollectionQueryResult } from '../jobs/collection-query';
-import { IGenerativeAIRealtimeSessionCreateResult } from 'generative-ai/jobs';
+import { IGenerativeAIRealtimeSessionCreateResult } from '../jobs/realtime-session-create';
 /**
  * Union type for an AI job result.
  * Represents the result of an AI job.
