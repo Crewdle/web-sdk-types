@@ -1,4 +1,4 @@
-import { IGenerativeAICollectionCreateCreateJobParameters, IGenerativeAICollectionDeleteCreateJobParameters, IGenerativeAIEmbedCreateJobParameters, IGenerativeAIFileDeleteCreateJobParameters, IGenerativeAIFileIngestCreateJobParameters, IGenerativeAIFileListCreateJobParameters, IGenerativeAIInferenceCreateJobParameters, IGenerativeAIRealtimeSessionCreateCreateJobParameters } from '../jobs';
+import { IGenerativeAICollectionCreateCreateJobParameters, IGenerativeAICollectionDeleteCreateJobParameters, IGenerativeAIEmbedCreateJobParameters, IGenerativeAIFileDeleteCreateJobParameters, IGenerativeAIFileIngestCreateJobParameters, IGenerativeAIFileListCreateJobParameters, IGenerativeAIInferenceCreateJobParameters, IGenerativeAIRealtimeSessionCreateCreateJobParameters, IGenerativeAIToolCallCreateJobParameters } from '../jobs';
 import { IGenerativeAICollectionQueryCreateJobParameters } from '../jobs/collection-query/GenerativeAICollectionQueryCreateJobParameters';
 import { IGenerativeAIFileDownloadCreateJobParameters } from '../jobs/file-download';
 import { IGenerativeAIPromptCreateJobParameters } from '../jobs/prompt';
@@ -21,4 +21,5 @@ export type CreateAIJobParameters =
   | IGenerativeAIPromptCreateJobParameters
   | IGenerativeAIRatingCreateJobParameters
   | IGenerativeAIRealtimeSessionCreateCreateJobParameters
+  | IGenerativeAIToolCallCreateJobParameters
 ;

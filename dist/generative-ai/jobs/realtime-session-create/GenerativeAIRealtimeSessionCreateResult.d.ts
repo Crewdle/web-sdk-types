@@ -1,5 +1,6 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 import { IGenerativeAIJobResult } from '../../job/GenerativeAIJobResult';
+import { IGenerativeAIInferenceTool } from '../inference';
 /**
  * The result of a RealtimeSessionCreate job.
  * @category AI
@@ -33,4 +34,8 @@ export interface IGenerativeAIRealtimeSessionCreateResult extends IGenerativeAIJ
      * The initial prompt.
      */
     initialPrompt?: string;
+    /**
+     * The tools for the Realtime Session.
+     */
+    tools?: IGenerativeAIInferenceTool[];
 }

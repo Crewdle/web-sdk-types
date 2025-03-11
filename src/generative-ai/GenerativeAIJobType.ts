@@ -62,4 +62,9 @@ export const enum GenerativeAIJobType {
    * The AI job for real-time session create.
    */
   RealtimeSessionCreate = 'realtime-session-create',
+
+  /**
+   * The AI job tool call.
+   */
+  ToolCall = 'tool-call',
 }

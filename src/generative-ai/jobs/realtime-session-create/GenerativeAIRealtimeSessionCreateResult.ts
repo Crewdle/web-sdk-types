@@ -1,5 +1,6 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 import { IGenerativeAIJobResult } from '../../job/GenerativeAIJobResult';
+import { IGenerativeAIInferenceTool } from '../inference';
 
 /**
  * The result of a RealtimeSessionCreate job.
@@ -9,7 +10,7 @@ export interface IGenerativeAIRealtimeSessionCreateResult extends IGenerativeAIJ
   /**
    * The AI job type.
    */
-  type:GenerativeAIJobType.RealtimeSessionCreate;
+  type: GenerativeAIJobType.RealtimeSessionCreate;
 
   /**
    * The API key.
@@ -40,4 +41,9 @@ export interface IGenerativeAIRealtimeSessionCreateResult extends IGenerativeAIJ
    * The initial prompt.
    */
   initialPrompt?: string;
+
+  /**
+   * The tools for the Realtime Session.
+   */
+  tools?: IGenerativeAIInferenceTool[];
 }
