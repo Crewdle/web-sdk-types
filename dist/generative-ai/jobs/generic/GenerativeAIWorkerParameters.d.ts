@@ -1,12 +1,20 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
-import { IJobParametersGenerativeAI } from '../../job/JobParametersGenerativeAI';
+import { IGenerativeAIJobParameters } from '../../job/GenerativeAIJobParameters';
 /**
  * Base AI job parameters Interface
  * @category AI
  */
-export interface IGenerativeAIWorkerParameters extends IJobParametersGenerativeAI {
+export interface IGenerativeAIWorkerParameters extends IGenerativeAIJobParameters {
     /**
      * The AI job type.
      */
     type: GenerativeAIJobType;
+    /**
+     * The vendor ID.
+     */
+    vendorId: string;
+    /**
+     * The workflow ID.
+     */
+    workflowId?: string;
 }

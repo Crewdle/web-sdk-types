@@ -61,7 +61,8 @@ export declare enum GenerativeAITaskType {
  */
 export declare enum GenerativeAIEngineType {
     Llamacpp = "llamacpp",
-    Transformers = "transformers"
+    Transformers = "transformers",
+    OpenAI = "openai"
 }
 /**
  * The generative AI model interface.

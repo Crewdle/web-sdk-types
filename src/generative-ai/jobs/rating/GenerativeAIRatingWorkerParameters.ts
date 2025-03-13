@@ -14,6 +14,11 @@ export interface IGenerativeAIRatingWorkerParameters extends IGenerativeAIWorker
   type: GenerativeAIJobType.Rating;
 
   /**
+   * The workflow ID.
+   */
+  workflowId: string;
+
+  /**
    * The job ID.
    */
   jobId: string;

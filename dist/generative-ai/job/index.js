@@ -1,2 +1,2 @@
-export * from './JobResultGenerativeAI';
-export * from './JobParametersGenerativeAI';
+export * from './GenerativeAIJobResult';
+export * from './GenerativeAIJobParameters';

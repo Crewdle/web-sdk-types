@@ -1,6 +1,6 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 import { IGenerativeAICreateJobParameters } from '../generic';
-import { IGenerativeAIPromptOptions } from './GenerativeAIPromptOptions';
+import { IPromptHistory } from './options';
 
 /**
  * Represents the parameters of a prompt job.
@@ -12,12 +12,29 @@ export interface IGenerativeAIPromptCreateJobParameters extends IGenerativeAICre
    * The prompt job type.
    */
   type: GenerativeAIJobType.Prompt;
+
+  /**
+   * The workflow id to use for the prompt.
+   */
+  workflowId: string;
+
   /**
    * The prompt to be processed.
    */
   prompt: string;
+
   /**
-   * The options for the prompt.
+   * The thread id
    */
-  options?: IGenerativeAIPromptOptions;
+  threadId: string;
+
+  /**
+   * The context for the AI job.
+   */
+  history?: IPromptHistory[];
+
+  /**
+   * The internal context for the AI job.
+   */
+  internalContext?: {[key: string]: string};
 }

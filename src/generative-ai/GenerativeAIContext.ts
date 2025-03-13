@@ -1,8 +1,8 @@
-import { IGenerativeAIRatingResult, IGenerativeAIDownloadDocumentResult, ISearchResult } from '.';
-import { IGenerativeAIDownloadDocumentCreateJobParameters, IGenerativeAIDownloadDocumentJob } from './jobs/download-document';
+import { IGenerativeAICollectionCreateCreateJobParameters, IGenerativeAICollectionCreateJob, IGenerativeAICollectionDeleteCreateJobParameters, IGenerativeAICollectionDeleteJob, IGenerativeAIEmbedCreateJobParameters, IGenerativeAIEmbedJob, IGenerativeAIFileDeleteCreateJobParameters, IGenerativeAIFileDeleteJob, IGenerativeAIFileIngestCreateJobParameters, IGenerativeAIFileIngestJob, IGenerativeAIFileListCreateJobParameters, IGenerativeAIFileListJob, IGenerativeAIInferenceCreateJobParameters, IGenerativeAIInferenceJob, IGenerativeAIRealtimeSessionCreateCreateJobParameters, IGenerativeAIRealtimeSessionCreateJob, IGenerativeAIToolCallCreateJobParameters, IGenerativeAIToolCallJob } from '.';
+import { IGenerativeAIFileDownloadCreateJobParameters, IGenerativeAIFileDownloadJob } from './jobs/file-download';
 import { IGenerativeAIPromptCreateJobParameters, IGenerativeAIPromptJob } from './jobs/prompt';
 import { IGenerativeAIRatingCreateJobParameters, IGenerativeAIRatingJob } from './jobs/rating';
-import { IGenerativeAISearchCreateJobParameters, IGenerativeAISearchJob } from './jobs/search';
+import { IGenerativeAICollectionQueryCreateJobParameters, IGenerativeAICollectionQueryJob } from './jobs/collection-query';
 
 /**
  * Represents a context for a Generative AI service.
@@ -14,31 +14,19 @@ export interface IGenerativeAIContext {
    * @param parameters The parameters of the AI job.
    * @returns The job ready to be run or streamed.
    */
+  createAIJob(parameters: IGenerativeAICollectionCreateCreateJobParameters): IGenerativeAICollectionCreateJob;
+  createAIJob(parameters: IGenerativeAICollectionDeleteCreateJobParameters): IGenerativeAICollectionDeleteJob;
+  createAIJob(parameters: IGenerativeAICollectionQueryCreateJobParameters): IGenerativeAICollectionQueryJob;
+  createAIJob(parameters: IGenerativeAIEmbedCreateJobParameters): IGenerativeAIEmbedJob;
+  createAIJob(parameters: IGenerativeAIFileDeleteCreateJobParameters): IGenerativeAIFileDeleteJob;
+  createAIJob(parameters: IGenerativeAIFileDownloadCreateJobParameters): IGenerativeAIFileDownloadJob;
+  createAIJob(parameters: IGenerativeAIFileIngestCreateJobParameters): IGenerativeAIFileIngestJob;
+  createAIJob(parameters: IGenerativeAIFileListCreateJobParameters): IGenerativeAIFileListJob;
+  createAIJob(parameters: IGenerativeAIInferenceCreateJobParameters): IGenerativeAIInferenceJob;
   createAIJob(parameters: IGenerativeAIPromptCreateJobParameters): IGenerativeAIPromptJob;
   createAIJob(parameters: IGenerativeAIRatingCreateJobParameters): IGenerativeAIRatingJob;
-  createAIJob(parameters: IGenerativeAIDownloadDocumentCreateJobParameters): IGenerativeAIDownloadDocumentJob;
-  createAIJob(parameters: IGenerativeAISearchCreateJobParameters): IGenerativeAISearchJob;
-
-  /**
-   * Rate a prompt.
-   * @param parameters The parameters of the rating job.
-   * @returns A promise that resolves with the result.
-   */
-  ratePrompt(parameters: IGenerativeAIRatingCreateJobParameters): Promise<IGenerativeAIRatingResult>;
-
-  /**
-   * Download a document.
-   * @param documentPath The path of the document to download.
-   * @returns A promise that resolves with the result containing the document as an ArrayBuffer.
-   */
-  downloadDocument(documentPath: string): Promise<IGenerativeAIDownloadDocumentResult>;
-
-  /**
-   * Search for documents.
-   * @param parameters The parameters of the search job.
-   * @returns A promise that resolves with the result containing the search results.
-   */
-  search(parameters: IGenerativeAISearchCreateJobParameters): Promise<ISearchResult[]>;
+  createAIJob(parameters: IGenerativeAIRealtimeSessionCreateCreateJobParameters): IGenerativeAIRealtimeSessionCreateJob;
+  createAIJob(parameters: IGenerativeAIToolCallCreateJobParameters): IGenerativeAIToolCallJob;
 
   /**
    * Get the data bucket IDs.
