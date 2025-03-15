@@ -1,5 +1,6 @@
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 import { IGenerativeAICreateJobParameters } from '../generic';
+import { IGenerativeAIPromptFile } from './GenerativeAIPromptOptions';
 import { IPromptHistory } from './options';
 /**
  * Represents the parameters of a prompt job.
@@ -32,4 +33,8 @@ export interface IGenerativeAIPromptCreateJobParameters extends IGenerativeAICre
     internalContext?: {
         [key: string]: string;
     };
+    /**
+     * The files that will be used by the LLM.
+     */
+    files?: IGenerativeAIPromptFile[];
 }

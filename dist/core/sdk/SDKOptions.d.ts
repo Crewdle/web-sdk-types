@@ -2,7 +2,7 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { DocumentParserConnectorConstructor, ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
-import { AISearchConnectorConstructor, GenerativeAIEngineType, GenerativeAIRagConnectorConstructor, GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, QueryFileConnectorConstructor, SearchConnectorConstructor } from '../../generative-ai';
+import { AISearchConnectorConstructor, GenerativeAIEngineType, GenerativeAIFileConnectorConstructor, GenerativeAIRagConnectorConstructor, GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, QueryFileConnectorConstructor, SearchConnectorConstructor } from '../../generative-ai';
 import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 import { GraphDatabaseConnectorConstructor } from '../../graph-database';
 import { ExternalStorageConnectionConnectorConstructor, ExternalStorageType } from '../../external-storage';
@@ -58,6 +58,10 @@ export interface ISDKOptions {
      * The custom document parser connector to use for parsing documents.
      */
     documentParserConnector?: DocumentParserConnectorConstructor;
+    /**
+     * The custom file connector to use for file tasks.
+     */
+    fileConnector?: GenerativeAIFileConnectorConstructor;
     /**
      * The custom natural language processing connector to use for natural language processing tasks.
      */

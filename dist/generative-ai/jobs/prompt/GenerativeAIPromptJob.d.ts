@@ -1,4 +1,4 @@
-import { IGenerativeAIPromptResult, IPromptHistory } from '.';
+import { IGenerativeAIPromptFile, IGenerativeAIPromptResult, IPromptHistory } from '.';
 import { IGenerativeAIJob } from '../generic';
 /**
  * Represents bounded prompt job ready to be run or streamed.
@@ -27,6 +27,10 @@ export interface IGenerativeAIPromptJob extends IGenerativeAIJob {
     internalContext?: {
         [key: string]: string;
     };
+    /**
+     * The files that will be used by the LLM.
+     */
+    files?: IGenerativeAIPromptFile[];
     /**
      * Run the prompt job.
      * @returns A promise that resolves with the result
