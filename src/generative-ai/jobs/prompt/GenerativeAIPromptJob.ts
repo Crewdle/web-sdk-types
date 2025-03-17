@@ -1,4 +1,4 @@
-import { IGenerativeAIPromptResult, IPromptHistory } from '.';
+import { IGenerativeAIPromptFile, IGenerativeAIPromptResult, IPromptHistory } from '.';
 import { IGenerativeAIJob } from '../generic';
 
 /**
@@ -30,6 +30,11 @@ export interface IGenerativeAIPromptJob extends IGenerativeAIJob {
    * The internal context for the AI job.
    */
   internalContext?: {[key: string]: string};
+
+  /**
+   * The files that will be used by the LLM.
+   */
+  files?: IGenerativeAIPromptFile[];
 
   /**
    * Run the prompt job.

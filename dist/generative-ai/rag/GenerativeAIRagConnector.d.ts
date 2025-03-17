@@ -1,5 +1,5 @@
-import { IGenerativeAIFile } from './jobs';
-import { ISearchResult } from './search';
+import { IGenerativeAIFile } from '../jobs';
+import { ISearchResult } from '../search';
 /**
  * Generative AI Rag Connector Interface
  * @category AI
