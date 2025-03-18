@@ -37,7 +37,7 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
   /**
    * The grammar to use for the AI job.
    */
-  grammar?: string;
+  grammar?: any;
 
   /**
    * Enable reasoning for the AI job.
