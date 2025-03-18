@@ -108,6 +108,10 @@ export interface IGenerativeAIInferenceTool {
         value: string;
     }[];
     /**
+     * The context output variable for the tool.
+     */
+    contextOutputVariable?: string;
+    /**
      * The model ID to use for the tool.
      */
     modelId?: string;
