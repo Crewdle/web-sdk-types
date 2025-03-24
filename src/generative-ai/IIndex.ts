@@ -6,7 +6,7 @@ export interface IIndex {
   /**
    * The content of the index.
    */
-  content: string;
+  content: number[] | string;
 
   /**
    * The start index of the content.

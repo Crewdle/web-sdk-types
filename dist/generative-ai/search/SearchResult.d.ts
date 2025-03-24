@@ -8,6 +8,14 @@ export interface ISearchResult {
      */
     content: string;
     /**
+     * The start index of the search
+     */
+    start?: number;
+    /**
+     * The length of the search result.
+     */
+    length?: number;
+    /**
      * The relevance of the search result.
      * The relevance is a number between 0 and 1, where 1 is the most relevant.
      */
