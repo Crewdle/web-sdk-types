@@ -2,7 +2,7 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { DocumentParserConnectorConstructor, ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
-import { AISearchConnectorConstructor, GenerativeAIEngineType, GenerativeAIFileConnectorConstructor, GenerativeAIRagConnectorConstructor, GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, QueryFileConnectorConstructor, SearchConnectorConstructor } from '../../generative-ai';
+import { AISearchConnectorConstructor, GenerativeAIEngineType, GenerativeAIFileConnectorConstructor, GenerativeAIRagConnectorConstructor, GenerativeAIRagType, GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, QueryFileConnectorConstructor, SearchConnectorConstructor } from '../../generative-ai';
 import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 import { GraphDatabaseConnectorConstructor } from '../../graph-database';
 import { ExternalStorageConnectionConnectorConstructor, ExternalStorageType } from '../../external-storage';
@@ -81,7 +81,7 @@ export interface ISDKOptions {
     /**
      * The custom RAG connector to use for RAG tasks.
      */
-    ragConnector?: GenerativeAIRagConnectorConstructor;
+    ragConnectors?: Map<GenerativeAIRagType, GenerativeAIRagConnectorConstructor>;
     /**
      * The maximum number of outgoing subscriptions.
      */
