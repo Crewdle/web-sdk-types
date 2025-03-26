@@ -67,6 +67,7 @@ export enum GenerativeAIEngineType {
   Llamacpp = 'llamacpp',
   Transformers = 'transformers',
   OpenAI = 'openai',
+  Anthropic = 'anthropic',
 }
 
 /**

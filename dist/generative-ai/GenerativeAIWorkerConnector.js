@@ -63,4 +63,5 @@ export var GenerativeAIEngineType;
     GenerativeAIEngineType["Llamacpp"] = "llamacpp";
     GenerativeAIEngineType["Transformers"] = "transformers";
     GenerativeAIEngineType["OpenAI"] = "openai";
+    GenerativeAIEngineType["Anthropic"] = "anthropic";
 })(GenerativeAIEngineType || (GenerativeAIEngineType = {}));
