@@ -31,9 +31,10 @@ export interface ISDK {
   /**
    * Validate a key.
    * @param key The key to validate.
+   * @param origin The origin of the request.
    * @returns A promise that resolves with the vendor ID.
    */
-  validateKey(key: string): Promise<string>;
+  validateKey(key: string, origin?: string): Promise<string>;
 
   /**
    * Join a cluster.
