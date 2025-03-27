@@ -128,9 +128,21 @@ export interface IGenerativeAIInferenceTool {
      */
     temperature?: number;
     /**
+     * The grammar for the tool.
+     */
+    grammar?: any;
+    /**
      * The collection ID for the tool.
      */
     collectionId?: string;
+    /**
+     * Whether to emit the tool call result.
+     */
+    shouldEmit?: boolean;
+    /**
+     * The tools for the tool.
+     */
+    tools?: IGenerativeAIInferenceTool[];
 }
 /**
  * The enum for the generative AI inference tool type.
