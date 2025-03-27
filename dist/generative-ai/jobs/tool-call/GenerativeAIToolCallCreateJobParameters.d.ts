@@ -15,6 +15,12 @@ export interface IGenerativeAIToolCallCreateJobParameters extends IGenerativeAIC
      */
     tool: IGenerativeAIInferenceTool;
     /**
+     * The internal context for the AI job.
+     */
+    internalContext?: {
+        [key: string]: string;
+    };
+    /**
      * The arguments for the tool.
      */
     arguments: {

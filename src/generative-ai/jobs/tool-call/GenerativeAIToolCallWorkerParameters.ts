@@ -18,6 +18,11 @@ export interface IGenerativeAIToolCallWorkerParameters extends IGenerativeAIWork
   tool: IGenerativeAIInferenceTool;
 
   /**
+   * The internal context for the AI job.
+   */
+  internalContext?: {[key: string]: string};
+
+  /**
    * The arguments for the tool.
    */
   arguments: { [key: string]: string | number | boolean };
