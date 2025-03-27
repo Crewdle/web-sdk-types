@@ -136,6 +136,10 @@ export interface IGenerativeAIInferenceTool {
      */
     collectionId?: string;
     /**
+     * The form skill questions for the tool.
+     */
+    questions?: IGenerativeAIInferenceQuestion[];
+    /**
      * Whether to emit the tool call result.
      */
     shouldEmit?: boolean;
@@ -160,7 +164,28 @@ export declare enum GenerativeAIInferenceToolType {
     Search = "search",
     WebScraper = "web-scraper",
     WebScraperRaw = "web-scraper-raw",
-    WriteFile = "write-file"
+    WriteFile = "write-file",
+    FormSkillGetQuestion = "form-skill-get-question",
+    FormSkillSetAnswer = "form-skill-set-answer",
+    FormSkillSubmitForm = "form-skill-submit-form"
+}
+/**
+ * The interface for the generative AI inference form skill question.
+ * @category AI
+ */
+export interface IGenerativeAIInferenceQuestion {
+    /**
+     * The question.
+     */
+    question: string;
+    /**
+     * The validation for the question.
+     */
+    validation: string;
+    /**
+     * Whether the question is required.
+     */
+    required: boolean;
 }
 /**
  * The interface for the generative AI inference tool parameter.
