@@ -13,4 +13,10 @@ export interface IGenerativeAIToolCallResult extends IGenerativeAIJobResult {
      * The output of the tool.
      */
     output: string;
+    /**
+     * The internal context for the AI job.
+     */
+    internalContext?: {
+        [key: string]: string;
+    };
 }

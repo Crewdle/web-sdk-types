@@ -19,6 +19,11 @@ export interface IGenerativeAIToolCallJob extends IGenerativeAIJob {
   tool: IGenerativeAIInferenceTool;
 
   /**
+   * The internal context for the AI job.
+   */
+  internalContext?: {[key: string]: string};
+
+  /**
    * Runs the job.
    * @returns A promise that resolves with the result of the job.
    */
