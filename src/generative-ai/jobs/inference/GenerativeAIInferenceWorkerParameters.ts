@@ -197,6 +197,11 @@ export enum GenerativeAIInferenceToolType {
  */
 export interface IGenerativeAIInferenceQuestion {
   /**
+   * The id of the question.
+   */
+  id: string;
+
+  /**
    * The question.
    */
   question: string;
@@ -210,6 +215,11 @@ export interface IGenerativeAIInferenceQuestion {
    * Whether the question is required.
    */
   required: boolean;
+
+  /**
+   * The format of the question.
+   */
+  format: string;
 }
 
 /**
