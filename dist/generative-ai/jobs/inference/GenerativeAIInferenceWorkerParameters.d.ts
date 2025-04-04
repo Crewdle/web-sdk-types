@@ -11,9 +11,17 @@ export interface IGenerativeAIInferenceWorkerParameters extends IGenerativeAIWor
      */
     type: GenerativeAIJobType.Inference;
     /**
-     * The thread id
+     * The thread id.
      */
     threadId: string;
+    /**
+     * The job id of the job.
+     */
+    jobId?: string;
+    /**
+     * The agent id of the job.
+     */
+    agentId?: string;
     /**
      * The prompt to be processed.
      */
@@ -112,9 +120,21 @@ export interface IGenerativeAIInferenceTool {
      */
     contextOutputVariable?: string;
     /**
+     * The context input variable for the tool.
+     */
+    contextInputVariable?: string;
+    /**
      * The model ID to use for the tool.
      */
     modelId?: string;
+    /**
+     * The workflow ID to use for the tool.
+     */
+    workflowId?: string;
+    /**
+     * Whether the tool is async.
+     */
+    async?: boolean;
     /**
      * The instructions for the tool.
      */
@@ -167,7 +187,8 @@ export declare enum GenerativeAIInferenceToolType {
     WriteFile = "write-file",
     FormSkillGetQuestion = "form-skill-get-question",
     FormSkillSetAnswer = "form-skill-set-answer",
-    FormSkillSubmitForm = "form-skill-submit-form"
+    FormSkillSubmitForm = "form-skill-submit-form",
+    WorkflowTool = "workflow-tool"
 }
 /**
  * The interface for the generative AI inference form skill question.
