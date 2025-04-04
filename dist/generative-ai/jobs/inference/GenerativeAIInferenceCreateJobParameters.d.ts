@@ -12,9 +12,17 @@ export interface IGenerativeAIInferenceCreateJobParameters extends IGenerativeAI
      */
     type: GenerativeAIJobType.Inference;
     /**
-     * The thread id
+     * The thread id.
      */
     threadId: string;
+    /**
+     * The job id of the job.
+     */
+    jobId?: string;
+    /**
+     * The agent id of the job.
+     */
+    agentId?: string;
     /**
      * The prompt to be processed.
      */

@@ -25,4 +25,14 @@ export interface IGenerativeAIPromptWorkerParameters extends IGenerativeAIWorker
    * The thread ID
    */
   threadId: string;
+
+  /**
+   * The job id
+   */
+  jobId?: string;
+
+  /**
+   * The agent id
+   */
+  agentId?: string;
 }
