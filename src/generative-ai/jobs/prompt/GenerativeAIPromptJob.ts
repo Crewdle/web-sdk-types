@@ -22,6 +22,16 @@ export interface IGenerativeAIPromptJob extends IGenerativeAIJob {
   threadId: string;
 
   /**
+   * The job id
+   */
+  jobId?: string;
+
+  /**
+   * The agent id
+   */
+  agentId?: string;
+
+  /**
    * The context for the AI job.
    */
   history?: IPromptHistory[];

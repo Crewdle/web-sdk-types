@@ -19,4 +19,5 @@ export var GenerativeAIInferenceToolType;
     GenerativeAIInferenceToolType["FormSkillGetQuestion"] = "form-skill-get-question";
     GenerativeAIInferenceToolType["FormSkillSetAnswer"] = "form-skill-set-answer";
     GenerativeAIInferenceToolType["FormSkillSubmitForm"] = "form-skill-submit-form";
+    GenerativeAIInferenceToolType["WorkflowTool"] = "workflow-tool";
 })(GenerativeAIInferenceToolType || (GenerativeAIInferenceToolType = {}));
