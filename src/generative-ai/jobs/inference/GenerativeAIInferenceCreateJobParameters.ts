@@ -29,6 +29,11 @@ export interface IGenerativeAIInferenceCreateJobParameters extends IGenerativeAI
   agentId?: string;
 
   /**
+   * The workflow id of the job.
+   */
+  workflowId?: string;
+
+  /**
    * The prompt to be processed.
    */
   prompt: string;
