@@ -68,6 +68,12 @@ export interface ICluster extends IClusterEventEmitter {
   openGenerativeAIContext(label: string): Promise<IGenerativeAIContext>;
 
   /**
+   * Open a generative AI context.
+   * @param label The label of the generative AI context.
+   */
+  openGenerativeAIContextStandalone(label: string): Promise<IGenerativeAIContext>;
+
+  /**
    * Open a generative AI worker.
    * @param label The label of the generative AI Worker.
    */
@@ -132,6 +138,12 @@ export interface ICluster extends IClusterEventEmitter {
    * @param strategy The strategy to use to filter the job dispatchers.
    */
   getGenerativeAIContexts(strategy?: (item: IGenerativeAIContext) => boolean): IGenerativeAIContext[];
+
+  /**
+   * Get an array of opened generative AI contexts.
+   * @param strategy The strategy to use to filter the job dispatchers.
+   */
+  getGenerativeAIContextsStandalone(strategy?: (item: IGenerativeAIContext) => boolean): IGenerativeAIContext[];
 
   /**
    * Get an array of opened generative AI workers.
