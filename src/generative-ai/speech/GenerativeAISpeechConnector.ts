@@ -1,3 +1,5 @@
+import { GenerativeAIEngineType } from '../GenerativeAIWorkerConnector';
+
 /**
  * A connector for generating speech from text.
  */
@@ -10,4 +12,10 @@ export interface IGenerativeAISpeechConnector {
    * @param instructions Optional instructions for the speech.
    */
   speak(model: string, text: string, voice: string, instructions?: string): Promise<ArrayBuffer>;
+
+  /**
+   * Get the engine type.
+   * @returns The engine type.
+   */
+  getEngineType(): GenerativeAIEngineType;
 }
