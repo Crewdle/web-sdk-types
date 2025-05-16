@@ -1,7 +1,7 @@
 /**
  * A connector for generating speech from text.
  */
-export interface IGenerativeAISpeachConnector {
+export interface IGenerativeAISpeechConnector {
     /**
      * Generates speech from text.
      * @param model The model to use.

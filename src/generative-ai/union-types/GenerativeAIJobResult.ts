@@ -9,6 +9,7 @@ import { IGenerativeAIFileIngestResult } from '../jobs/file-ingest';
 import { IGenerativeAICollectionQueryResult } from '../jobs/collection-query';
 import { IGenerativeAIRealtimeSessionCreateResult } from '../jobs/realtime-session-create';
 import { IGenerativeAIToolCallResult } from '../jobs/tool-call';
+import { IGenerativeAISpeechCreateResult } from '../jobs/speech-create';
 
 /**
  * Union type for an AI job result.
@@ -26,5 +27,6 @@ export type GenerativeAIJobResult =
   | IGenerativeAIFileIngestResult
   | IGenerativeAIFileListResult
   | IGenerativeAIRealtimeSessionCreateResult
+  | IGenerativeAISpeechCreateResult
   | IGenerativeAIToolCallResult
 ;
