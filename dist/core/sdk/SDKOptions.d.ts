@@ -2,7 +2,7 @@ import { KeyValueDatabaseConnectorConstructor } from '../../key-value-database';
 import { ILoggingConnector } from '.';
 import { DocumentParserConnectorConstructor, ObjectStoreConnectorConstructor } from '../../object-storage';
 import { PeerConnectionConnectorConstructor } from '../connection';
-import { AISearchConnectorConstructor, GenerativeAIEngineType, GenerativeAIFileConnectorConstructor, GenerativeAIRagConnectorConstructor, GenerativeAIRagType, GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, QueryFileConnectorConstructor, SearchConnectorConstructor } from '../../generative-ai';
+import { AISearchConnectorConstructor, GenerativeAIEngineType, GenerativeAIFileConnectorConstructor, GenerativeAIRagConnectorConstructor, GenerativeAIRagType, GenerativeAISpeechConnectorConstructor, GenerativeAIWorkerConnectorConstructor, NLPLibraryConnectorConstructor, QueryFileConnectorConstructor, SearchConnectorConstructor } from '../../generative-ai';
 import { VectorDatabaseConnectorConstructor } from '../../vector-database';
 import { GraphDatabaseConnectorConstructor } from '../../graph-database';
 import { ExternalStorageConnectionConnectorConstructor, ExternalStorageType } from '../../external-storage';
@@ -46,6 +46,10 @@ export interface ISDKOptions {
      * The custom generative AI worker connectors to use for generative AI tasks.
      */
     generativeAIWorkerConnectors?: Map<GenerativeAIEngineType, GenerativeAIWorkerConnectorConstructor>;
+    /**
+     * The custom generative AI speech connectors to use for generative AI speech tasks.
+     */
+    generativeAISpeechConnectors?: Map<GenerativeAIEngineType, GenerativeAISpeechConnectorConstructor>;
     /**
      * The custom vector database connector to use for vector database tasks.
      */

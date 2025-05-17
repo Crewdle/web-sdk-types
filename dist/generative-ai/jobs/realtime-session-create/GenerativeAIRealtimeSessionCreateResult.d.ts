@@ -1,3 +1,4 @@
+import { GenerativeAITaskType } from '../../GenerativeAIWorkerConnector';
 import { GenerativeAIJobType } from '../../GenerativeAIJobType';
 import { IGenerativeAIJobResult } from '../../job/GenerativeAIJobResult';
 import { IGenerativeAIInferenceTool } from '../inference';
@@ -15,9 +16,27 @@ export interface IGenerativeAIRealtimeSessionCreateResult extends IGenerativeAIJ
      */
     apiKey: string;
     /**
+     * The type of session.
+     */
+    sessionType: 'speech-to-speech' | 'chained';
+    /**
+     * The first agent.
+     */
+    firstAgent: IGenerativeAIRealtimeSessionAgent;
+    /**
+     * The last agent.
+     */
+    lastAgent?: IGenerativeAIRealtimeSessionAgent;
+}
+export interface IGenerativeAIRealtimeSessionAgent {
+    /**
      * The model ID.
      */
     modelId: string;
+    /**
+     * The task type.
+     */
+    taskType: GenerativeAITaskType;
     /**
      * The instructions.
      */
@@ -25,11 +44,11 @@ export interface IGenerativeAIRealtimeSessionCreateResult extends IGenerativeAIJ
     /**
      * The temperature.
      */
-    temperature: number;
+    temperature?: number;
     /**
      * The max tokens.
      */
-    maxTokens: number;
+    maxTokens?: number;
     /**
      * The initial prompt.
      */

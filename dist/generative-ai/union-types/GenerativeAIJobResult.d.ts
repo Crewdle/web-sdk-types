@@ -9,9 +9,10 @@ import { IGenerativeAIFileIngestResult } from '../jobs/file-ingest';
 import { IGenerativeAICollectionQueryResult } from '../jobs/collection-query';
 import { IGenerativeAIRealtimeSessionCreateResult } from '../jobs/realtime-session-create';
 import { IGenerativeAIToolCallResult } from '../jobs/tool-call';
+import { IGenerativeAISpeechCreateResult } from '../jobs/speech-create';
 /**
  * Union type for an AI job result.
  * Represents the result of an AI job.
  * @category AI
  */
-export type GenerativeAIJobResult = IGenerativeAIPromptResult | IGenerativeAIRatingResult | IGenerativeAICollectionCreateResult | IGenerativeAICollectionDeleteResult | IGenerativeAICollectionQueryResult | IGenerativeAIFileDeleteResult | IGenerativeAIFileDownloadResult | IGenerativeAIFileIngestResult | IGenerativeAIFileListResult | IGenerativeAIRealtimeSessionCreateResult | IGenerativeAIToolCallResult;
+export type GenerativeAIJobResult = IGenerativeAIPromptResult | IGenerativeAIRatingResult | IGenerativeAICollectionCreateResult | IGenerativeAICollectionDeleteResult | IGenerativeAICollectionQueryResult | IGenerativeAIFileDeleteResult | IGenerativeAIFileDownloadResult | IGenerativeAIFileIngestResult | IGenerativeAIFileListResult | IGenerativeAIRealtimeSessionCreateResult | IGenerativeAISpeechCreateResult | IGenerativeAIToolCallResult;

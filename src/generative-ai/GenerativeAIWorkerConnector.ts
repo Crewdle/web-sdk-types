@@ -57,6 +57,8 @@ export enum GenerativeAITaskType {
   ZeroShotAudioClassification = 'zero-shot-audio-classification',
   ZeroShotImageClassification = 'zero-shot-image-classification',
   ZeroShotObjectDetection = 'zero-shot-object-detection',
+  SpeechToSpeech = 'speech-to-speech',
+  SpeechToText = 'speech-to-text',
 }
 
 /**
@@ -68,6 +70,7 @@ export enum GenerativeAIEngineType {
   Transformers = 'transformers',
   OpenAI = 'openai',
   Anthropic = 'anthropic',
+  VertexAI = 'vertexai',
 }
 
 /**

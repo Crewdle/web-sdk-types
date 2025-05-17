@@ -3,6 +3,7 @@ import { IGenerativeAICollectionQueryCreateJobParameters } from '../jobs/collect
 import { IGenerativeAIFileDownloadCreateJobParameters } from '../jobs/file-download';
 import { IGenerativeAIPromptCreateJobParameters } from '../jobs/prompt';
 import { IGenerativeAIRatingCreateJobParameters } from '../jobs/rating';
+import { IGenerativeAISpeechCreateCreateJobParameters } from '../jobs/speech-create';
 
 /**
  * Represents the parameters of an AI job.
@@ -21,5 +22,6 @@ export type CreateAIJobParameters =
   | IGenerativeAIPromptCreateJobParameters
   | IGenerativeAIRatingCreateJobParameters
   | IGenerativeAIRealtimeSessionCreateCreateJobParameters
+  | IGenerativeAISpeechCreateCreateJobParameters
   | IGenerativeAIToolCallCreateJobParameters
 ;

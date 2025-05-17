@@ -53,7 +53,9 @@ export declare enum GenerativeAITaskType {
     ImageToText = "image-to-text",
     ZeroShotAudioClassification = "zero-shot-audio-classification",
     ZeroShotImageClassification = "zero-shot-image-classification",
-    ZeroShotObjectDetection = "zero-shot-object-detection"
+    ZeroShotObjectDetection = "zero-shot-object-detection",
+    SpeechToSpeech = "speech-to-speech",
+    SpeechToText = "speech-to-text"
 }
 /**
  * The generative AI engine types.
@@ -63,7 +65,8 @@ export declare enum GenerativeAIEngineType {
     Llamacpp = "llamacpp",
     Transformers = "transformers",
     OpenAI = "openai",
-    Anthropic = "anthropic"
+    Anthropic = "anthropic",
+    VertexAI = "vertexai"
 }
 /**
  * The generative AI model interface.
