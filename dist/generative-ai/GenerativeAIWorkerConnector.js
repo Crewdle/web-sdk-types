@@ -53,6 +53,8 @@ export var GenerativeAITaskType;
     GenerativeAITaskType["ZeroShotAudioClassification"] = "zero-shot-audio-classification";
     GenerativeAITaskType["ZeroShotImageClassification"] = "zero-shot-image-classification";
     GenerativeAITaskType["ZeroShotObjectDetection"] = "zero-shot-object-detection";
+    GenerativeAITaskType["SpeechToSpeech"] = "speech-to-speech";
+    GenerativeAITaskType["SpeechToText"] = "speech-to-text";
 })(GenerativeAITaskType || (GenerativeAITaskType = {}));
 /**
  * The generative AI engine types.
@@ -64,4 +66,5 @@ export var GenerativeAIEngineType;
     GenerativeAIEngineType["Transformers"] = "transformers";
     GenerativeAIEngineType["OpenAI"] = "openai";
     GenerativeAIEngineType["Anthropic"] = "anthropic";
+    GenerativeAIEngineType["VertexAI"] = "vertexai";
 })(GenerativeAIEngineType || (GenerativeAIEngineType = {}));

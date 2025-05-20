@@ -4,6 +4,7 @@ export * from './jobs';
 export * from './query';
 export * from './rag';
 export * from './search';
+export * from './speech';
 export * from './union-types';
 
 export * from './GenerativeAIContext';
