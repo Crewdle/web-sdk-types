@@ -14,5 +14,5 @@ export interface IGenerativeAISpeechCreateResult extends IGenerativeAIJobResult 
   /**
    * The audio data for the generated speech.
    */
-  audio: ArrayBuffer;
+  audio: ReadableStream;
 }
