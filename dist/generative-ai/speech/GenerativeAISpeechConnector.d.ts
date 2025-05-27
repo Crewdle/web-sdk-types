@@ -10,7 +10,7 @@ export interface IGenerativeAISpeechConnector {
      * @param voice The voice to use.
      * @param instructions Optional instructions for the speech.
      */
-    speak(model: string, text: string, voice: string, instructions?: string): Promise<ArrayBuffer>;
+    speak(model: string, text: string, voice: string, instructions?: string): Promise<ReadableStream>;
     /**
      * Get the engine type.
      * @returns The engine type.
