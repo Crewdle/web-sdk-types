@@ -71,6 +71,7 @@ export enum GenerativeAIEngineType {
   OpenAI = 'openai',
   Anthropic = 'anthropic',
   VertexAI = 'vertexai',
+  ElevenLabs = 'elevenlabs',
 }
 
 /**

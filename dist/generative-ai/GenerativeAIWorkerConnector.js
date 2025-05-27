@@ -67,4 +67,5 @@ export var GenerativeAIEngineType;
     GenerativeAIEngineType["OpenAI"] = "openai";
     GenerativeAIEngineType["Anthropic"] = "anthropic";
     GenerativeAIEngineType["VertexAI"] = "vertexai";
+    GenerativeAIEngineType["ElevenLabs"] = "elevenlabs";
 })(GenerativeAIEngineType || (GenerativeAIEngineType = {}));
