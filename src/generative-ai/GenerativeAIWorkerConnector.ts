@@ -72,6 +72,7 @@ export enum GenerativeAIEngineType {
   Anthropic = 'anthropic',
   VertexAI = 'vertexai',
   ElevenLabs = 'elevenlabs',
+  OpenRouter = 'openrouter',
 }
 
 /**

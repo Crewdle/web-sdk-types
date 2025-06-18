@@ -67,7 +67,8 @@ export declare enum GenerativeAIEngineType {
     OpenAI = "openai",
     Anthropic = "anthropic",
     VertexAI = "vertexai",
-    ElevenLabs = "elevenlabs"
+    ElevenLabs = "elevenlabs",
+    OpenRouter = "openrouter"
 }
 /**
  * The generative AI model interface.
