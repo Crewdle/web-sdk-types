@@ -14,6 +14,10 @@ export interface IGenerativeAISpeechCreateJob extends IGenerativeAIJob {
      */
     voice: string;
     /**
+     * The format to use.
+     */
+    format: string;
+    /**
      * The model to use.
      */
     model: string;
