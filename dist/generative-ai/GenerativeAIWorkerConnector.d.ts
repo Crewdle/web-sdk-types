@@ -19,6 +19,7 @@ export declare enum GenerativeAIModelOutputType {
     Text = "text",
     Audio = "audio",
     Image = "image",
+    Video = "video",
     Vector = "vector",
     Entity = "entity"
 }
@@ -56,7 +57,8 @@ export declare enum GenerativeAITaskType {
     ZeroShotObjectDetection = "zero-shot-object-detection",
     SpeechToSpeech = "speech-to-speech",
     SpeechToText = "speech-to-text",
-    ImageGeneration = "image-generation"
+    ImageGeneration = "image-generation",
+    VideoGeneration = "video-generation"
 }
 /**
  * The generative AI engine types.
@@ -69,7 +71,8 @@ export declare enum GenerativeAIEngineType {
     Anthropic = "anthropic",
     VertexAI = "vertexai",
     ElevenLabs = "elevenlabs",
-    OpenRouter = "openrouter"
+    OpenRouter = "openrouter",
+    RunwayML = "runwayml"
 }
 /**
  * The generative AI model interface.
