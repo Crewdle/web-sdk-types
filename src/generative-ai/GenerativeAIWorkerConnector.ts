@@ -59,6 +59,7 @@ export enum GenerativeAITaskType {
   ZeroShotObjectDetection = 'zero-shot-object-detection',
   SpeechToSpeech = 'speech-to-speech',
   SpeechToText = 'speech-to-text',
+  ImageGeneration = 'image-generation',
 }
 
 /**

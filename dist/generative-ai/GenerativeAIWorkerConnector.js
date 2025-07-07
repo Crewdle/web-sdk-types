@@ -55,6 +55,7 @@ export var GenerativeAITaskType;
     GenerativeAITaskType["ZeroShotObjectDetection"] = "zero-shot-object-detection";
     GenerativeAITaskType["SpeechToSpeech"] = "speech-to-speech";
     GenerativeAITaskType["SpeechToText"] = "speech-to-text";
+    GenerativeAITaskType["ImageGeneration"] = "image-generation";
 })(GenerativeAITaskType || (GenerativeAITaskType = {}));
 /**
  * The generative AI engine types.

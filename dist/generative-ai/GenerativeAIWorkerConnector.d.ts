@@ -55,7 +55,8 @@ export declare enum GenerativeAITaskType {
     ZeroShotImageClassification = "zero-shot-image-classification",
     ZeroShotObjectDetection = "zero-shot-object-detection",
     SpeechToSpeech = "speech-to-speech",
-    SpeechToText = "speech-to-text"
+    SpeechToText = "speech-to-text",
+    ImageGeneration = "image-generation"
 }
 /**
  * The generative AI engine types.
