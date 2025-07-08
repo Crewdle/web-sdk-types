@@ -21,6 +21,7 @@ export enum GenerativeAIModelOutputType {
   Text = 'text',
   Audio = 'audio',
   Image = 'image',
+  Video = 'video',
   Vector = 'vector',
   Entity = 'entity',
 }
@@ -59,6 +60,8 @@ export enum GenerativeAITaskType {
   ZeroShotObjectDetection = 'zero-shot-object-detection',
   SpeechToSpeech = 'speech-to-speech',
   SpeechToText = 'speech-to-text',
+  ImageGeneration = 'image-generation',
+  VideoGeneration = 'video-generation',
 }
 
 /**
@@ -73,6 +76,7 @@ export enum GenerativeAIEngineType {
   VertexAI = 'vertexai',
   ElevenLabs = 'elevenlabs',
   OpenRouter = 'openrouter',
+  RunwayML = 'runwayml',
 }
 
 /**
