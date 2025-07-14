@@ -17,6 +17,11 @@ export interface IGenerativeAIFileIngestWorkerParameters extends IGenerativeAIWo
   collectionId: string;
 
   /**
+   * The namespace to ingest the file.
+   */
+  namespace?: string;
+
+  /**
    * The name of the file to ingest.
    */
   fileName: string;

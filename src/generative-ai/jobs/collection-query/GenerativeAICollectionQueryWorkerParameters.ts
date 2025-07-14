@@ -20,4 +20,9 @@ export interface IGenerativeAICollectionQueryWorkerParameters extends IGenerativ
    * The collection id for the search.
    */
   collectionId: string;
+
+  /**
+   * The namespace for the search.
+   */
+  namespace?: string;
 }

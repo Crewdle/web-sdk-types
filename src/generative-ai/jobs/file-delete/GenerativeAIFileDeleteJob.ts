@@ -12,6 +12,11 @@ export interface IGenerativeAIFileDeleteJob extends IGenerativeAIJob {
   collectionId: string;
 
   /**
+   * The namespace to delete the file.
+   */
+  namespace?: string;
+
+  /**
    * The file id of the file to delete.
    */
   fileId: string;

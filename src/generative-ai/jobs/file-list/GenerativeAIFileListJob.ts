@@ -12,6 +12,11 @@ export interface IGenerativeAIFileListJob extends IGenerativeAIJob {
   collectionId: string;
 
   /**
+   * The namespace to list files.
+   */
+  namespace?: string;
+
+  /**
    * Run the file list job.
    * @returns A promise that resolves with the result.
    */

@@ -160,6 +160,10 @@ export interface IGenerativeAIInferenceTool {
      */
     collectionId?: string;
     /**
+     * The namespace for the tool.
+     */
+    namespace?: string;
+    /**
      * The form skill questions for the tool.
      */
     questions?: IGenerativeAIInferenceQuestion[];

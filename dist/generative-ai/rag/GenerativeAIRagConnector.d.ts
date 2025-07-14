@@ -5,6 +5,11 @@ export declare enum GenerativeAIRagType {
     Pinecone = "pinecone",
     Crewdle = "crewdle"
 }
+export interface IGenerativeAIRagCollection {
+    instanceId: string;
+    collectionId: string;
+    namespace?: string;
+}
 /**
  * Generative AI Rag Connector Interface
  * @category AI
@@ -27,35 +32,31 @@ export interface IGenerativeAIRagConnector {
     deleteCollection(instanceId: string, collectionId: string, deleteInstance: boolean): Promise<void>;
     /**
      * Query a collection.
-     * @param instanceId The instance id to query.
-     * @param collectionId The collection id to query.
+     * @param collection The collection to query.
      * @param query The query to run.
      * @param topK The number of results to return.
      * @returns The search results.
      */
-    queryCollection(instanceId: string, collectionId: string, query: string | number[], topK: number): Promise<ISearchResult[]>;
+    queryCollection(collection: IGenerativeAIRagCollection, query: string | number[], topK: number): Promise<ISearchResult[]>;
     /**
      * Delete a file.
-     * @param instanceId The instance id of the file to delete.
-     * @param collectionId The collection id of the file to delete.
+     * @param collection The collection to delete the file.
      * @param fileId The file id to delete.
      * @returns A promise that resolves when the file is deleted.
      */
-    deleteFile(instanceId: string, collectionId: string, fileId: string): Promise<void>;
+    deleteFile(collection: IGenerativeAIRagCollection, fileId: string): Promise<void>;
     /**
      * Ingest a file.
-     * @param instanceId The instance id to ingest the file.
-     * @param collectionId The collection id to ingest the file.
+     * @param collection The collection to ingest the file.
      * @param fileName The name of the file to ingest.
      * @param content The content of the file to ingest.
      * @returns A promise that resolves when the file is ingested.
      */
-    ingestFile(instanceId: string, collectionId: string, fileName: string, content: string | IIndex[]): Promise<void>;
+    ingestFile(collection: IGenerativeAIRagCollection, fileName: string, content: string | IIndex[]): Promise<void>;
     /**
      * List files in a collection.
-     * @param instanceId The instance id to list files.
-     * @param collectionId The collection id to list files.
+     * @param collection The collection to list files.
      * @returns The list of files.
      */
-    listFiles(instanceId: string, collectionId: string): Promise<IGenerativeAIFile[]>;
+    listFiles(collection: IGenerativeAIRagCollection): Promise<IGenerativeAIFile[]>;
 }

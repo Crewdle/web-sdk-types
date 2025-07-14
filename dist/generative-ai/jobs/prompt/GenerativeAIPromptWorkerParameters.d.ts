@@ -14,6 +14,10 @@ export interface IGenerativeAIPromptWorkerParameters extends IGenerativeAIWorker
      */
     workflowId: string;
     /**
+     * The namespace to use for the prompt.
+     */
+    namespace?: string;
+    /**
      * The prompt for the AI job.
      */
     prompt: string;

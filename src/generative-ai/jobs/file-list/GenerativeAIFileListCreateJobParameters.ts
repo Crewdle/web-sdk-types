@@ -15,4 +15,9 @@ export interface IGenerativeAIFileListCreateJobParameters extends IGenerativeAIC
    * The collection id of the file to list.
    */
   collectionId: string;
+
+  /**
+   * The namespace to list files.
+   */
+  namespace?: string;
 }

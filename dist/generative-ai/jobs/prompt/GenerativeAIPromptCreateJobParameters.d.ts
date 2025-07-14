@@ -16,6 +16,10 @@ export interface IGenerativeAIPromptCreateJobParameters extends IGenerativeAICre
      */
     workflowId: string;
     /**
+     * The namespace to use for the prompt.
+     */
+    namespace?: string;
+    /**
      * The prompt to be processed.
      */
     prompt: string;

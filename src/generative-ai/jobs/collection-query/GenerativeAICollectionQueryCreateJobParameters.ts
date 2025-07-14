@@ -20,4 +20,9 @@ export interface IGenerativeAICollectionQueryCreateJobParameters extends IGenera
    * The collection id for the search.
    */
   collectionId: string;
+
+  /**
+   * The namespace for the search.
+   */
+  namespace?: string;
 }

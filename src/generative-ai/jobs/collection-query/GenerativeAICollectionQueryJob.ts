@@ -17,6 +17,11 @@ export interface IGenerativeAICollectionQueryJob extends IGenerativeAIJob {
   collectionId: string;
 
   /**
+   * The namespace for the search.
+   */
+  namespace?: string;
+
+  /**
    * Run the search job.
    * @returns A promise that resolves with the result.
    */

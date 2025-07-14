@@ -15,4 +15,9 @@ export interface IGenerativeAIFileListWorkerParameters extends IGenerativeAIWork
    * The collection id to list files from.
    */
   collectionId: string;
+
+  /**
+   * The namespace to list files.
+   */
+  namespace?: string;
 }
