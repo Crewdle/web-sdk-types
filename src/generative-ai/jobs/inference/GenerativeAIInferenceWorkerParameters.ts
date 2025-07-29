@@ -121,7 +121,7 @@ export interface IGenerativeAIInferenceTool {
   /**
    * The headers for the tool.
    */
-  headers?: { name: string, value: string }[];
+  headers?: { name: string, value: string }[] | { [key: string]: string };
 
   /**
    * The query parameters for the tool.
@@ -203,6 +203,29 @@ export interface IGenerativeAIInferenceTool {
    */
   shouldEmit?: boolean;
 
+  /**
+   * The server label for the tool.
+   */
+  server_label?: string;
+
+  /**
+   * The server URL for the tool.
+   */
+  server_url?: string;
+
+  /**
+   * The require approval for the tool.
+   */
+  require_approval?: string;
+
+  /**
+   * The allowed tools for the tool.
+   */
+  allowed_tools?: string[];
+
+  /**
+   * The headers for the tool.
+   */
   /**
    * The tools for the tool.
    */
