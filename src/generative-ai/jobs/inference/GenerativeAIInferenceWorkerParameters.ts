@@ -154,6 +154,11 @@ export interface IGenerativeAIInferenceTool {
   workflowId?: string;
 
   /**
+   * The user ID to use for the tool.
+   */
+  userId?: string;
+
+  /**
    * Whether the tool is async.
    */
   async?: boolean;
@@ -225,6 +230,8 @@ export enum GenerativeAIInferenceToolType {
   FormSkillSetAnswer = 'form-skill-set-answer',
   FormSkillSubmitForm = 'form-skill-submit-form',
   WorkflowTool = 'workflow-tool',
+  GenerateImage = 'generate-image',
+  CrewdleMCP = 'crewdle-mcp',
 }
 
 /**

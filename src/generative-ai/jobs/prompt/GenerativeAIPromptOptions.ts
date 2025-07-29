@@ -1,5 +1,5 @@
 import { IGenerativeAIOptions } from '../generic/GenerativeAIOptions';
-import { IPromptFunction, IPromptHistory } from './options';
+import { IPromptHistory, PromptFunction } from './options';
 
 export interface IGenerativeAIPromptFile {
   /**
@@ -67,7 +67,7 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
   /**
    * The functions that can be called by the LLM.
    */
-  functions?: Map<string, IPromptFunction>;
+  functions?: Map<string, PromptFunction>;
 
   /**
    * The files that will be used by the LLM.

@@ -10,6 +10,10 @@ export interface IGenerativeAIPromptJob extends IGenerativeAIJob {
      */
     workflowId: string;
     /**
+     * The user id to use for the prompt.
+     */
+    userId?: string;
+    /**
      * The namespace to use for the prompt.
      */
     namespace?: string;
