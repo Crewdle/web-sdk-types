@@ -104,7 +104,9 @@ export interface IGenerativeAIInferenceTool {
     headers?: {
         name: string;
         value: string;
-    }[];
+    }[] | {
+        [key: string]: string;
+    };
     /**
      * The query parameters for the tool.
      */
@@ -135,6 +137,10 @@ export interface IGenerativeAIInferenceTool {
      * The workflow ID to use for the tool.
      */
     workflowId?: string;
+    /**
+     * The user ID to use for the tool.
+     */
+    userId?: string;
     /**
      * Whether the tool is async.
      */
@@ -172,6 +178,25 @@ export interface IGenerativeAIInferenceTool {
      */
     shouldEmit?: boolean;
     /**
+     * The server label for the tool.
+     */
+    server_label?: string;
+    /**
+     * The server URL for the tool.
+     */
+    server_url?: string;
+    /**
+     * The require approval for the tool.
+     */
+    require_approval?: string;
+    /**
+     * The allowed tools for the tool.
+     */
+    allowed_tools?: string[];
+    /**
+     * The headers for the tool.
+     */
+    /**
      * The tools for the tool.
      */
     tools?: IGenerativeAIInferenceTool[];
@@ -196,7 +221,9 @@ export declare enum GenerativeAIInferenceToolType {
     FormSkillGetQuestion = "form-skill-get-question",
     FormSkillSetAnswer = "form-skill-set-answer",
     FormSkillSubmitForm = "form-skill-submit-form",
-    WorkflowTool = "workflow-tool"
+    WorkflowTool = "workflow-tool",
+    GenerateImage = "generate-image",
+    CrewdleMCP = "crewdle-mcp"
 }
 /**
  * The interface for the generative AI inference form skill question.

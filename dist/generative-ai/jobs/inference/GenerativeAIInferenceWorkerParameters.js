@@ -20,4 +20,6 @@ export var GenerativeAIInferenceToolType;
     GenerativeAIInferenceToolType["FormSkillSetAnswer"] = "form-skill-set-answer";
     GenerativeAIInferenceToolType["FormSkillSubmitForm"] = "form-skill-submit-form";
     GenerativeAIInferenceToolType["WorkflowTool"] = "workflow-tool";
+    GenerativeAIInferenceToolType["GenerateImage"] = "generate-image";
+    GenerativeAIInferenceToolType["CrewdleMCP"] = "crewdle-mcp";
 })(GenerativeAIInferenceToolType || (GenerativeAIInferenceToolType = {}));
