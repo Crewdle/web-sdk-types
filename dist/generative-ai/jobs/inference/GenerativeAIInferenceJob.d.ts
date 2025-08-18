@@ -39,6 +39,10 @@ export interface IGenerativeAIInferenceJob extends IGenerativeAIJob {
      */
     reasoning?: boolean;
     /**
+     * The privacy flag for the AI job.
+     */
+    privacy?: boolean;
+    /**
      * The context for the AI job.
      */
     history?: IPromptHistory[];
