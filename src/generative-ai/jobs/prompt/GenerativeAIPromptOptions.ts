@@ -70,6 +70,36 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
   temperature?: number;
 
   /**
+   * The voice for the LLM.
+   */
+  voice?: string;
+
+  /**
+   * The response format for the LLM.
+   */
+  responseFormat?: string;
+
+  /**
+   * The timestamp granularities for the LLM.
+   */
+  timestampGranularities?: string;
+
+  /**
+   * The language for the LLM.
+   */
+  language?: string;
+
+  /**
+   * The ratio for the LLM.
+   */
+  ratio?: string;
+
+  /**
+   * The duration for the LLM.
+   */
+  duration?: string;
+
+  /**
    * The functions that can be called by the LLM.
    */
   functions?: Map<string, PromptFunction>;

@@ -66,6 +66,16 @@ export interface IGenerativeAIRealtimeSessionAgent {
   initialPrompt?: string;
 
   /**
+   * The voice for the LLM.
+   */
+  voice?: string;
+
+  /**
+   * The language for the LLM.
+   */
+  language?: string;
+
+  /**
    * The tools for the Realtime Session.
    */
   tools?: IGenerativeAIInferenceTool[];
