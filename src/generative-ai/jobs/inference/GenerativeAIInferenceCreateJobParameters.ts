@@ -79,6 +79,36 @@ export interface IGenerativeAIInferenceCreateJobParameters extends IGenerativeAI
   maxTokens?: number;
 
   /**
+   * The voice for the inference.
+   */
+  voice?: string;
+
+  /**
+   * The language for the inference.
+   */
+  language?: string;
+
+  /**
+   * The response format for the inference.
+   */
+  responseFormat?: string;
+
+  /**
+   * The timestamp granularities for the inference.
+   */
+  timestampGranularities?: string;
+
+  /**
+   * The duration for the inference.
+   */
+  duration?: string;
+
+  /**
+   * The ratio for the inference.
+   */
+  ratio?: string;
+
+  /**
    * tools for the AI job.
    */
   tools?: IGenerativeAIInferenceTool[];
