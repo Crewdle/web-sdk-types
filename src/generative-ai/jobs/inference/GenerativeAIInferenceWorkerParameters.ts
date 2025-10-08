@@ -48,9 +48,14 @@ export interface IGenerativeAIInferenceWorkerParameters extends IGenerativeAIWor
   grammar?: any;
 
   /**
-   * Enable reasoning for the AI job.
+   * Reasoning effort for the AI job.
+   */ 
+  reasoning?: string;
+
+  /**
+   * Verbosity for the AI job.
    */
-  reasoning?: boolean;
+  verbosity?: string;
 
   /**
    * The privacy flag for the AI job.

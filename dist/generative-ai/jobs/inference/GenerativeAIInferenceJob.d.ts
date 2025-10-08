@@ -35,9 +35,13 @@ export interface IGenerativeAIInferenceJob extends IGenerativeAIJob {
      */
     grammar?: any;
     /**
-     * Enable reasoning for the AI job.
+     * Reasoning effort for the AI job.
      */
-    reasoning?: boolean;
+    reasoning?: string;
+    /**
+     * Verbosity for the AI job.
+     */
+    verbosity?: string;
     /**
      * The privacy flag for the AI job.
      */
