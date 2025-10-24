@@ -224,6 +224,16 @@ export interface IGenerativeAIInferenceTool {
   grammar?: any;
 
   /**
+   * The reasoning effort for the tool.
+   */
+  reasoning?: string;
+
+  /**
+   * The verbosity for the tool.
+   */
+  verbosity?: string;
+
+  /**
    * The collection ID for the tool.
    */
   collectionId?: string;
