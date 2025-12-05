@@ -48,7 +48,7 @@ export interface IMcpFunction {
  */
 export interface ICodeInterpreterFunction {
   type: 'code_interpreter';
-  container: { type: 'auto' };
+  container: { type: 'auto', memory_limit?: string, file_ids?: string[] };
 }
 
 /**

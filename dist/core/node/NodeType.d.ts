@@ -10,5 +10,9 @@ export declare enum NodeType {
     /**
      * The agent node type.
      */
-    Agent = "agent"
+    Agent = "agent",
+    /**
+     * The local node type (offline/standalone mode).
+     */
+    Local = "local"
 }

@@ -232,6 +232,11 @@ export interface IGenerativeAIInferenceTool {
    * The verbosity for the tool.
    */
   verbosity?: string;
+  
+  /**
+   * The files for the tool.
+   */
+  files?: string[];
 
   /**
    * The collection ID for the tool.
@@ -273,9 +278,6 @@ export interface IGenerativeAIInferenceTool {
    */
   allowed_tools?: string[];
 
-  /**
-   * The headers for the tool.
-   */
   /**
    * The tools for the tool.
    */

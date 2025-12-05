@@ -45,3 +45,22 @@ export interface ISDK {
    */
   joinCluster(clusterId: string, standalone?: boolean): Promise<ICluster>;
 }
+
+/**
+ * The local SDK interface for standalone, offline use.
+ * @category Core
+ */
+export interface ILocalSDK {
+  /**
+   * Close the SDK.
+   * @param options The options to close the SDK with.
+   */
+  close(options?: ISDKCloseOptions): Promise<void>;
+
+  /**
+   * Join a cluster.
+   * @param clusterId The ID of the cluster to join.
+   * @returns A promise that resolves with the cluster.
+   */
+  joinCluster(clusterId: string): Promise<ICluster>;
+}

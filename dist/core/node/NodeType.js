@@ -12,4 +12,8 @@ export var NodeType;
      * The agent node type.
      */
     NodeType["Agent"] = "agent";
+    /**
+     * The local node type (offline/standalone mode).
+     */
+    NodeType["Local"] = "local";
 })(NodeType || (NodeType = {}));
