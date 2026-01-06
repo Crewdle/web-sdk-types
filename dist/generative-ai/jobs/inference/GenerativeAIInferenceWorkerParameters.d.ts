@@ -258,6 +258,7 @@ export declare enum GenerativeAIInferenceToolType {
     Search = "search",
     WebScraper = "web-scraper",
     WebScraperRaw = "web-scraper-raw",
+    WebScraperMarkdown = "web-scraper-markdown",
     WriteFile = "write-file",
     FormSkillGetQuestion = "form-skill-get-question",
     FormSkillSetAnswer = "form-skill-set-answer",

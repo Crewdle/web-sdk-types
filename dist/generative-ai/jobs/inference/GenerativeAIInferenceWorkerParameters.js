@@ -15,6 +15,7 @@ export var GenerativeAIInferenceToolType;
     GenerativeAIInferenceToolType["Search"] = "search";
     GenerativeAIInferenceToolType["WebScraper"] = "web-scraper";
     GenerativeAIInferenceToolType["WebScraperRaw"] = "web-scraper-raw";
+    GenerativeAIInferenceToolType["WebScraperMarkdown"] = "web-scraper-markdown";
     GenerativeAIInferenceToolType["WriteFile"] = "write-file";
     GenerativeAIInferenceToolType["FormSkillGetQuestion"] = "form-skill-get-question";
     GenerativeAIInferenceToolType["FormSkillSetAnswer"] = "form-skill-set-answer";
