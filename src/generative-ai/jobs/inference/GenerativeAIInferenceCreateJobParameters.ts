@@ -119,6 +119,11 @@ export interface IGenerativeAIInferenceCreateJobParameters extends IGenerativeAI
   tools?: IGenerativeAIInferenceTool[];
 
   /**
+   * Whether to emit tool execution status during streaming.
+   */
+  toolStatus?: boolean;
+
+  /**
    * The internal context used by the AI job.
    */
   internalContext?: {[key: string]: string};
