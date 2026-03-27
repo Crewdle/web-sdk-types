@@ -19,6 +19,16 @@ export interface IGenerativeAIRealtimeSessionCreateResult extends IGenerativeAIJ
   apiKey: string;
 
   /**
+   * The Twilio Account SID.
+   */
+  twilioAccountSid?: string;
+
+  /**
+   * The Twilio Auth Token.
+   */
+  twilioAuthToken?: string;
+
+  /**
    * The type of session.
    */
   sessionType: 'speech-to-speech' | 'chained';
