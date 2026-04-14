@@ -21,4 +21,9 @@ export interface IGenerativeAIWorkerParameters extends IGenerativeAIJobParameter
    * The workflow ID.
    */
   workflowId?: string;
+
+  /**
+   * The user ID.
+   */
+  userId?: string;
 }
