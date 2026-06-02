@@ -9,6 +9,10 @@ export interface IGenerativeAICreateJobParameters {
      */
     vendorId: string;
     /**
+     * The user ID.
+     */
+    userId?: string;
+    /**
      * The options for the job.
      */
     options?: IGenerativeAIOptions;
