@@ -58,7 +58,8 @@ export declare enum GenerativeAITaskType {
     SpeechToSpeech = "speech-to-speech",
     SpeechToText = "speech-to-text",
     ImageGeneration = "image-generation",
-    VideoGeneration = "video-generation"
+    VideoGeneration = "video-generation",
+    MusicGeneration = "music-generation"
 }
 /**
  * The generative AI engine types.

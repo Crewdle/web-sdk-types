@@ -58,6 +58,7 @@ export var GenerativeAITaskType;
     GenerativeAITaskType["SpeechToText"] = "speech-to-text";
     GenerativeAITaskType["ImageGeneration"] = "image-generation";
     GenerativeAITaskType["VideoGeneration"] = "video-generation";
+    GenerativeAITaskType["MusicGeneration"] = "music-generation";
 })(GenerativeAITaskType || (GenerativeAITaskType = {}));
 /**
  * The generative AI engine types.

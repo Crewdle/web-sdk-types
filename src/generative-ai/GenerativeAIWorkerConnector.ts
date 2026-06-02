@@ -62,6 +62,7 @@ export enum GenerativeAITaskType {
   SpeechToText = 'speech-to-text',
   ImageGeneration = 'image-generation',
   VideoGeneration = 'video-generation',
+  MusicGeneration = 'music-generation',
 }
 
 /**
