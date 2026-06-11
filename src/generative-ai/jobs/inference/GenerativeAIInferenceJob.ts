@@ -48,6 +48,11 @@ export interface IGenerativeAIInferenceJob extends IGenerativeAIJob {
   reasoning?: string;
 
   /**
+   * Effort level for the AI job.
+   */
+  effort?: string;
+
+  /**
    * Verbosity for the AI job.
    */
   verbosity?: string;
