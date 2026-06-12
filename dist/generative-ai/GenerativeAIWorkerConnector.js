@@ -74,4 +74,5 @@ export var GenerativeAIEngineType;
     GenerativeAIEngineType["ElevenLabs"] = "elevenlabs";
     GenerativeAIEngineType["OpenRouter"] = "openrouter";
     GenerativeAIEngineType["RunwayML"] = "runwayml";
+    GenerativeAIEngineType["Google"] = "google";
 })(GenerativeAIEngineType || (GenerativeAIEngineType = {}));

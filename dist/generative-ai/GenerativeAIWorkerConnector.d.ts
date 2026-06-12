@@ -73,7 +73,8 @@ export declare enum GenerativeAIEngineType {
     VertexAI = "vertexai",
     ElevenLabs = "elevenlabs",
     OpenRouter = "openrouter",
-    RunwayML = "runwayml"
+    RunwayML = "runwayml",
+    Google = "google"
 }
 /**
  * The generative AI model interface.

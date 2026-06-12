@@ -78,6 +78,7 @@ export enum GenerativeAIEngineType {
   ElevenLabs = 'elevenlabs',
   OpenRouter = 'openrouter',
   RunwayML = 'runwayml',
+  Google = 'google',
 }
 
 /**

@@ -1,11 +1,16 @@
 {
   "name": "@crewdle/web-sdk-types",
-  "version": "1.0.57",
+  "version": "1.0.58",
   "description": "The Crewdle Mist Web SDK public types and interfaces",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && tsc"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "@crewdle:registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "repository": {
     "type": "git",
