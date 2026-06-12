@@ -43,6 +43,10 @@ export interface IGenerativeAIInferenceWorkerParameters extends IGenerativeAIWor
      */
     reasoning?: string;
     /**
+     * Effort level for the AI job.
+     */
+    effort?: string;
+    /**
      * Verbosity for the AI job.
      */
     verbosity?: string;
@@ -201,6 +205,10 @@ export interface IGenerativeAIInferenceTool {
      * The reasoning effort for the tool.
      */
     reasoning?: string;
+    /**
+     * Effort level for the tool.
+     */
+    effort?: string;
     /**
      * The verbosity for the tool.
      */
