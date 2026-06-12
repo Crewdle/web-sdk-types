@@ -41,8 +41,13 @@ export interface IGenerativeAIPromptOptions extends IGenerativeAIOptions {
 
   /**
    * Reasoning effort for the AI job.
-   */ 
+   */
   reasoning?: string;
+
+  /**
+   * Effort level for the AI job.
+   */
+  effort?: string;
 
   /**
    * Verbosity for the AI job.
