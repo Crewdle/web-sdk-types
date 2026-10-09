@@ -50,4 +50,21 @@ export interface IGenerativeAIPromptResult extends IGenerativeAIJobResult {
         input?: Record<string, number>;
         output?: Record<string, number>;
     };
+    /**
+     * Per-request usage, one entry per provider API request (tool-loop
+     * iterations and max_tokens continuations each count). Price tiers such as
+     * `context-<N>k` are decided per request on that request's raw prompt
+     * length, which the aggregate `tokenBuckets` cannot express once several
+     * requests are summed. The aggregate fields above stay populated for
+     * backward compatibility; consumers prefer `usageCalls` when present.
+     */
+    usageCalls?: IGenerativeAIUsageCall[];
+}
+/**
+ * Token usage of a single provider API request, bucketed by type.
+ * @category AI
+ */
+export interface IGenerativeAIUsageCall {
+    input: Record<string, number>;
+    output: Record<string, number>;
 }
