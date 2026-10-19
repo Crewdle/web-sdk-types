@@ -1,5 +1,6 @@
 import { IJobWorkerConnector, IJobWorkerOptions } from '../job';
 import { IGenerativeAIWorkerConnectorPromptResult } from './jobs/prompt/GenerativeAIWorkerConnectorPromptResult';
+import { IGenerativeAIUsageCall } from './jobs/prompt/GenerativeAIPromptResult';
 import { IGenerativeAIPromptWorkerConnectorParameters } from './jobs/prompt/GenerativeAIPromptWorkerConnectorParameters';
 import { GenerativeAIWorkerConnectorParameters, GenerativeAIWorkerConnectorResult } from './union-types';
 /**
@@ -97,6 +98,28 @@ export interface IGenerativeAIModel {
 export interface IGenerativeAIWorkerOptions extends IJobWorkerOptions {
     model: IGenerativeAIModel;
     sequences?: number;
+    /**
+     * Per-request metering. Connectors that support it call this once per
+     * provider API request (each tool-loop round and continuation), right after
+     * the request completes, so usage is billed even if the job later throws or
+     * the process dies. A caller that receives at least one report must not
+     * bill the job's returned totals again — they describe the same requests.
+     */
+    onUsage?: (usage: IGenerativeAIUsageReport) => void;
+}
+/**
+ * Token usage of one provider API request, as reported through
+ * {@link IGenerativeAIWorkerOptions.onUsage}.
+ * @category AI
+ */
+export interface IGenerativeAIUsageReport {
+    inputTokens: number;
+    outputTokens: number;
+    tokenBuckets?: {
+        input?: Record<string, number>;
+        output?: Record<string, number>;
+    };
+    usageCalls?: IGenerativeAIUsageCall[];
 }
 /**
  * The generative AI worker connector interface.
